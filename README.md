@@ -1,6 +1,6 @@
 # LLC «TalentSpot»
 
-nginx + uwsgi
+apache + uwsgi
 
 - Python version 3.12.0
 - Django version 4.2.7
