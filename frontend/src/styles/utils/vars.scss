@@ -1,0 +1,11 @@
+@use "sass:list";
+
+$vendors  : "-webkit-", "-apple-", "-khtml-", "-moz-", "-rim-", "-xv-","-ms-", "-o-", "";
+
+:root[theme="light"] {
+
+}
+
+:root[theme="dark"] {
+
+}

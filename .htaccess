@@ -1,0 +1,21 @@
+# НАСТРОЙКА СЕРВЕРА APACHE
+
+# ######################################################################
+# # CROSS-ORIGIN                                                       #
+# ######################################################################
+
+Options -Indexes -Includes -MultiViews +ExecCGI
+
+AddHandler wsgi-script .py
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ /wsgi.py/$1 [QSA,PT,L]
+
+Header always edit Set-Cookie (.*) "$1; HTTPOnly"
+
+# TODO: ОТДЕЛЬНЫЕ НАСТРОЙКИ >>>
+
+
+
