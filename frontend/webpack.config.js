@@ -1,25 +1,56 @@
 'use strict'
 
 const path = require('path')
+const TerserPlugin = require('terser-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
-const PATHS = {
-    src: path.join(__dirname, './src'),
-    build: path.join(__dirname, '/build')
-}
+// TODO: ПРИ РАЗРАБОТКЕ BACKEND - ВЫХОД В talentspot/static/
 
-const mode = process.env.NODE_ENV || 'node'
+const SCRIPT =  path.join(__dirname, './src/scripts')
+const EXTERNAL = path.join(__dirname, './src/styles')
+const BUILD = path.join(__dirname, './build')
+
+const mode = process.env.NODE_ENV || 'production'
 const target = process.env.NODE_ENV === 'production' ? 'browserslist' : 'web'
 
+const recursiveIssuer = m => {
+    if (m.issuer)
+        return recursiveIssuer(m.issuer)
+    else if (m.name)
+        return m.name
+    else
+        return false
+}
+
 module.exports = {
-    entry: [
-        `${PATHS.src}/styles/index.scss`
-    ],
-    output: {
-        path: path.join(__dirname, './build/src'),
-        filename: 'script.bundle.js',
+    entry: {
+        home: [
+            `${SCRIPT}/home.js`
+        ],
+        styles: [
+            `${EXTERNAL}/index.scss`
+        ],
     },
-    devtool: 'source-map',
+    optimization: {
+        minimize: true,
+        minimizer: [new TerserPlugin()],
+        splitChunks: {
+            cacheGroups: {
+                styles: {
+                    name: 'styles',
+                    test: (m, c, entry = 'styles') =>
+                        m.constructor.name === 'CssModule' && recursiveIssuer(m) === entry,
+                    chunks: 'all',
+                    enforce: true,
+                }
+            }
+        }
+    },
+    output: {
+        path: BUILD,
+        filename: '[name].bundle.js',
+    },
+    devtool: 'eval',
     mode,
     target,
     node: {
@@ -29,6 +60,11 @@ module.exports = {
     },
     module: {
         rules: [
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: ['babel-loader']
+            },
             {
                 test: /\.(s[ac]|c)ss$/i,
                 use: [
@@ -47,7 +83,7 @@ module.exports = {
     },
     resolve: {
         modules: ['node_modules'],
-        extensions: ['.scss'],
+        extensions: ['.js', '.scss'],
         fallback: {
             fs: false,
             os: false,
@@ -56,7 +92,7 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: 'style.bundle.css'
-        })
+            filename: '[name].bundle.css'
+        }),
     ]
 }

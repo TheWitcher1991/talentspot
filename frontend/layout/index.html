@@ -5,7 +5,7 @@
 <!--[if IE 9 ]><html class="ie ie9" lang="ru" dir="ltr"> <![endif]-->
 <!--[if IE 10 ]><html class="ie ie10" lang="ru" dir="ltr"> <![endif]-->
 <!--[if (gte IE 11)|!(IE)]><!-->
-<html lang="ru" dir="ltr" xmlns="http://www.w3.org/1999/html">
+<html lang="ru" dir="ltr" theme="light" xmlns="http://www.w3.org/1999/html">
 <!--<![endif]-->
 <head>
 
@@ -28,6 +28,8 @@
     <link rel="icon" href="" type="image/x-icon" />
     <!-- / SEO  -->
 
+    <link rel="stylesheet" href="../build/styles.bundle.css">
+
     <!-- SCRIPT FOR OLD BROWSERS -->
     <script type="text/javascript">
         !function(){"use strict";function trackOldBrowserEvent(){var t=function createXmlHttpRequestObject(){var t;try{t=new XMLHttpRequest}catch(r){for(var e=new Array("MSXML2.XMLHHTP.11.0","MSXML2.XMLHHTP.10.0","MSXML2.XMLHHTP.9.0","MSXML2.XMLHHTP.8.0","MSXML2.XMLHHTP.7.0","MSXML2.XMLHHTP.6.0","MSXML2.XMLHHTP.5.0","MSXML2.XMLHHTP.4.0","MSXML2.XMLHHTP.3.0","MSXML2.XMLHHTP","Microsoft.XMLHHTP"),s=0;s<e.length&&!t;s++)try{t=new ActiveXObject(e[s])}catch(t){}}return null!=t?t:void 0}(),e=new Object;return e.open="/badbrowser?status="+(0!==t.status&&t.status),e.xhr=t.responseURL?t.responseURL:"/badbrowser?status="+(0!==t.status&&t.status),t.open("GET",e.open,!0),t.setRequestHeader("Content-Type","text/html"),t.setRequestHeader("X-Requested-With","XMLHttpRequest"),t.onreadystatechange=function(){if(4===t.readyState&&(t.status>=200&&t.status<300||304===t.status||0===t.status&&"file:"===protocol))try{location.replace(t.responseURL?t.responseURL:"/badbrowser?status="+t.status)}catch(t){}},t.send(e.xhr?e.xhr:null),t}!function checkOldBrowser(){if(document.body)try{"CSS"in window&&CSS.supports("display","flex")&&"undefined"!=typeof Symbol||trackOldBrowserEvent()}catch(t){}else setTimeout(checkOldBrowser,100)}()}();
@@ -35,9 +37,12 @@
     <!-- / SCRIPT FOR OLD BROWSERS -->
 
     <!-- INCLUDE LIBS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css" />
     <!-- / INCLUDE LIBS -->
 
     <!-- INCLUDE ICONS AND FRONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.3.67/css/materialdesignicons.min.css" integrity="sha512-nRzny9w0V2Y1/APe+iEhKAwGAc+K8QYCw4vJek3zXhdn92HtKt226zHs9id8eUq+uYJKaH2gPyuLcaG/dE5c7A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- / INCLUDE ICONS AND FRONTS -->
 
 </head>
@@ -45,11 +50,122 @@
 
 <!-- MAIN CONTENT -->
 <main id="wrapper" class="wrapper">
+    <header id="header">
+        <div class="header__tmp">
+            <div class="container header__container">
+                <nav class="header__menu wow fadeIn">
+                    <span class="header__logo"><img src="../src/images/logo.png" alt=""></span>
+                    <ul class="header__ul">
+                        <li><a class="header__active" href="">Главная</a></li>
+                        <li><a href="">Резюме</a></li>
+                        <li><a href="">Вакансии</a></li>
+                        <li><a href="">О компании</a></li>
+                    </ul>
+                    <div class="header__bth">
+                        <a href=""><i class="mdi mdi-login"></i> Войти</a>
+                        <a href=""><i class="mdi mdi-account-plus-outline"></i> Регистрация</a>
+                    </div>
+                </nav>
+                <h1 class="header__name wow fadeIn" data-wow-delay="200ms">TALENT <m></m> SPOT</h1>
+                <img class="header__purple" src="../src/images/header/header_bg_1.png" alt="">
+                <div class="header__info">
+                    <div class="header__info-left wow fadeIn" data-wow-delay="400ms">
+                        <form class="home__form" action="" method="GET">
+                            <label for="search" class="search__label">
+                                <div class="search__span">
+                                    <i class="mdi mdi-magnify"></i>
+                                    <input name="search" id="search" type="text" placeholder="Должность или ключевое слово">
+                                </div>
+                                <button type="button"><i class="mdi mdi-arrow-top-right"></i></button>
+                            </label>
+                        </form>
+                        <div class="header__popular">
+                            Популярное:
+                            <div>
+                                <a href="">Программист</a>
+                                <a href="">Инженер</a>
+                                <a href="">Дизайнер</a>
+                            </div>
+                        </div>
+                        <div class="header__company">
+                            <span>Нам доверяют</span>
+                            <div class="header__company-flex">
+                                <div class="header__company-left">
+                                    <img src="../src/images/company/c_1.png" alt="">
+                                    <img src="../src/images/company/c_2.png" alt="">
+                                    <img src="../src/images/company/c_3.png" alt="">
+                                    <img src="../src/images/company/c_4.png" alt="">
+                                </div>
+                                <div class="header__company-right">
+                                    <span>200+</span>
+                                    <p>работодателей</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
+                    <div class="header__info-right">
+                        <span class="parallax-bg-2 header__cart-mini cart__company wow fadeIn" data-wow-delay="800ms">
+                            <span><i class="mdi mdi-server-security"></i></span>217 работодателей
+                        </span>
+                        <span class="parallax-bg-3 header__cart-mini cart__job wow fadeIn" data-wow-delay="1000ms">
+                            <span><i class="mdi mdi-briefcase"></i></span>7000+ рабочих мест
+                        </span>
+                        <span class="parallax-bg-4 header__cart-mini cart__resume wow fadeIn" data-wow-delay="1200ms">
+                            <span><i class="mdi mdi-account-school"></i></span> 10000+ специалистов
+                        </span>
+                        <span class="parallax-bg-1 header__hero wow fadeIn" data-wow-delay="600ms">
+                            <img src="../src/images/person/home_hero_1.png" alt="">
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="context">
+        <div class="container context__container">
+            <section class="home__section category__section">
+                <div class="section__title">
+                    <h2>ИССЛЕДУЙ ПО КАТЕГОРИЯМ</h2>
+                    <a href="">Посмотреть все <i class="mdi mdi-arrow-right"></i></a>
+                </div>
+                <div class="section__content category__list">
+                </div>
+            </section>
+
+            <section class="home__section hero__section">
+                <img src="../src/images/person/home_hero_2.png" alt="">
+                <div class="hero__text">
+                    <span>Вы в поисках <br /> работы?</span>
+                    <a href="">Создать резюме</a>
+                </div>
+            </section>
+
+            <section class="home__section job__section">
+                <div class="section__title">
+                    <h2>СВЕЖИЕ ВАКАНСИИ</h2>
+                    <a href="">Посмотреть все <i class="mdi mdi-arrow-right"></i></a>
+                </div>
+                <div class="section__content job__list">
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <div class="container footer__container">
+
+        </div>
+    </footer>
 </main>
 <!-- / MAIN CONTENT -->
 
 <!-- INCLUDE SCRIPTS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>new WOW().init()</script>
+
+<script src="../build/home.bundle.js"></script>
 <!-- / INCLUDE SCRIPTS -->
 
 </body>
