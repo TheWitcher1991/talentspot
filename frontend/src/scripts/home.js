@@ -29,7 +29,7 @@
         const CATEGORY = [
             { icon: 'mdi mdi-microsoft-visual-studio-code', name: 'IT-технологии' },
             { icon: 'mdi mdi-silo', name: 'Сельское хозяйство' },
-            { icon: 'mdi mdi-hand-front-right-outline', name: 'Юриспрудения' },
+            { icon: 'mdi mdi-hand-front-right-outline', name: 'Юриспруденция' },
             { icon: 'mdi mdi-factory', name: 'Промышленность' },
             { icon: 'mdi mdi-medical-bag', name: 'Медицина' },
             { icon: 'mdi mdi-account-group-outline', name: 'Кадры' },
@@ -42,11 +42,11 @@
         ]
 
         CATEGORY.forEach(({icon, name}) => {
-            document.querySelector('.category__list').innerHTML += `
-                <a href="" class="category__name">
+            document.querySelector('.vac__list').innerHTML += `
+                <a href="" class="category__name wow fadeIn">
                     <i class="${icon}"></i>
                     <p>${name}</p>
-                    <span>доступно 103 вакансии <i class="mdi mdi-arrow-right"></i></span>
+                    <span>доступно 103 вакансий <i class="mdi mdi-arrow-right"></i></span>
                 </a>
             `
         })
@@ -65,7 +65,7 @@
 
         JOB.forEach(({name, text}) => {
             document.querySelector('.job__list').innerHTML += `
-                <div class="home__job-item">
+                <div class="home__job-item wow fadeIn">
                     <span class="hji-time">8 октября в 16:50</span>
                     <span class="hji-img">
                         <img src="../src/images/company/c_5.png" alt="">

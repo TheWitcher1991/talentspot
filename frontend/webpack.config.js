@@ -24,8 +24,21 @@ const recursiveIssuer = m => {
 
 module.exports = {
     entry: {
+        // ТОЧКИ ВХОДА
         home: [
             `${SCRIPT}/home.js`
+        ],
+        vacancy: [
+            `${SCRIPT}/modules/config.js`,
+            `${SCRIPT}/modules/HTTP.js`,
+            `${SCRIPT}/modules/AjaxHandler.js`,
+            `${SCRIPT}/vacancy.js`
+        ],
+        company: [
+            `${SCRIPT}/modules/config.js`,
+            `${SCRIPT}/modules/HTTP.js`,
+            `${SCRIPT}/modules/AjaxHandler.js`,
+            `${SCRIPT}/company.js`
         ],
         styles: [
             `${EXTERNAL}/index.scss`
