@@ -73,6 +73,7 @@
                     <a href="" class="hji-company">SberTech</a>
                     <a href="" class="hji-title">${name}</a>
                     <div class="hji-emp">
+                        <span class="hji-salary"><i class="mdi mdi-currency-rub"></i> 70 000</span>
                         <span><i class="mdi mdi-map-marker"></i> г. Москва</span>
                         <span><i class="mdi mdi-clock-outline"></i> Полный рабочий день</span>
                         <span><i class="mdi mdi-briefcase"></i> Без опыта</span>

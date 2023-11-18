@@ -1,7 +1,8 @@
 class HTTP {
-
-    xmlHtpp;
-
+    /**
+     *
+     * @return {XMLHttpRequest|boolean}
+     */
     static getXMLHttp = () => {
         try {
             this.xmlHttp = new window.XMLHttpRequest()

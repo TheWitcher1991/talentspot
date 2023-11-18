@@ -40,6 +40,12 @@ module.exports = {
             `${SCRIPT}/modules/AjaxHandler.js`,
             `${SCRIPT}/company.js`
         ],
+        resume: [
+            `${SCRIPT}/modules/config.js`,
+            `${SCRIPT}/modules/HTTP.js`,
+            `${SCRIPT}/modules/AjaxHandler.js`,
+            `${SCRIPT}/resume.js`
+        ],
         styles: [
             `${EXTERNAL}/index.scss`
         ],

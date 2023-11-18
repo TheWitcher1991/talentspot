@@ -1,4 +1,4 @@
-# LLC «TalentSpot»
+# web-services «TalentSpot»
 
 apache + uwsgi
 

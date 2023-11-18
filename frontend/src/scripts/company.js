@@ -1,5 +1,3 @@
-import { HTTP } from './modules/HTTP'
-import { $_GET } from './modules/config'
 import { AjaxHandler } from './modules/AjaxHandler'
 
 (function () {
