@@ -47,11 +47,11 @@ progress {
     @include prefix(box-sizing, border-box);
 }
 
-input, button, select, option {
+input, button, select, option, pre {
     font-family: $Inter;
 }
 
-ul, menu {
+ul, ol, menu {
     list-style: none;
 }
 

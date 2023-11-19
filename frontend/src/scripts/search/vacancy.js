@@ -1,4 +1,4 @@
-import { AjaxHandler } from './modules/AjaxHandler'
+import { AjaxHandler } from '../modules/AjaxHandler'
 
 (function () {
 
@@ -28,7 +28,7 @@ import { AjaxHandler } from './modules/AjaxHandler'
                         <button class="vi-mark" type="button"><i class="mdi mdi-bookmark-outline"></i></button>
                     </div>
                     <span class="vi-img">
-                        <img src="../../../src/images/company/c_5.png" alt="">
+                        <img src="../../src/images/company/c_5.png" alt="">
                     </span>
                     <a class="vi-company" href=""><m></m> SberTech <i class="mdi mdi-check-circle-outline"></i></a>
                     <a class="vi-title" href="">Backend-разработчик</a>

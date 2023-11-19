@@ -22,35 +22,37 @@ const recursiveIssuer = m => {
         return false
 }
 
+const baseModule = [
+    `${SCRIPT}/modules/config.js`,
+    `${SCRIPT}/modules/HTTP.js`,
+    `${SCRIPT}/modules/AjaxHandler.js`,
+]
+
 module.exports = {
     entry: {
         // ТОЧКИ ВХОДА
         home: [
-            `${SCRIPT}/home.js`
+            `${SCRIPT}/main/home.js`
         ],
-        vacancy: [
-            `${SCRIPT}/modules/config.js`,
-            `${SCRIPT}/modules/HTTP.js`,
-            `${SCRIPT}/modules/AjaxHandler.js`,
-            `${SCRIPT}/vacancy.js`
+        // module: [...baseModule],
+        vacancy_search: [
+            ...baseModule,
+            `${SCRIPT}/search/vacancy.js`
         ],
-        company: [
-            `${SCRIPT}/modules/config.js`,
-            `${SCRIPT}/modules/HTTP.js`,
-            `${SCRIPT}/modules/AjaxHandler.js`,
-            `${SCRIPT}/company.js`
+        company_search: [
+            ...baseModule,
+            `${SCRIPT}/search/company.js`
         ],
-        resume: [
-            `${SCRIPT}/modules/config.js`,
-            `${SCRIPT}/modules/HTTP.js`,
-            `${SCRIPT}/modules/AjaxHandler.js`,
-            `${SCRIPT}/resume.js`
+        resume_search: [
+            ...baseModule,
+            `${SCRIPT}/search/resume.js`
         ],
         styles: [
             `${EXTERNAL}/index.scss`
         ],
     },
     optimization: {
+        // runtimeChunk: 'single',
         minimize: true,
         minimizer: [new TerserPlugin()],
         splitChunks: {
@@ -92,7 +94,7 @@ module.exports = {
                         loader: 'css-loader',
                         options: {
                             importLoaders: 1,
-                            sourceMap: true
+                            sourceMap: false
                         }
                     },
                     'sass-loader'

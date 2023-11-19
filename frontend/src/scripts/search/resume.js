@@ -1,4 +1,4 @@
-import { AjaxHandler } from './modules/AjaxHandler'
+import { AjaxHandler } from '../modules/AjaxHandler'
 
 (function () {
 
@@ -29,7 +29,7 @@ import { AjaxHandler } from './modules/AjaxHandler'
                             <div class="ri-lock-i">
                                 <i class="mdi mdi-lock""></i>
                             </div>
-                            <img src="../../../src/images/user/placeholder.png" alt="">
+                            <img src="../../src/images/user/user.jpg" alt="">
                         </span>
                         <span class="ri-status">
                             В активном поиске

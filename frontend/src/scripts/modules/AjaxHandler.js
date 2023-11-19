@@ -51,9 +51,9 @@ class AjaxHandler {
         e.stopPropagation()
 
         let $page = e.target.parentElement
-        this.pagination.querySelector('div').classList.remove('page-active')
+        this.pagination.querySelector('div').classList.remove('main-active')
         this.bindRequest(1)
-        $page.classList.add('page-active')
+        $page.classList.add('main-active')
 
         window.scrollTo(0, 0)
     }
@@ -98,7 +98,6 @@ class AjaxHandler {
         setTimeout(thisHandler, this.options.timeout)
     }
 
-
     renderContext(data) {
         this.options.title.innerHTML = data.count
         document.querySelector('.filter__load').style.display = 'none'
@@ -116,7 +115,7 @@ class AjaxHandler {
             let start_page, end_page, last, forward, page_left, page_right
 
             if (PAGE > midSize + 1) {
-                start_page = '<div data-page="1"><a href><i class="mdi mdi-chevron-double-left"></i></a></div>';
+                start_page = '<div data-main="1"><a href><i class="mdi mdi-chevron-double-left"></i></a></div>';
             }
 
             if (PAGE < (countPages - midSize)) {
