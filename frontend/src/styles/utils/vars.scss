@@ -13,6 +13,8 @@ $font                 : normal 16px 'Inter', sans-serif;
 :root[theme="light"] {
     // BG
     --color-bg-body   : #EDEAEB;
+    --color-bg-inp    : #FAFDFF;
+    --color-br-inp    : #E8E8E8;
     --color-bg-main   : #AFC3C3;
     --color-bg-400    : #F5F5F5;
     --color-bg-500    : #DADADA;
@@ -23,6 +25,7 @@ $font                 : normal 16px 'Inter', sans-serif;
     --color-gl-400    : #AFAFAF99;
     --color-gl-500    : rgba(255, 255, 255, 0.5);
     --color-gl-600    : rgba(237, 234, 235, 0.5);
+    --color-gl-550  : rgba(255,22,46,.06);
 
     // FG
     --color-fg-main   : #171717;
@@ -31,6 +34,7 @@ $font                 : normal 16px 'Inter', sans-serif;
     --color-fg-400    : #C3C3C3;
     --color-fg-500    : #A19FA4;
     --color-fg-800    : #727272;
+    --color-error     : #ff4c4c;
 
     // WIDTH
     --width-container : 1450px;
@@ -42,6 +46,7 @@ $font                 : normal 16px 'Inter', sans-serif;
                         0px 22.33631px 17.86905px 0px rgba(0, 0, 0, 0.04),
                         0px 41.77761px 33.42209px 0px rgba(0, 0, 0, 0.05),
                         0px 100px 80px 0px rgba(0, 0, 0, 0.07);
+    --shadow-grey-bth : 0px 10px 30px 0px var(--color-bg-main);
 }
 
 :root[theme="dark"] {

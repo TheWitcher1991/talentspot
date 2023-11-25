@@ -68,7 +68,7 @@
                 <div class="home__job-item wow fadeIn">
                     <span class="hji-time">8 октября в 16:50</span>
                     <span class="hji-img">
-                        <img src="../src/images/company/c_5.png" alt="">
+                        <img src="../../src/images/media/company/c_5.png" alt="">
                     </span>
                     <a href="" class="hji-company">SberTech</a>
                     <a href="" class="hji-title">${name}</a>

@@ -1,3 +1,12 @@
+/**
+ * Класс для работы с интерфейсом XMLHttpRequest, использующий запросы по протоколу HTTP
+ *
+ * Класс реализует методы, которые позволяют создавать готовые AJAX запросы
+ *
+ * [MDN Reference](https://developer.mozilla.org/ru/docs/Web/API/XMLHttpRequest)
+ *
+ * @class
+ */
 class HTTP {
     /**
      *
@@ -18,6 +27,10 @@ class HTTP {
         return this.xmlHttp
     }
 
+    /**
+     *
+     * @param options {object} - параметры ajax запроса
+     */
     static ajax = options => {
 
         let xhr = this.getXMLHttp()

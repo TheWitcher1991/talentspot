@@ -24,7 +24,7 @@ import { AjaxHandler } from '../modules/AjaxHandler'
                 <a href="" class="company__item wow fadeIn">
                     <div class="company__top">
                         <span>
-                            <img src="../../src/images/company/c_5.png" alt="">
+                            <img src="../../src/images/media/company/c_5.png" alt="">
                         </span>
                         <div class="company__title">
                             <span>${name}</span>

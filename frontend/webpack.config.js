@@ -47,6 +47,10 @@ module.exports = {
             ...baseModule,
             `${SCRIPT}/search/resume.js`
         ],
+        signup: [
+            ...baseModule,
+            `${SCRIPT}/guest/signup.js`
+        ],
         styles: [
             `${EXTERNAL}/index.scss`
         ],

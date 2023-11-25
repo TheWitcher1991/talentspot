@@ -12,7 +12,7 @@
     <meta charset="utf-8" />
 
     <!-- SEO -->
-    <title>Ошибка 404 - TalentSpot</title>
+    <title>Авторизация - TalentSpot</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta name="description" content="" />
     <meta name="keywords" content=" />
@@ -36,10 +36,6 @@
     </script>
     <!-- / SCRIPT FOR OLD BROWSERS -->
 
-    <!-- INCLUDE LIBS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css" />
-    <!-- / INCLUDE LIBS -->
-
     <!-- INCLUDE ICONS AND FRONTS -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.3.67/css/materialdesignicons.min.css" integrity="sha512-nRzny9w0V2Y1/APe+iEhKAwGAc+K8QYCw4vJek3zXhdn92HtKt226zHs9id8eUq+uYJKaH2gPyuLcaG/dE5c7A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -49,33 +45,50 @@
 <body>
 
 <!-- MAIN CONTENT -->
-<main id="wrapper" class="wrapper">
-    <div class="global__error">
+<main id="auth__wrapper" class="auth__wrapper">
+    <section class="auth__section">
+        <div class="auth__image auth__image-large">
+            <img src="../../src/images/static/figure/auth_1_nb.png" alt="">
+        </div>
+        <div class="auth__content">
+            <div class="auth__logo">
+                <a href="">TALENT SPOT</a>
+                <img src="../../src/images/static/logo.png" alt="">
+            </div>
+            <div class="auth__context">
+                <h1 class="auth__title">Авторизация</h1>
+                <span class="auth__span">Рады видеть вас снова</span>
+                <form class="auth__form" action="" method="POST">
+                    <label for="email" class="auth__label">
+                        <span>Электронная почта <m>*</m></span>
+                        <input type="email" name="email" id="email" required>
+                    </label>
+                    <label for="password" class="auth__label">
+                        <span>Пароль <m>*</m></span>
+                        <div class="label__password">
+                            <input type="password" name="password" id="password" required>
+                            <i class="mdi mdi-eye"></i>
+                        </div>
+                    </label>
 
-        <div class="global__error-left">
-            <h1>Такой страницы нет</h1>
-            <span>Ошибка 404 :(</span>
-            <p>К сожалению, страница не найдена <br> Такой страницы не существует, либо она была не удалена</p>
-            <div>
-                <a href="">Главная</a>
-                <a href="">Резюме</a>
-                <a href="">Вакансии</a>
-                <a href="">Компании</a>
+                    <div class="auth__exp">
+                        <div class="white__checkbox">
+                            <input type="checkbox" class="white-checkbox" name="remember" id="remember" value="1">
+                            <label for="remember">Запомнить меня</label>
+                        </div>
+                        <a href="">Забыли пароль?</a>
+                    </div>
+
+                    <button class="auth__button" type="button">Войти</button>
+                </form>
+            </div>
+            <div class="auth__link">
+                У вас нет аккаунта? <a href="">Регистрация</a>
             </div>
         </div>
-
-        <div class="global__error-right">
-            <img src="../../src/images/static/404.png" alt="">
-        </div>
-
-    </div>
+    </section>
 </main>
 <!-- / MAIN CONTENT -->
-
-<!-- INCLUDE SCRIPTS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script>new WOW().init()</script>
-<!-- / INCLUDE SCRIPTS -->
 
 </body>
 </html>

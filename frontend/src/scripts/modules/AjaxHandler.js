@@ -3,6 +3,7 @@ import { isFunction, isset, RenderSearchError, $_GET } from './config'
 
 /**
  * Класс для создания ajax запроса, с учетом фильтров и вывода пагинации
+ *
  * @class
  */
 class AjaxHandler {
