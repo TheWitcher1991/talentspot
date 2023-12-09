@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<!--[if lt IE 6 ]><html class="ie ie6" lang="ru" dir="ltr"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="ru" dir="ltr"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="ru" dir="ltr"> <![endif]-->
+<!--[if IE 9 ]><html class="ie ie9" lang="ru" dir="ltr"> <![endif]-->
+<!--[if IE 10 ]><html class="ie ie10" lang="ru" dir="ltr"> <![endif]-->
+<!--[if (gte IE 11)|!(IE)]><!-->
+<html lang="ru" dir="ltr" theme="light" xmlns="http://www.w3.org/1999/html">
+<!--<![endif]-->
+<head>
+
+    <meta charset="utf-8" />
+
+    <!-- SEO -->
+    <title>Регистрация - TalentSpot</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content="" />
+    <meta name="keywords" content=" />
+    <link rel="canonical" href="" />
+    <meta http-equiv="content-language" content="ru" />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="x-dns-prefetch-control" content="on" />
+
+    <meta name="author" content="" />
+    <meta name="copyright" content="ООО «ТалентСпот»" />
+
+    <link rel="shortcut icon" href="" type="image/x-icon" />
+    <link rel="icon" href="" type="image/x-icon" />
+    <!-- / SEO  -->
+
+    <link rel="stylesheet" href="../../build/styles.bundle.css">
+
+    <!-- SCRIPT FOR OLD BROWSERS -->
+    <script type="text/javascript">
+        !function(){"use strict";function trackOldBrowserEvent(){var t=function createXmlHttpRequestObject(){var t;try{t=new XMLHttpRequest}catch(r){for(var e=new Array("MSXML2.XMLHHTP.11.0","MSXML2.XMLHHTP.10.0","MSXML2.XMLHHTP.9.0","MSXML2.XMLHHTP.8.0","MSXML2.XMLHHTP.7.0","MSXML2.XMLHHTP.6.0","MSXML2.XMLHHTP.5.0","MSXML2.XMLHHTP.4.0","MSXML2.XMLHHTP.3.0","MSXML2.XMLHHTP","Microsoft.XMLHHTP"),s=0;s<e.length&&!t;s++)try{t=new ActiveXObject(e[s])}catch(t){}}return null!=t?t:void 0}(),e=new Object;return e.open="/badbrowser?status="+(0!==t.status&&t.status),e.xhr=t.responseURL?t.responseURL:"/badbrowser?status="+(0!==t.status&&t.status),t.open("GET",e.open,!0),t.setRequestHeader("Content-Type","text/html"),t.setRequestHeader("X-Requested-With","XMLHttpRequest"),t.onreadystatechange=function(){if(4===t.readyState&&(t.status>=200&&t.status<300||304===t.status||0===t.status&&"file:"===protocol))try{location.replace(t.responseURL?t.responseURL:"/badbrowser?status="+t.status)}catch(t){}},t.send(e.xhr?e.xhr:null),t}!function checkOldBrowser(){if(document.body)try{"CSS"in window&&CSS.supports("display","flex")&&"undefined"!=typeof Symbol||trackOldBrowserEvent()}catch(t){}else setTimeout(checkOldBrowser,100)}()}();
+    </script>
+    <!-- / SCRIPT FOR OLD BROWSERS -->
+
+    <!-- INCLUDE ICONS AND FRONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.3.67/css/materialdesignicons.min.css" integrity="sha512-nRzny9w0V2Y1/APe+iEhKAwGAc+K8QYCw4vJek3zXhdn92HtKt226zHs9id8eUq+uYJKaH2gPyuLcaG/dE5c7A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- / INCLUDE ICONS AND FRONTS -->
+
+</head>
+<body class="body__auth">
+
+<!-- MAIN CONTENT -->
+<main id="auth__wrapper" class="auth__wrapper">
+    <section class="auth__section">
+        <div class="auth__image auth__image-large">
+            <img src="../../src/images/static/figure/auth_1_nb.png" alt="">
+        </div>
+        <div class="auth__content">
+            <div class="auth__content__temp">
+                <div class="auth__logo">
+                    <a href="">TALENT SPOT</a>
+                    <img src="../../src/images/static/logo.png" alt="">
+                </div>
+                <div class="auth__context">
+                    <div class="auth__center auth__resume">
+                        <div class="auth__start__resume auth__next auth__next-new">
+                            <div class="auth__step">
+                                <div class="step__one step__one-resume step__active">
+                                    <span>1</span>
+                                    Персональная информация
+                                </div>
+                                <div class="step__two step__two-resume">
+                                    <span>2</span>
+                                    Профессиональная информация
+                                </div>
+                                <div class="step__three step__three-resume">
+                                    <span>3</span>
+                                    Подтверждение
+                                </div>
+                            </div>
+                            <h1 class="auth__title">Персольная информация</h1>
+                            <span class="auth__span">Расскажите о себе</span>
+                            <form class="auth__form auth__start__resume-form" action="" method="POST">
+                                <div class="auth__flex-radio">
+                                    <div class="white__radio">
+                                        <input type="radio" class="white-radio i_choice" name="i_choice" id="i_student" value="1" checked>
+                                        <label for="i_student">Я студент/выпускник</label>
+                                    </div>
+                                    <div class="white__radio">
+                                        <input type="radio" class="white-radio i_choice" name="i_choice" id="i_applicant" value="2">
+                                        <label for="i_applicant">Я специалист</label>
+                                    </div>
+                                </div>
+                                <div class="auth__flex">
+                                    <label for="surname" class="auth__label">
+                                        <span>Фамилия <m>*</m></span>
+                                        <input type="text" name="surname" id="surname" required>
+                                        <div class="label__error error__surname"></div>
+                                    </label>
+                                    <label for="name" class="auth__label">
+                                        <span>Имя <m>*</m></span>
+                                        <input type="text" name="name" id="name" required>
+                                        <div class="label__error error__name"></div>
+                                    </label>
+                                </div>
+                                <div class="auth__flex">
+                                    <label for="email" class="auth__label">
+                                        <span>Электронная почта <m>*</m></span>
+                                        <input data-id="email" type="email" inputmode="email" name="email" id="email" required>
+                                        <div class="label__error error__email"></div>
+                                    </label>
+                                    <label for="phone" class="auth__label">
+                                        <span>Номер телефона <m>*</m></span>
+                                        <input data-id="phone" type="text" inputmode="tel" name="phone" size="20" id="phone" class="phone__mask" required placeholder="7+">
+                                        <div class="label__error error__phone"></div>
+                                    </label>
+                                </div>
+                                <label for="date" class="auth__label">
+                                    <span>Дата рождения <m>*</m></span>
+                                    <input min="1900-12-31" max="2006-12-31" type="date" name="date" id="date" required>
+                                    <div class="label__error error__date"></div>
+                                </label>
+                                <label for="password" class="auth__label">
+                                    <span>Пароль <m>*</m></span>
+                                    <div class="label__password">
+                                        <input data-id="password" minlength="8" type="password" name="password" id="password" required>
+                                        <i class="mdi mdi-eye"></i>
+                                    </div>
+                                    <div class="label__error error__password"></div>
+                                </label>
+                                <button class="auth__arrow signup__resume__next" type="button"><i class="mdi mdi-arrow-right"></i></button>
+                            </form>
+                        </div>
+                        <div class="auth__exp__resume auth__next auth__next-new">
+                            <div class="auth__step">
+                                <div class="step__one step__one-resume step__access">
+                                    <span><i class="mdi mdi-check"></i></span>
+                                    Персональная информация
+                                </div>
+                                <div class="step__two step__two-resume step__active">
+                                    <span>2</span>
+                                    Профессиональная информация
+                                </div>
+                                <div class="step__three step__three-resume">
+                                    <span>3</span>
+                                    Подтверждение
+                                </div>
+                            </div>
+                            <h1 class="auth__title">Профессиональная информация</h1>
+                            <span class="auth__span">Расскажите о своей желаемой профессиии и профессиональных достижениях</span>
+                            <form class="auth__form " action="" method="POST" >
+                                <div class="auth__form-exp auth__form__for__applicant">
+                                    <label for="prof__applicant" class="auth__label">
+                                        <span>Желаемая профессия <m>*</m></span>
+                                        <input type="text" name="prof__applicant" id="prof__applicant" required>
+                                        <div class="label__error error__prof__applicant"></div>
+                                    </label>
+                                    <label for="salary__applicant" class="auth__label">
+                                        <span>Зарплата от, руб. <m>*</m></span>
+                                        <input type="number" inputmode="numeric" maxlength="10" name="salary__applicant" id="salary__applicant" required>
+                                        <div class="label__error error__salary__applicant"></div>
+                                    </label>
+                                    <h2>Опыт работы</h2>
+                                    <label for="exp__company" class="auth__label">
+                                        <span>Компания <m>*</m></span>
+                                        <input type="text" name="exp__company" id="exp__company" required>
+                                        <div class="label__error error__exp__company"></div>
+                                    </label>
+                                    <div class="auth__flex">
+                                        <label for="exp__address" class="auth__label">
+                                            <span>Город <m>*</m></span>
+                                            <input type="text" name="exp__address" id="exp__address" required>
+                                            <div class="label__error error__exp__address"></div>
+                                        </label>
+                                        <label for="exp__prof" class="auth__label">
+                                            <span>Должность <m>*</m></span>
+                                            <input type="text" name="exp__prof" id="exp__prof" required>
+                                            <div class="label__error error__exp__prof"></div>
+                                        </label>
+                                    </div>
+                                    <div class="auth__flex-mini">
+                                        <span>Начало работы <m>*</m></span>
+                                        <div class="auth__flex">
+                                            <label for="exp__start-date-1" class="auth__label">
+                                                <div class="label__select-block">
+                                                    <select name="exp__start-date-1" id="exp__start-date-1">
+                                                        <option value="01">Январь</option>
+                                                        <option value="02">Февраль</option>
+                                                        <option value="03">Март</option>
+                                                        <option value="04">Апрель</option>
+                                                        <option value="05">Май</option>
+                                                        <option value="06">Июнь</option>
+                                                        <option value="07">Июль</option>
+                                                        <option value="08">Август</option>
+                                                        <option value="09">Сентябрь</option>
+                                                        <option value="10">Октябрь</option>
+                                                        <option value="11">Ноябрь</option>
+                                                        <option value="12">Декабрь</option>
+                                                    </select>
+                                                    <div class="label-arrow">
+                                                        <i class="mdi mdi-chevron-down"></i>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                            <label for="exp__start-date-2" class="auth__label">
+                                                <input type="number" inputmode="numeric" maxlength="4" size="4" class="year__mask"
+                                                       data-type="year"
+                                                       name="exp__start-date-2" id="exp__start-date-2" required placeholder="Год">
+                                            </label>
+                                        </div>
+                                        <div class="label__error error__exp__start-date-1"></div>
+                                        <div class="label__error error__exp__start-date-2"></div>
+                                    </div>
+                                    <div class="auth__flex-mini">
+                                        <span>Окончание работы <m>*</m></span>
+                                        <div class="auth__flex">
+                                            <label for="exp__end-date-1" class="auth__label">
+                                                <div class="label__select-block">
+                                                    <select name="exp__end-date-1" id="exp__end-date-1">
+                                                        <option value="01">Январь</option>
+                                                        <option value="02">Февраль</option>
+                                                        <option value="03">Март</option>
+                                                        <option value="04">Апрель</option>
+                                                        <option value="05">Май</option>
+                                                        <option value="06">Июнь</option>
+                                                        <option value="07">Июль</option>
+                                                        <option value="08">Август</option>
+                                                        <option value="09">Сентябрь</option>
+                                                        <option value="10">Октябрь</option>
+                                                        <option value="11">Ноябрь</option>
+                                                        <option value="12">Декабрь</option>
+                                                    </select>
+                                                    <div class="label-arrow">
+                                                        <i class="mdi mdi-chevron-down"></i>
+                                                    </div>
+                                                </div>
+                                            </label>
+                                            <label for="exp__end-date-2" class="auth__label">
+                                                <input type="number" inputmode="numeric" maxlength="4" size="4" class="year__mask"
+                                                       data-type="year" name="exp__end-date-2" id="exp__end-date-2" placeholder="Год">
+                                            </label>
+                                        </div>
+                                        <div class="white__checkbox">
+                                            <input type="checkbox" class="white-checkbox" name="block__end-date" id="block__end-date" value="1">
+                                            <label for="block__end-date">По настоящее время</label>
+                                        </div>
+                                        <div class="label__error error__exp__start-date-1"></div>
+                                        <div class="label__error error__exp__start-date-2"></div>
+                                    </div>
+                                    <label for="phone" class="auth__label">
+                                        <span>Опишите, что вы делали на работе</span>
+                                        <textarea name="exp__text" id="exp__text" style="height:100px;" cols="30" rows="10" placeholder=""></textarea>
+                                        <div class="label__error error__exp__text"></div>
+                                    </label>
+                                </div>
+                                <div class="auth__form-exp auth__form__for__student">
+                                    <label for="prof__student" class="auth__label">
+                                        <span>Желаемая профессия <m>*</m></span>
+                                        <input type="text" name="prof__applicant" id="prof__student" required>
+                                        <div class="label__error error__prof__student"></div>
+                                    </label>
+                                    <label for="salary__student" class="auth__label">
+                                        <span>Зарплата от, руб. <m>*</m></span>
+                                        <input type="number" inputmode="numeric" maxlength="10" name="salary__student" id="salary__student" required>
+                                        <div class="label__error error__salary__student"></div>
+                                    </label>
+                                    <label for="ed__education" class="auth__label">
+                                        <span>Уровень образования <m>*</m></span>
+                                        <div class="label__select-block">
+                                            <select name="ed__education" id="ed__education">
+                                                <option value="01">Среднее специальное</option>
+                                                <option value="02">Незаконченное высшее</option>
+                                                <option value="03">Высшее</option>
+                                                <option value="04">Бакалавр</option>
+                                                <option value="05">Магистр</option>
+                                                <option value="06">Аспирант</option>
+                                                <option value="07">Кандидат наук</option>
+                                                <option value="08">Доктор наук</option>
+                                            </select>
+                                            <div class="label-arrow">
+                                                <i class="mdi mdi-chevron-down"></i>
+                                            </div>
+                                        </div>
+                                        <div class="label__error error__ed__education"></div>
+                                    </label>
+                                    <div class="auth__flex">
+                                        <label for="ed__company" class="auth__label">
+                                            <span>Учебное заведение <m>*</m></span>
+                                            <input type="email" name="ed__company" id="ed__company" required>
+                                            <div class="label__error error__ed__company"></div>
+                                        </label>
+                                        <label for="ed__year" class="auth__label">
+                                            <span>Год выпуска <m>*</m></span>
+                                            <input type="number" inputmode="numeric" maxlength="4" size="4" class="year__mask"
+                                                   data-type="year" name="ed__year" id="ed__year" placeholder="XXXX" required>
+                                            <div class="label__error error__ed__year"></div>
+                                        </label>
+                                    </div>
+                                    <label for="ed__prof" class="auth__label">
+                                        <span>Специальность <m>*</m></span>
+                                        <input type="text" name="ed__prof" id="ed__prof" required>
+                                        <div class="label__error error__ed__prof"></div>
+                                    </label>
+                                </div>
+                                <div class="auth__exp">
+                                    <div class="white__checkbox">
+                                        <label for="">
+                                            Продолжая регистрацию, вы принимаете <a href="">политику конфиденциальности</a> и
+                                            <a href="">правила портала</a></label>
+                                    </div>
+                                </div>
+                                <button class="auth__arrow signup__resume__exp" type="button"><i class="mdi mdi-arrow-right"></i></button>
+                            </form>
+                        </div>
+                        <div class="auth__create__resume auth__next auth__next-new">
+                            <div class="auth__step">
+                                <div class="step__one step__one-resume step__access">
+                                    <span><i class="mdi mdi-check"></i></span>
+                                    Персональная информация
+                                </div>
+                                <div class="step__two step__two-resume step__access">
+                                    <span><i class="mdi mdi-check"></i></span>
+                                    Профессиональная информация
+                                </div>
+                                <div class="step__three step__three-resume step__active">
+                                    <span>3</span>
+                                    Подтверждение
+                                </div>
+                            </div>
+                            <h1 class="auth__title">Подтверждение</h1>
+                            <span class="auth__span email__from__resume">Введите код, который был отправлен на [EMAIL]</span>
+                            <form class="auth__form auth__create__resume-form" action="" method="POST">
+
+                                <div class="pin__code-context">
+                                    <div class="pin__code-wrap pin__code-resume">
+                                        <input type="text" inputmode="numeric" class="pin__input" maxlength="1" size="1" data-index="0" tabindex="0" />
+                                        <input type="text" inputmode="numeric" class="pin__input" maxlength="1" size="1" data-index="1" tabindex="1" />
+                                        <input type="text" inputmode="numeric" class="pin__input" maxlength="1" size="1" data-index="2" tabindex="2" />
+                                        <input type="text" inputmode="numeric" class="pin__input" maxlength="1" size="1" data-index="3" tabindex="3" />
+                                        <input type="text" inputmode="numeric" class="pin__input" maxlength="1" size="1" data-index="4" tabindex="4" />
+                                        <input type="text" inputmode="numeric" class="pin__input" maxlength="1" size="1" data-index="5" tabindex="5" />
+                                    </div>
+                                    <button type="button">Отравить повторно</button>
+                                </div>
+
+
+                                <button class="auth__button signup__resume__create" type="button">Подтвердить</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="auth__center auth__company">
+                        <div class="auth__start__company auth__next auth__next-new">
+                            <div class="auth__step">
+                                <div class="step__one step__one-resume step__active">
+                                    <span>1</span>
+                                    Представитель организации
+                                </div>
+                                <div class="step__two step__two-resume">
+                                    <span>2</span>
+                                    Информация о организации
+                                </div>
+                                <div class="step__three step__three-resume">
+                                    <span>3</span>
+                                    Подтверждение
+                                </div>
+                            </div>
+                            <h1 class="auth__title">Представитель организации</h1>
+                            <span class="auth__span">На указанную электронную почту придёт код подтверждения и по ней будет осуществляться авторизация в системе</span>
+
+                            <form class="auth__form auth__start__company-form" action="" method="POST">
+                                <label for="contact" class="auth__label">
+                                    <span>Представитель компании <m>*</m></span>
+                                    <input type="text" name="contact" id="contact" required placeholder="Имя контактного лица">
+                                    <div class="label__error error__contact"></div>
+                                </label>
+                                <div class="auth__flex">
+                                    <label for="phone_company" class="auth__label">
+                                        <span>Номер телефона <m>*</m></span>
+                                        <input data-id="phone" type="text" inputmode="tel" name="phone_company" size="20" id="phone_company" class="phone__mask" required placeholder="7+">
+                                        <div class="label__error error__phone_company"></div>
+                                    </label>
+                                    <label for="email_company" class="auth__label">
+                                        <span>Электронная почта <m>*</m></span>
+                                        <input data-id="email" type="email" inputmode="email" name="email_company" id="email_company" required>
+                                        <div class="label__error error__email_company"></div>
+                                    </label>
+                                </div>
+                                <label for="type_company" class="auth__label">
+                                    <span>Тип компании <m>*</m></span>
+                                    <div class="label__select-block">
+                                        <select name="type_company" id="type_company">
+                                            <option value="01">Частная</option>
+                                            <option value="02">Государственная</option>
+                                            <option value="03">Муниципальная</option>
+                                            <option value="04">Собственность общественных организаций</option>
+                                            <option value="05">Смешанная</option>
+                                        </select>
+                                        <div class="label-arrow">
+                                            <i class="mdi mdi-chevron-down"></i>
+                                        </div>
+                                    </div>
+                                </label>
+                                <span class="auth__exp-text">Регистрация иностранным организациям пока недоступна</span>
+                                <label for="password_company" class="auth__label">
+                                    <span>Пароль <m>*</m></span>
+                                    <div class="label__password">
+                                        <input data-id="password" minlength="8" type="password" name="password_company" id="password_company" required>
+                                        <i class="mdi mdi-eye"></i>
+                                    </div>
+                                    <div class="label__error error__password_company"></div>
+                                </label>
+
+                                <button class="auth__arrow signup__company__next" type="button"><i class="mdi mdi-arrow-right"></i></button>
+                            </form>
+                        </div>
+                        <div class="auth__exp__company auth__next auth__next-new">
+                            <div class="auth__step">
+                                <div class="step__one step__one-resume step__access">
+                                    <span><i class="mdi mdi-check"></i></span>
+                                    Представитель организации
+                                </div>
+                                <div class="step__two step__two-resume step__active">
+                                    <span>2</span>
+                                    Информация о организации
+                                </div>
+                                <div class="step__three step__three-resume">
+                                    <span>3</span>
+                                    Подтверждение
+                                </div>
+                            </div>
+                            <h1 class="auth__title">Информация о организации</h1>
+                            <span class="auth__span">Расскажите о своём бизнесе</span>
+                            <form class="auth__form auth__exp__company-form" action="" method="POST" >
+                                <div class="auth__flex">
+                                    <label for="inn" class="auth__label">
+                                        <span>ИНН <m>*</m></span>
+                                        <input type="text" inputmode="numeric" maxlength="12" name="inn" id="inn" required>
+                                        <div class="label__error error__inn"></div>
+                                    </label>
+                                    <label for="ogrn" class="auth__label">
+                                        <span>ОГРН или ОГРНИП <m>*</m></span>
+                                        <input type="text" inputmode="numeric" maxlength="15" name="ogrn" id="ogrn" required>
+                                        <div class="label__error error__ogrn"></div>
+                                    </label>
+                                </div>
+                                <span class="auth__exp-text">Укажите ИНН или ОГРН / ОГРНИП и данные будут автоматически заполнены</span>
+
+                                <label for="name_company" class="auth__label">
+                                    <span>Название <m>*</m></span>
+                                    <input type="text" name="name_company" id="name_company" required>
+                                    <div class="label__error error__name_company"></div>
+                                </label>
+
+                                <label for="address_company" class="auth__label">
+                                    <span>Город <m>*</m></span>
+                                    <input type="text" name="address_company" id="address_company" required>
+                                    <div class="label__error error__address_company"></div>
+                                </label>
+
+                                <label for="ceo" class="auth__label">
+                                    <span>Руководитель <m>*</m></span>
+                                    <input type="text" name="prof__ceo" id="ceo" required>
+                                    <div class="label__error error__ceo"></div>
+                                </label>
+
+                                <div class="auth__exp">
+                                    <div class="white__checkbox">
+                                        <label for="">
+                                            Продолжая регистрацию, вы принимаете <a href="">политику конфиденциальности</a> и
+                                            <a href="">правила портала</a></label>
+                                    </div>
+                                </div>
+                                <button class="auth__arrow signup__company__exp" type="button"><i class="mdi mdi-arrow-right"></i></button>
+                            </form>
+                        </div>
+                        <div class="auth__create__company auth__next auth__next-new">
+                            <div class="auth__step">
+                                <div class="step__one step__one-resume step__access">
+                                    <span><i class="mdi mdi-check"></i></span>
+                                    Представитель организации
+                                </div>
+                                <div class="step__two step__two-resume step__access">
+                                    <span><i class="mdi mdi-check"></i></span>
+                                    Информация о организации
+                                </div>
+                                <div class="step__three step__three-resume step__active">
+                                    <span>3</span>
+                                    Подтверждение
+                                </div>
+                            </div>
+                            <h1 class="auth__title">Подтверждение</h1>
+                            <span class="auth__span email__from__company">Введите код, который был отправлен на [EMAIL]</span>
+                            <form class="auth__form auth__create__company-form" action="" method="POST">
+
+                                <div class="pin__code-context">
+                                    <div class="pin__code-wrap pin__code-company">
+                                        <input type="text" inputmode="numeric" class="pin__input" maxlength="1" size="1" data-index="0" tabindex="0" />
+                                        <input type="text" inputmode="numeric" class="pin__input" maxlength="1" size="1" data-index="1" tabindex="1" />
+                                        <input type="text" inputmode="numeric" class="pin__input" maxlength="1" size="1" data-index="2" tabindex="2" />
+                                        <input type="text" inputmode="numeric" class="pin__input" maxlength="1" size="1" data-index="3" tabindex="3" />
+                                        <input type="text" inputmode="numeric" class="pin__input" maxlength="1" size="1" data-index="4" tabindex="4" />
+                                        <input type="text" inputmode="numeric" class="pin__input" maxlength="1" size="1" data-index="5" tabindex="5" />
+                                    </div>
+                                    <button type="button">Отравить повторно</button>
+                                </div>
+
+
+                                <button class="auth__button signup__company__create" type="button">Подтвердить</button>
+                            </form>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="auth__start auth__next">
+                <h1 class="auth__title">Регистрация</h1>
+                <span class="auth__span">Вы в поисках работы или хотите найти сотрудника?</span>
+
+                <div class="auth__choice">
+                    <div>
+                        <input type="radio" class="choice__input" id="resume" name="choice" value="1">
+                        <label for="resume">
+                            <span><img src="../../src/images/static/dashboard/auth_resume.png" alt=""></span>
+                            Я в поиске работы
+                            <div><i class="mdi mdi-check"></i></div>
+                        </label>
+                    </div>
+
+                    <div>
+                        <input type="radio" class="choice__input" id="company" name="choice" value="2">
+                        <label for="company">
+                            <span><img src="../../src/images/static/dashboard/auth_job.png" alt=""></span>
+                            Я хочу найти сотрудника
+                            <div><i class="mdi mdi-check"></i></div>
+                        </label>
+                    </div>
+                </div>
+
+                <button class="auth__arrow signup__start" type="button"><i class="mdi mdi-arrow-right"></i></button>
+            </div>
+            <div class="auth__link">
+                У вас есть аккаунт? <a href="">Войти</a>
+            </div>
+        </div>
+    </section>
+</main>
+<!-- / MAIN CONTENT -->
+
+<!-- INCLUDE SCRIPTS -->
+<script src="../../build/vendor/imask/imask.min.js"></script>
+
+<script src="../../build/signup.bundle.js"></script>
+<!-- / INCLUDE SCRIPTS -->
+
+</body>
+</html>

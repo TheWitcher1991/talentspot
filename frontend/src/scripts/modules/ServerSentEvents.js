@@ -7,11 +7,6 @@
  *
  * @class
  */
-class ServerSentEvents {
+export default class ServerSentEvents {
 
-
-}
-
-export {
-    ServerSentEvents
 }

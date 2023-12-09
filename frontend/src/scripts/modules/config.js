@@ -1,4 +1,61 @@
 /**
+ * Проверка, что это email
+ * @param {string} str
+ * @return {boolean}
+ */
+const isEmail = str => {
+    return  /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu
+        .test(String(str).toLowerCase())
+}
+
+
+/**
+ * Проверка, что это ИНН
+ * @param {string} i
+ * @return {boolean}
+ */
+const isINN = i => {
+    if (i.match(/\D/)) return false
+
+    let inn = i.match(/(\d)/g)
+
+    if (inn.length === 10) {
+        return inn[9] === String(((
+            2 * inn[0] + 4 * inn[1] + 10 * inn[2] +
+            3 * inn[3] + 5 * inn[4] +  9 * inn[5] +
+            4 * inn[6] + 6 * inn[7] +  8 * inn[8]
+        ) % 11) % 10)
+    } else if (inn.length === 12) {
+        return inn[10] === String(((
+            7 * inn[0] + 2 * inn[1] + 4 * inn[2] +
+            10 * inn[3] + 3 * inn[4] + 5 * inn[5] +
+            9 * inn[6] + 4 * inn[7] + 6 * inn[8] +
+            8 * inn[9]
+        ) % 11) % 10) && inn[11] === String(((
+            3 * inn[0] +  7 * inn[1] + 2 * inn[2] +
+            4 * inn[3] + 10 * inn[4] + 3 * inn[5] +
+            5 * inn[6] +  9 * inn[7] + 4 * inn[8] +
+            6 * inn[9] +  8 * inn[10]
+        ) % 11) % 10)
+    }
+
+    return false
+}
+
+/**
+ * Проверка, что это ОГРН
+ * @param {string} ogrn
+ * @return {boolean}
+ */
+const isOGRN = ogrn => {
+    ogrn += ''
+
+    if (ogrn.length === 13 && (ogrn.slice(12,13) === ((ogrn.slice(0,-1)) % 11 + '').slice(-1))) {
+        return true
+    } else return ogrn.length === 15 && (ogrn.slice(14, 15) === ((ogrn.slice(0, -1)) % 13 + '').slice(-1));
+}
+
+/**
  * Проверить, что элемент - массив
  * @param {any} vars
  * @returns {*}
@@ -119,6 +176,64 @@ const mask = el => {
 }
 
 /**
+ * Запуска кода JavaScript, как только объектная модель документа (DOM) страницы
+ * станет безопасной для манипулирования
+ * @param {function} callback
+ */
+let ready = callback => {
+    if (document.readyState !== 'loading') callback();
+    else document.addEventListener('DOMContentLoaded', callback);
+}
+
+/**
+ *
+ * @param {NodeListOf<HTMLObjectElement>} nodeList
+ * @return {number}
+ */
+const HandlingInputError = nodeList => {
+    let err = 0
+
+    const NO_TYPE = ['i_choice', 'password', 'phone', 'email'],
+          NO_DATA = ['year']
+
+    document.querySelectorAll('.label__error').forEach(el => el.style.display = 'none')
+    nodeList.forEach(el => el.classList.remove('input__error'))
+
+    nodeList.forEach(el => {
+        let id = el.id
+
+        let tmp = text => {
+            el.classList.add('input__error')
+            document.querySelector(`.error__${id}`).style.display = 'block'
+            document.querySelector(`.error__${id}`).innerHTML = text
+            err++
+        }
+
+        if (el.value.trim() === '' && !NO_TYPE.includes(id) && !NO_DATA.includes(el.dataset.type)) {
+            tmp('Данные указаны неверно')
+        }
+
+        if (el.dataset.id === 'email' && (el.value.trim() === '' || !isEmail(el.value))) {
+            tmp('Email указан неверно')
+        }
+
+        if (el.dataset.id === 'password' && (el.value.trim() === '' || el.value.length < 8)) {
+            tmp('Пароль должен быть не менее 8 символов')
+        }
+
+        if (el.dataset.id === 'phone' && (el.value.trim() === '' || el.value.length < 15)) {
+            tmp( 'Телефон указан неверно')
+        }
+
+        if (el.dataset.type === 'year' && (el.value.trim() === '' || el.value.length < 4)) {
+            tmp('Год указан неверно')
+        }
+    })
+
+    return err
+}
+
+/**
  * GET параметры страницы
  * @type {{}}
  * @returns {array}
@@ -131,7 +246,7 @@ const $_GET = window
     .reduce(
         function(p,e){
             let a = e.split('=');
-            p[ decodeURIComponent(a[0])] = decodeURIComponent(a[1]);
+            p[decodeURIComponent(a[0])] = decodeURIComponent(a[1]);
             return p;
         },
         {}
@@ -139,11 +254,16 @@ const $_GET = window
 
 export {
     isset,
+    isEmail,
+    isINN,
+    isOGRN,
     isArray,
     isObject,
     isFunction,
     MessageBox,
     RenderSearchError,
+    HandlingInputError,
+    ready,
     mask,
     $_GET
 }

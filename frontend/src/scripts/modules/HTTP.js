@@ -7,17 +7,24 @@
  *
  * @class
  */
-class HTTP {
+export default class HTTP {
+
+    static #TYPE_URLENCODED = 'application/x-www-form-urlencoded'
+    static #TYPE_JSON = 'application/json'
+    static #TYPE_FROM_DATA = 'multipart/form-data'
+    static #TYPE_PLAIN = 'text/plain'
+    static #TYPE_XML = 'application/xml, text/xml'
+
     /**
      *
      * @return {XMLHttpRequest|boolean}
      */
-    static getXMLHttp = () => {
+    static #getXMLHttp = () => {
         try {
             this.xmlHttp = new window.XMLHttpRequest()
         } catch (e) {
-            try{
-                this.xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+            try {
+                this.xmlHttp = new ActiveXObject('Microsoft.XMLHTTP')
             } catch(e) {
                 console.log('Your browser does not support AJAX!')
                 return false;
@@ -28,33 +35,62 @@ class HTTP {
     }
 
     /**
-     *
-     * @param options {object} - параметры ajax запроса
+     * AJAX запрос на базе XMLHttpRequest
+     * @param {{
+     *     method: string,
+     *     data: Document | XMLHttpRequestBodyInit | null,
+     *     url: string,
+     *     ok: function,
+     *     error: function,
+     *     async: boolean,
+     *     cache: boolean,
+     *     dataType: string,
+     *     contentType: string
+     * }} options - параметры ajax запроса
      */
     static ajax = options => {
 
-        let xhr = this.getXMLHttp()
+        let xhr = this.#getXMLHttp()
 
-        let { type, method, data, url, async, cache, ok, error } = options
+        let {
+            method,
+            data,
+            url,
+            ok,
+            error,
+            async = true,
+            cache = true,
+            dataType = 'json',
+            contentType = this.#TYPE_JSON
+        } = options
 
         xhr.open(method, url, async)
 
-        xhr.responseType = type
-        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded; charset=UTF-8')
+        xhr.responseType = dataType
+
+        xhr.setRequestHeader('Content-type', contentType)
+        xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest')
 
         if (!cache) {
             xhr.setRequestHeader('Cache-Control', 'no-cache, no-store, max-age=0')
             xhr.setRequestHeader('Pragma', 'no-cache')
         }
 
-        xhr.onload = ok(xhr)
+        xhr.onload = () => {
+            if (xhr.status >= 200 && xhr.status < 300 || xhr.status === 304)
+                ok(xhr)
+            else
+                error(xhr)
+        }
+
         xhr.onerror = error(xhr)
 
-        xhr.send(data)
+        try {
+            xhr.send(data)
+        } catch (e) {
+            throw e;
+        }
 
     }
-}
 
-export {
-    HTTP
 }

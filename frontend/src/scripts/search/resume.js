@@ -1,4 +1,3 @@
-import { AjaxHandler } from '../modules/AjaxHandler'
 
 (function () {
 

@@ -75,6 +75,11 @@ body {
     overscroll-behavior: none;
     -webkit-text-size-adjust: 100%;
     overflow-x: hidden;
+    text-rendering: optimizeLegibility;
+    font-smoothing: antialiased;
+    -moz-font-feature-settings: "liga" on;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 #wrapper {

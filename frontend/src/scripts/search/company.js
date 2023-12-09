@@ -1,4 +1,4 @@
-import { AjaxHandler } from '../modules/AjaxHandler'
+
 
 (function () {
 
@@ -39,23 +39,6 @@ import { AjaxHandler } from '../modules/AjaxHandler'
                 </a>
             `
         })
-
-        /* HTTP.ajax({
-            type: 'json',
-            method: 'POST',
-            async: true,
-            cache: false,
-            url: '/ajax/login',
-            data: ``,
-            ok: (xhr) => {
-                if (xhr.status === 200) {
-
-                }
-            },
-            error: (xhr) => {
-                console.log(xhr)
-            }
-        }) */
 
     })
 

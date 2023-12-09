@@ -1,4 +1,4 @@
-import { HTTP } from './HTTP'
+import HTTP from './HTTP'
 import { isFunction, isset, RenderSearchError, $_GET } from './config'
 
 /**
@@ -6,7 +6,7 @@ import { isFunction, isset, RenderSearchError, $_GET } from './config'
  *
  * @class
  */
-class AjaxHandler {
+export default class AjaxHandler {
 
     /**
      * @constructor
@@ -165,8 +165,4 @@ class AjaxHandler {
         }
     }
 
-}
-
-export {
-    AjaxHandler
 }

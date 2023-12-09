@@ -51,6 +51,10 @@ module.exports = {
             ...baseModule,
             `${SCRIPT}/guest/signup.js`
         ],
+        lk: [
+            ...baseModule,
+            `${SCRIPT}/applicant/lk.js`
+        ],
         styles: [
             `${EXTERNAL}/index.scss`
         ],
