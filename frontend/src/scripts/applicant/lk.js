@@ -17,17 +17,16 @@ import {TRUE} from "sass";
 
         let lkSwap = localStorage.getItem('swap')
 
-        localStorage.setItem('swap', 'max')
-
         let swapMin = () => {
             localStorage.removeItem('swap')
             localStorage.setItem('swap', 'min')
             lkMenu.classList.remove('lk__menu-max')
-            lkMenu.classList.add('lk__menu-min')
             lkPage.classList.remove('lk__page-max')
-            lkPage.classList.add('lk__page-min')
             lkReplace.classList.remove('lk__menu-left')
+            lkMenu.classList.add('lk__menu-min')
+            lkPage.classList.add('lk__page-min')
             lkReplace.classList.add('lk__menu-right')
+            lkReplace.innerHTML = '<i class="mdi mdi-unfold-more-vertical"></i>'
         }
 
 
@@ -40,18 +39,20 @@ import {TRUE} from "sass";
             lkPage.classList.add('lk__page-max')
             lkReplace.classList.remove('lk__menu-right')
             lkReplace.classList.add('lk__menu-left')
+            lkReplace.innerHTML = '<i class="mdi mdi-unfold-less-vertical"></i>'
+
         }
 
         !isset(lkSwap) || lkSwap === 'max' ?  swapMax() : swapMin()
 
-
         lkReplace.addEventListener('click', function () {
-            if (this.classList.contains('lk__menu-left')) {
-                swapMin()
+
+            if (lkReplace.classList[1] === 'lk__menu-left') {
+                return swapMin()
             }
 
-            if (this.classList.contains('lk__menu-right')) {
-                swapMax()
+            if (lkReplace.classList[1] === 'lk__menu-right') {
+                return swapMax()
             }
         })
 

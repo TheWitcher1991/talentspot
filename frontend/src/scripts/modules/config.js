@@ -8,7 +8,6 @@ const isEmail = str => {
         .test(String(str).toLowerCase())
 }
 
-
 /**
  * Проверка, что это ИНН
  * @param {string} i

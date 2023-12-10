@@ -1,5 +1,10 @@
 # web-services «TalentSpot»
 
+<h2 align="center">
+© Общество с ограниченной ответственностью 
+«ТалентСпот» (LLC «ТалентСпот»)
+</h2>
+
 apache + uwsgi
 
 - Python version 3.12.0
