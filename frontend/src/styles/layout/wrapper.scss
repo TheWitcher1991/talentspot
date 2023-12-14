@@ -226,139 +226,141 @@
     }
 }
 
+.custom-checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.custom__checkbox > label {
+    font-size: 14px;
+    color: var(--color-fg-800);
+    font-weight: 500;
+}
+
+.custom-checkbox+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+}
+
+.custom-checkbox+label::before {
+    content: '';
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid var(--color-fg-800);
+    border-radius: 5px;
+    margin-right: 8px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 60% 60%;
+}
+
+/* стили при наведении курсора на checkbox */
+.custom-checkbox:not(:disabled):not(:checked)+label:hover::before {
+    border-color: var(--color-fg-500);
+}
+
+/* стили для активного чекбокса (при нажатии на него) */
+.custom-checkbox:not(:disabled):active+label::before {
+    background-color: var(--color-fg-400);
+    border-color: var(--color-fg-400);
+}
+
+/* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+.custom-checkbox:focus:not(:checked)+label::before {
+    border-color: var(--color-fg-800);
+}
+
+/* стили для чекбокса, находящегося в состоянии checked */
+.custom-checkbox:checked+label::before {
+    border-color: var(--color-fg-main);
+    background-color: var(--color-fg-main);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6'%3e%3cpath fill='%23fff' d='M0.292893 3.82843C-0.0976312 3.4379 -0.0976308 2.80474 0.292893 2.41421C0.683417 2.02369 1.31658 2.02369 1.70711 2.41421L3.82843 4.53553L8.07107 0.292893C8.46159 -0.0976311 9.09476 -0.0976311 9.48528 0.292893C9.87581 0.683418 9.87581 1.31658 9.48528 1.70711L4.61042 6.58197C4.5884 6.60917 4.56475 6.63548 4.53945 6.66077C4.14893 7.0513 3.51576 7.0513 3.12524 6.66077L0.292893 3.82843Z'/%3e%3c/svg%3e");
+}
+
+/* стили для чекбокса, находящегося в состоянии disabled */
+.custom-checkbox:disabled+label::before {
+    background-color: var(--color-fg-400);
+    border-color: var(--color-fg-400);
+}
+
+.custom-radio {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.custom__radio > label {
+    font-size: 14px;
+    color: var(--color-fg-800);
+    font-weight: 500;
+}
+
+.custom-radio+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+}
+
+.custom-radio+label::before {
+    content: '';
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid var(--color-fg-800);
+    border-radius: 20px;
+    margin-right: 8px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+}
+
+/* стили при наведении курсора на checkbox */
+.custom-radio:not(:disabled):not(:checked)+label:hover::before {
+    border-color: var(--color-fg-500);
+}
+
+/* стили для активного чекбокса (при нажатии на него) */
+.custom-radio:not(:disabled):active+label::before {
+    background-color: var(--color-fg-400);
+    border-color: var(--color-fg-400);
+}
+
+/* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+.custom-radio:focus:not(:checked)+label::before {
+    border-color: var(--color-fg-800);
+}
+
+/* стили для чекбокса, находящегося в состоянии checked */
+.custom-radio:checked+label::before {
+    border-color: var(--color-fg-main);
+    background-color: var(--color-fg-main);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+}
+
+/* стили для чекбокса, находящегося в состоянии disabled */
+.custom-radio:disabled+label::before {
+    background-color: var(--color-fg-400);
+    border-color: var(--color-fg-400);
+}
+
 .filter__label {
     display: flex;
     align-items: center;
     margin: 0 0 8px 0;
     justify-content: space-between;
 
-    .custom-checkbox {
-        position: absolute;
-        z-index: -1;
-        opacity: 0;
-    }
 
-    .custom__checkbox > label {
-        font-size: 14px;
-        color: var(--color-fg-800);
-        font-weight: 500;
-    }
-
-    .custom-checkbox+label {
-        display: inline-flex;
-        align-items: center;
-        user-select: none;
-    }
-
-    .custom-checkbox+label::before {
-        content: '';
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 18px;
-        height: 18px;
-        flex-shrink: 0;
-        flex-grow: 0;
-        border: 1px solid var(--color-fg-800);
-        border-radius: 5px;
-        margin-right: 8px;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: 60% 60%;
-    }
-
-    /* стили при наведении курсора на checkbox */
-    .custom-checkbox:not(:disabled):not(:checked)+label:hover::before {
-        border-color: var(--color-fg-500);
-    }
-
-    /* стили для активного чекбокса (при нажатии на него) */
-    .custom-checkbox:not(:disabled):active+label::before {
-        background-color: var(--color-fg-400);
-        border-color: var(--color-fg-400);
-    }
-
-    /* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
-    .custom-checkbox:focus:not(:checked)+label::before {
-        border-color: var(--color-fg-800);
-    }
-
-    /* стили для чекбокса, находящегося в состоянии checked */
-    .custom-checkbox:checked+label::before {
-        border-color: var(--color-fg-main);
-        background-color: var(--color-fg-main);
-        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6'%3e%3cpath fill='%23fff' d='M0.292893 3.82843C-0.0976312 3.4379 -0.0976308 2.80474 0.292893 2.41421C0.683417 2.02369 1.31658 2.02369 1.70711 2.41421L3.82843 4.53553L8.07107 0.292893C8.46159 -0.0976311 9.09476 -0.0976311 9.48528 0.292893C9.87581 0.683418 9.87581 1.31658 9.48528 1.70711L4.61042 6.58197C4.5884 6.60917 4.56475 6.63548 4.53945 6.66077C4.14893 7.0513 3.51576 7.0513 3.12524 6.66077L0.292893 3.82843Z'/%3e%3c/svg%3e");
-    }
-
-    /* стили для чекбокса, находящегося в состоянии disabled */
-    .custom-checkbox:disabled+label::before {
-        background-color: var(--color-fg-400);
-        border-color: var(--color-fg-400);
-    }
-
-    .custom-radio {
-        position: absolute;
-        z-index: -1;
-        opacity: 0;
-    }
-
-    .custom__radio > label {
-        font-size: 14px;
-        color: var(--color-fg-800);
-        font-weight: 500;
-    }
-
-    .custom-radio+label {
-        display: inline-flex;
-        align-items: center;
-        user-select: none;
-    }
-
-    .custom-radio+label::before {
-        content: '';
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 18px;
-        height: 18px;
-        flex-shrink: 0;
-        flex-grow: 0;
-        border: 1px solid var(--color-fg-800);
-        border-radius: 20px;
-        margin-right: 8px;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: 50% 50%;
-    }
-
-    /* стили при наведении курсора на checkbox */
-    .custom-radio:not(:disabled):not(:checked)+label:hover::before {
-        border-color: var(--color-fg-500);
-    }
-
-    /* стили для активного чекбокса (при нажатии на него) */
-    .custom-radio:not(:disabled):active+label::before {
-        background-color: var(--color-fg-400);
-        border-color: var(--color-fg-400);
-    }
-
-    /* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
-    .custom-radio:focus:not(:checked)+label::before {
-        border-color: var(--color-fg-800);
-    }
-
-    /* стили для чекбокса, находящегося в состоянии checked */
-    .custom-radio:checked+label::before {
-        border-color: var(--color-fg-main);
-        background-color: var(--color-fg-main);
-        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
-    }
-
-    /* стили для чекбокса, находящегося в состоянии disabled */
-    .custom-radio:disabled+label::before {
-        background-color: var(--color-fg-400);
-        border-color: var(--color-fg-400);
-    }
 
     > span {
         background: var(--color-fg-500);
@@ -1051,5 +1053,143 @@
 
     > div {
         margin: 26px 0 0 0;
+    }
+}
+
+.flex__align {
+    display: flex;
+    margin: 0 0 20px 0;
+
+    > span {
+        font-size: 14px;
+        display: block;
+        width: 250px;
+        font-weight: 500;
+    }
+}
+
+.flex__align-content > div {
+    margin: 0 0 6px 0;
+}
+
+.lk__delete-link {
+    display: inline-flex;
+    background: var(--color-error);
+    color: var(--color-fg-white);
+    padding: 20px 36px;
+    border-radius: 20px;
+    font-size: 14px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 26px 0;
+    transition: all .2s linear;
+    border: 0;
+    cursor: pointer;
+
+    &:hover {
+        background: var(--color-fg-main);
+    }
+
+    span {
+        font-size: 17px;
+        display: block;
+    }
+
+    i {
+        font-size: 30px;
+    }
+}
+
+.document__name-wrap {
+    margin: 50px 0 0 0;
+    padding: 50px 30px;
+    border-radius: 20px;
+    background: var(--color-bg-main);
+    color: var(--color-fg-white);
+    display: flex;
+    justify-content: space-between;
+
+    .document__name-left {
+        max-width: 70%;
+
+        h2 {
+            font-size: 50px;
+            font-weight: 700;
+            line-height: 0.6;
+
+            m {
+                font-size: 20px;
+                font-weight: 400;
+                color: var(--color-fg-main);
+            }
+        }
+
+        > div {
+            margin: 46px 0 0 0;
+
+            span {
+                margin: 0 0 6px 0;
+                display: flex;
+
+                m {
+                    font-weight: 500;
+                    color: var(--color-fg-main);
+                    width: 100px;
+                }
+            }
+        }
+    }
+
+    .document__name-right {
+
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: right;
+
+        img {
+            width: 110px;
+            height: 110px;
+        }
+
+        span {
+            margin: 20px 0 0;
+            display: block;
+            width: 300px;
+            font-size: 15px;
+            text-align: right;
+            text-wrap: balance
+        }
+    }
+}
+
+.document__list {
+    margin: 50px 0 0 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    > a {
+        display: block;
+        width: 33%;
+        text-align: left;
+        margin: 0 0 40px 0;
+
+
+        img {
+            width: 280px;
+            border-radius: 20px;
+            border: 1px solid var(--color-bg-main);
+        }
+
+        span {
+            margin: 16px 0 0 0;
+            color: var(--color-fg-main);
+            font-size: 16px;
+            display: block;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
     }
 }

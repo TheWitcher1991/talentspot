@@ -37,6 +37,12 @@
     position: relative;
 }
 
+.header__logo {
+    img {
+        height: 55px;
+    }
+}
+
 .header__ul {
     display: flex;
     align-items: center;

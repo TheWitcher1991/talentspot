@@ -345,7 +345,7 @@
                     </div>
 
                     <div class="auth__center auth__company">
-                        <div class="auth__start__company auth__next auth__next-new">
+                        <div class="auth__starts__company auth__next auth__next-new">
                             <div class="auth__step">
                                 <div class="step__one step__one-resume step__active">
                                     <span>1</span>
@@ -361,12 +361,12 @@
                                 </div>
                             </div>
                             <h1 class="auth__title">Представитель организации</h1>
-                            <span class="auth__span">На указанную электронную почту придёт код подтверждения и по ней будет осуществляться авторизация в системе</span>
+                            <span class="auth__span">На указанную электронную почту придёт код подтверждения и по ней будет осуществляться авторизация в системе главного администратора (менеджера)</span>
 
                             <form class="auth__form auth__start__company-form" action="" method="POST">
                                 <label for="contact" class="auth__label">
                                     <span>Представитель компании <m>*</m></span>
-                                    <input type="text" name="contact" id="contact" required placeholder="Имя контактного лица">
+                                    <input type="text" name="contact" id="contact" required placeholder="Имя и фамилия ">
                                     <div class="label__error error__contact"></div>
                                 </label>
                                 <div class="auth__flex">
@@ -386,6 +386,7 @@
                                     <div class="label__select-block">
                                         <select name="type_company" id="type_company">
                                             <option value="01">Частная</option>
+                                            <option value="01">ИП</option>
                                             <option value="02">Государственная</option>
                                             <option value="03">Муниципальная</option>
                                             <option value="04">Собственность общественных организаций</option>
@@ -409,7 +410,7 @@
                                 <button class="auth__arrow signup__company__next" type="button"><i class="mdi mdi-arrow-right"></i></button>
                             </form>
                         </div>
-                        <div class="auth__exp__company auth__next auth__next-new">
+                        <div class="auth__start__company auth__next auth__next-new">
                             <div class="auth__step">
                                 <div class="step__one step__one-resume step__access">
                                     <span><i class="mdi mdi-check"></i></span>
@@ -425,7 +426,7 @@
                                 </div>
                             </div>
                             <h1 class="auth__title">Информация о организации</h1>
-                            <span class="auth__span">Расскажите о своём бизнесе</span>
+                            <span class="auth__span">Укажите ИНН или ОГРН / ОГРНИП и данные будут автоматически заполнены</span>
                             <form class="auth__form auth__exp__company-form" action="" method="POST" >
                                 <div class="auth__flex">
                                     <label for="inn" class="auth__label">
@@ -439,7 +440,7 @@
                                         <div class="label__error error__ogrn"></div>
                                     </label>
                                 </div>
-                                <span class="auth__exp-text">Укажите ИНН или ОГРН / ОГРНИП и данные будут автоматически заполнены</span>
+                                <span class="auth__exp-text"></span>
 
                                 <label for="name_company" class="auth__label">
                                     <span>Название <m>*</m></span>

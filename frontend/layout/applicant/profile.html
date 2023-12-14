@@ -1,9 +1,14 @@
 <!DOCTYPE html>
-<!--[if lt IE 6 ]><html class="ie ie6" lang="ru" dir="ltr"> <![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" lang="ru" dir="ltr"> <![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="ru" dir="ltr"> <![endif]-->
-<!--[if IE 9 ]><html class="ie ie9" lang="ru" dir="ltr"> <![endif]-->
-<!--[if IE 10 ]><html class="ie ie10" lang="ru" dir="ltr"> <![endif]-->
+<!--[if lt IE 6 ]>
+<html class="ie ie6" lang="ru" dir="ltr"> <![endif]-->
+<!--[if IE 7 ]>
+<html class="ie ie7" lang="ru" dir="ltr"> <![endif]-->
+<!--[if IE 8 ]>
+<html class="ie ie8" lang="ru" dir="ltr"> <![endif]-->
+<!--[if IE 9 ]>
+<html class="ie ie9" lang="ru" dir="ltr"> <![endif]-->
+<!--[if IE 10 ]>
+<html class="ie ie10" lang="ru" dir="ltr"> <![endif]-->
 <!--[if (gte IE 11)|!(IE)]><!-->
 <html lang="ru" dir="ltr" theme="light" xmlns="http://www.w3.org/1999/html">
 <!--<![endif]-->
@@ -33,7 +38,37 @@
 
     <!-- SCRIPT FOR OLD BROWSERS -->
     <script type="text/javascript">
-        !function(){"use strict";function trackOldBrowserEvent(){var t=function createXmlHttpRequestObject(){var t;try{t=new XMLHttpRequest}catch(r){for(var e=new Array("MSXML2.XMLHHTP.11.0","MSXML2.XMLHHTP.10.0","MSXML2.XMLHHTP.9.0","MSXML2.XMLHHTP.8.0","MSXML2.XMLHHTP.7.0","MSXML2.XMLHHTP.6.0","MSXML2.XMLHHTP.5.0","MSXML2.XMLHHTP.4.0","MSXML2.XMLHHTP.3.0","MSXML2.XMLHHTP","Microsoft.XMLHHTP"),s=0;s<e.length&&!t;s++)try{t=new ActiveXObject(e[s])}catch(t){}}return null!=t?t:void 0}(),e=new Object;return e.open="/badbrowser?status="+(0!==t.status&&t.status),e.xhr=t.responseURL?t.responseURL:"/badbrowser?status="+(0!==t.status&&t.status),t.open("GET",e.open,!0),t.setRequestHeader("Content-Type","text/html"),t.setRequestHeader("X-Requested-With","XMLHttpRequest"),t.onreadystatechange=function(){if(4===t.readyState&&(t.status>=200&&t.status<300||304===t.status||0===t.status&&"file:"===protocol))try{location.replace(t.responseURL?t.responseURL:"/badbrowser?status="+t.status)}catch(t){}},t.send(e.xhr?e.xhr:null),t}!function checkOldBrowser(){if(document.body)try{"CSS"in window&&CSS.supports("display","flex")&&"undefined"!=typeof Symbol||trackOldBrowserEvent()}catch(t){}else setTimeout(checkOldBrowser,100)}()}();
+        !function () {
+            "use strict";
+
+            function trackOldBrowserEvent() {
+                var t = function createXmlHttpRequestObject() {
+                    var t;
+                    try {
+                        t = new XMLHttpRequest
+                    } catch (r) {
+                        for (var e = new Array("MSXML2.XMLHHTP.11.0", "MSXML2.XMLHHTP.10.0", "MSXML2.XMLHHTP.9.0", "MSXML2.XMLHHTP.8.0", "MSXML2.XMLHHTP.7.0", "MSXML2.XMLHHTP.6.0", "MSXML2.XMLHHTP.5.0", "MSXML2.XMLHHTP.4.0", "MSXML2.XMLHHTP.3.0", "MSXML2.XMLHHTP", "Microsoft.XMLHHTP"), s = 0; s < e.length && !t; s++) try {
+                            t = new ActiveXObject(e[s])
+                        } catch (t) {
+                        }
+                    }
+                    return null != t ? t : void 0
+                }(), e = new Object;
+                return e.open = "/badbrowser?status=" + (0 !== t.status && t.status), e.xhr = t.responseURL ? t.responseURL : "/badbrowser?status=" + (0 !== t.status && t.status), t.open("GET", e.open, !0), t.setRequestHeader("Content-Type", "text/html"), t.setRequestHeader("X-Requested-With", "XMLHttpRequest"), t.onreadystatechange = function () {
+                    if (4 === t.readyState && (t.status >= 200 && t.status < 300 || 304 === t.status || 0 === t.status && "file:" === protocol)) try {
+                        location.replace(t.responseURL ? t.responseURL : "/badbrowser?status=" + t.status)
+                    } catch (t) {
+                    }
+                }, t.send(e.xhr ? e.xhr : null), t
+            }
+
+            !function checkOldBrowser() {
+                if (document.body) try {
+                    "CSS" in window && CSS.supports("display", "flex") && "undefined" != typeof Symbol || trackOldBrowserEvent()
+                } catch (t) {
+                } else setTimeout(checkOldBrowser, 100)
+            }()
+        }();
     </script>
     <!-- / SCRIPT FOR OLD BROWSERS -->
 
@@ -66,62 +101,100 @@
                 <ul class="lk__menu-ul">
                     <li>
                         <a class="lk__link" href="">
-                            <i class="mdi mdi-home-variant-outline"></i>
-                            <div class="lk__link-title">Главная</div>
+                            <span>
+                                <i class="mdi mdi-home-variant-outline"></i>
+                                <div class="lk__link-title">Главная</div>
+                            </span>
                         </a>
                     </li>
                     <li>
                         <a class="lk__link lk__link-active" href="">
-                            <i class="mdi mdi-account-outline"></i>
-                            <div class="lk__link-title">Профиль</div>
+                            <span>
+                                 <i class="mdi mdi-account-outline"></i>
+                                <div class="lk__link-title">Профиль</div>
+                            </span>
                         </a>
                     </li>
                     <li>
                         <a class="lk__link" href="">
-                            <i class="mdi mdi-chart-line-variant"></i>
-                            <div class="lk__link-title">Дашборд</div>
+                            <span>
+                                <i class="mdi mdi-chart-line-variant"></i>
+                                <div class="lk__link-title">Дашборд</div>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="lk__link">
+                            <span>
+                                <i class="mdi mdi-database-lock-outline"></i>
+                                <div class="lk__link-title">Мои резюме</div>
+                            </span>
+                            <i class="mdi mdi-chevron-down"></i>
+                        </a>
+                        <ul class="lk__menu-pop">
+                            <li><a href="">Список резюме</a></li>
+                            <li><a href="">Добавить резюме</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="lk__link" href="">
+                            <span>
+                                  <i class="mdi mdi-briefcase-outline"></i>
+                                <div class="lk__link-title">Мои отклики</div>
+                            </span>
                         </a>
                     </li>
                     <li>
                         <a class="lk__link" href="">
-                            <i class="mdi mdi-database-lock-outline"></i>
-                            <div class="lk__link-title">Мои резюме</div>
+                            <span>
+                                   <i class="mdi mdi-key-outline"></i>
+                                <div class="lk__link-title">Безопасность</div>
+                            </span>
                         </a>
                     </li>
                     <li>
                         <a class="lk__link" href="">
-                            <i class="mdi mdi-briefcase-outline"></i>
-                            <div class="lk__link-title">Мои отклики</div>
+                            <span>
+                                   <i class="mdi mdi-chat-outline"></i>
+                                <div class="lk__link-title">Чат</div>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="lk__link">
+                            <span>
+                                 <i class="mdi mdi-view-grid-outline"></i>
+                                <div class="lk__link-title">Ещё сервисы</div>
+                            </span>
+                            <i class="mdi mdi-chevron-down"></i>
+                        </a>
+                        <ul class="lk__menu-pop">
+                            <li><a href="">Отзывы</a></li>
+                            <li><a href="">Подписи</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="lk__link" href="">
+                            <span>
+                               <i class="mdi mdi-head-lightbulb-outline"></i>
+                                <div class="lk__link-title">Есть идея</div>
+                            </span>
                         </a>
                     </li>
                     <li>
                         <a class="lk__link" href="">
-                            <i class="mdi mdi-key-outline"></i>
-                            <div class="lk__link-title">Безопасность</div>
+                            <span>
+                               <i class="mdi mdi-handshake-outline"></i>
+                                <div class="lk__link-title">Центр поддержки</div>
+                            </span>
                         </a>
                     </li>
                     <li>
                         <a class="lk__link" href="">
-                            <i class="mdi mdi-chat-outline"></i>
-                            <div class="lk__link-title">Чат</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="lk__link" href="">
-                            <i class="mdi mdi-handshake-outline"></i>
-                            <div class="lk__link-title">Центр поддержки</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="lk__link" href="">
-                            <i class="mdi mdi-dots-horizontal-circle-outline"></i>
-                            <div class="lk__link-title">Прочее</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="lk__link" href="">
-                            <i class="mdi mdi-logout"></i>
-                            <div class="lk__link-title">Выход</div>
+                            <span>
+                                <i class="mdi mdi-logout"></i>
+                                <div class="lk__link-title">Выход</div>
+                            </span>
                         </a>
                     </li>
                 </ul>
@@ -138,8 +211,31 @@
                     <div class="lk__menu-replace">
 
                     </div>
+
+                    <div class="lk__search-wrapper">
+                        <label for="lk__search" class="lk__search-label">
+                            <i class="mdi mdi-magnify"></i>
+                            <input type="text" name="lk__search" id="lk__search" placeholder="Введите для поиска...">
+                        </label>
+                        <div class="lk__search-result">
+
+                        </div>
+                    </div>
                 </div>
-                <div class="lk__nav-right"></div>
+                <div class="lk__nav-right">
+                    <a href="">Добавить резюме</a>
+                    <div class="lk__nav-item lk__nav-bell">
+                        <span><i class="mdi mdi-bell"></i></span>
+                        <div></div>
+                    </div>
+                    <div class="lk__nav-item lk__nav-name">
+                        <span><i class="mdi mdi-account"></i></span>
+                        <div>
+                            <span>Иван</span>
+                            <p>admin@talentspot.ru</p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="lk__content">
@@ -147,23 +243,27 @@
                     <div class="lk__content-left">
                         <div class="lk__tabs">
                             <div class="lk__tabs-bth">
-                                <div class="lk__tabs-link lk__tab-active" id="lk__default-tab">Личные данные</div>
-                                <div class="lk__tabs-link">Общие данные</div>
-                                <div class="lk__tabs-link">Настройки</div>
-                                <div class="lk__tabs-link">Скрытое</div>
-                                <div class="lk__tabs-link">Избранное</div>
+                                <div data-tab="#lk__personal" class="tab__links lk__tabs-link">Личные данные</div>
+                                <div data-tab="#lk__general" class="tab__links lk__tabs-link" id="default__tab">Общие
+                                    данные
+                                </div>
+                                <div data-tab="#lk__setting" class="tab__links lk__tabs-link">Настройки</div>
+                                <div data-tab="#lk__hidden" class="tab__links lk__tabs-link">Скрытое</div>
+                                <div data-tab="#lk__save" class="tab__links lk__tabs-link">Избранное</div>
                             </div>
                             <div class="lk__tabs-div">
-                                <div class="lk__tab" id="lk__personal">
+                                <div class="tab__content lk__tab" id="lk__personal">
                                     <div class="lk__div">
-
                                         <div class="lk__div-content">
                                             <form action="" method="post" class="lk__form lk__form-input">
 
+
                                                 <div class="auth__flex">
+
                                                     <label for="surname" class="lk__label">
                                                         <span>Фамилия <m>*</m></span>
-                                                        <input type="text" name="surname" id="surname" required value="Иванов">
+                                                        <input type="text" name="surname" id="surname" required
+                                                               value="Иванов">
                                                         <div class="label__error error__surname"></div>
                                                     </label>
                                                     <label for="name" class="lk__label">
@@ -173,13 +273,17 @@
                                                     </label>
                                                     <label for="name" class="lk__label">
                                                         <span>Отчество</span>
-                                                        <input type="text" name="name" id="name" required placeholder="При наличии">
+                                                        <input type="text" name="name" id="name" required
+                                                               placeholder="При наличии">
                                                         <div class="label__error error__name"></div>
                                                     </label>
+
+
                                                 </div>
                                                 <label for="date" class="lk__label">
                                                     <span>Дата рождения <m>*</m></span>
-                                                    <input min="1900-12-31" max="2006-12-31" type="date" name="date" id="date" required value="01.12.2002">
+                                                    <input min="1900-12-31" max="2006-12-31" type="date" name="date"
+                                                           id="date" required value="01.12.2002">
                                                     <div class="label__error error__date"></div>
                                                 </label>
 
@@ -197,33 +301,40 @@
 
                                                 <label for="date" class="lk__label">
                                                     <span>Район поиска работы <m>*</m></span>
-                                                    <input type="text" name="name" id="name" required value="Ставрополь">
+                                                    <input type="text" name="name" id="name" required
+                                                           value="Ставрополь">
                                                     <div class="label__error error__name"></div>
                                                 </label>
 
                                                 <div class="auth__flex-mini">
                                                     <span>Пол <m>*</m></span>
-                                                <div class="auth__flex-radio">
-                                                    <div class="white__radio">
-                                                        <input type="radio" class="white-radio i_choice" name="i_choice" id="i_student" value="1" checked>
-                                                        <label for="i_student">Мужской</label>
+                                                    <div class="auth__flex-radio">
+                                                        <div class="white__radio">
+                                                            <input type="radio" class="white-radio i_choice"
+                                                                   name="i_choice" id="i_student" value="1" checked>
+                                                            <label for="i_student">Мужской</label>
+                                                        </div>
+                                                        <div class="white__radio">
+                                                            <input type="radio" class="white-radio i_choice"
+                                                                   name="i_choice" id="i_applicant" value="2">
+                                                            <label for="i_applicant">Женский</label>
+                                                        </div>
                                                     </div>
-                                                    <div class="white__radio">
-                                                        <input type="radio" class="white-radio i_choice" name="i_choice" id="i_applicant" value="2">
-                                                        <label for="i_applicant">Женский</label>
-                                                    </div>
-                                                </div>
                                                 </div>
 
                                                 <div class="auth__flex">
                                                     <label for="email" class="lk__label">
                                                         <span>Электронная почта <m>*</m></span>
-                                                        <input data-id="email" type="email" inputmode="email" name="email" id="email" required disabled value="admin@talentspot.ru">
+                                                        <input data-id="email" type="email" inputmode="email"
+                                                               name="email" id="email" required disabled
+                                                               value="admin@talentspot.ru">
                                                         <div class="label__exp">Изменить</div>
                                                     </label>
                                                     <label for="phone" class="lk__label">
                                                         <span>Номер телефона <m>*</m></span>
-                                                        <input data-id="phone" type="text" inputmode="tel" name="phone" size="20" id="phone" class="phone__mask" required placeholder="7+" value="+7 909 767 7217">
+                                                        <input data-id="phone" type="text" inputmode="tel" name="phone"
+                                                               size="20" id="phone" class="phone__mask" required
+                                                               placeholder="7+" value="+7 909 767 7217">
                                                         <div class="label__error error__phone"></div>
                                                     </label>
                                                 </div>
@@ -234,16 +345,358 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="lk__tab" id="lk__general">
+                                <div class="tab__content lk__tab" id="lk__general">
+                                    <div class="danger__auth" style="margin: 30px 0;">
+                                        <div class="danger__auth-left">
+                                            <i class="mdi mdi-information-slab-circle-outline"></i>
+                                            <div>
+                                                <span>Это — общая информация для каждого резюме</span>
+                                                <p>Данные, которые будут указаны тут будут вставляться в каждое новое
+                                                    резюме</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="lk__div">
+                                        <div class="lk__div-title">
+                                            <div>
+                                                Опыт работы
+                                                <span>Общий трудовой стаж — 2 года 3 месяца</span>
+                                            </div>
+                                            <div class="lk__bth-add">
+                                                <i class="mdi mdi-plus"></i>
+                                            </div>
+                                        </div>
+                                        <div class="lk__div-content">
+                                            <form action="" method="POST" class="lk__form lk__form-setting">
+                                                <div class="unique__block-ctx">
+                                                    <div class="ub__exp">
+                                                        <div class="ub__left">
+                                                            апрель 2022 —
+                                                            <br>
+                                                            по настоящее время
+                                                            <p>1 год 7 месяцев</p>
+                                                        </div>
+                                                        <div class="ub__right">
+                                                            <div class="ub__bth">
+                                                                <button type="button"><i class="mdi mdi-pencil"></i></button>
+                                                                <button type="button"><i class="mdi mdi-delete"></i></button>
+                                                            </div>
+
+
+                                            <span class="ub__title">
+                                                ПАО «СберБанк»
+                                            </span>
+                                                            <span class="ub__perm">Менеджер</span>
+                                                            <span class="ub__text">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ub__exp">
+                                                        <div class="ub__left">
+                                                            апрель 2022 —
+                                                            <br>
+                                                            по настоящее время
+                                                            <p>1 год 7 месяцев</p>
+                                                        </div>
+                                                        <div class="ub__right">
+
+                                                            <div class="ub__bth">
+                                                                <button type="button"><i class="mdi mdi-pencil"></i></button>
+                                                                <button type="button"><i class="mdi mdi-delete"></i></button>
+                                                            </div>
+
+                                                            <span class="ub__title">
+                                                 ООО «TalentSpot»
+                                            </span>
+                                                            <span class="ub__perm">Менеджер</span>
+                                                            <span class="ub__text">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ub__exp">
+                                                        <div class="ub__left">
+                                                            апрель 2022 —
+                                                            <br>
+                                                            по настоящее время
+                                                            <p>1 год 7 месяцев</p>
+                                                        </div>
+                                                        <div class="ub__right">
+                                                            <div class="ub__bth">
+                                                                <button type="button"><i class="mdi mdi-pencil"></i></button>
+                                                                <button type="button"><i class="mdi mdi-delete"></i></button>
+                                                            </div>
+
+                                                            <span class="ub__title">
+                                                                 ПАО «СберБанк»
+                                                            </span>
+                                                            <span class="ub__perm">Менеджер</span>
+                                                            <span class="ub__text">
+                                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="lk__div">
+                                        <div class="lk__div-title">
+                                            <div>
+                                                Образование
+
+                                            </div>
+                                            <div class="lk__bth-add">
+                                                <i class="mdi mdi-plus"></i>
+                                            </div>
+                                        </div>
+                                        <div class="lk__div-content">
+                                            <form action="" method="POST" class="lk__form lk__form-setting">
+
+                                                <div class="ub__exp">
+                                                    <div class="ub__left">
+                                                        2025
+                                                    </div>
+                                                    <div class="ub__right">
+                                                        <div class="ub__bth">
+                                                            <button type="button"><i class="mdi mdi-pencil"></i></button>
+                                                            <button type="button"><i class="mdi mdi-delete"></i></button>
+                                                        </div>
+
+                                                        <span class="ub__title">
+                                                Ставропольский ГАУ
+                                            </span>
+                                                        <span class="ub__perm">Информационные системы и технологии</span>
+                                                    </div>
+                                                </div>
+                                                <div class="ub__exp">
+                                                    <div class="ub__left">
+                                                        2025
+                                                    </div>
+                                                    <div class="ub__right">
+                                                        <div class="ub__bth">
+                                                            <button type="button"><i class="mdi mdi-pencil"></i></button>
+                                                            <button type="button"><i class="mdi mdi-delete"></i></button>
+                                                        </div>
+
+                                                        <span class="ub__title">
+                                                Ставропольский ГАУ
+                                            </span>
+                                                        <span class="ub__perm">Информационные системы и технологии</span>
+                                                    </div>
+                                                </div>
+
+                                            </form>
+                                        </div>
+                                    </div>
+
+                                    <div class="lk__div">
+                                        <div class="lk__div-title">
+                                            <div>
+                                                Тесты
+
+                                            </div>
+                                            <div class="lk__bth-add">
+                                                <i class="mdi mdi-plus"></i>
+                                            </div>
+                                        </div>
+                                        <div class="lk__div-content">
+                                            <form action="" method="POST" class="lk__form lk__form-setting">
+                                                <div class="ub__exp">
+                                                    <div class="ub__left">
+                                                        2020
+                                                    </div>
+                                                    <div class="ub__right">
+                                                        <div class="ub__bth">
+                                                            <button type="button"><i class="mdi mdi-pencil"></i></button>
+                                                            <button type="button"><i class="mdi mdi-delete"></i></button>
+                                                        </div>
+
+                                                        <span class="ub__title">
+                                                IELTS
+                                            </span>
+                                                        <span class="ub__text">University of Cambridge ESOL, the British Council и IDP: IELTS Australia., академический результат - 6,5</span>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="lk__div">
+                                        <div class="lk__div-title">
+                                            <div>
+                                                Достижения
+
+                                            </div>
+                                            <div class="lk__bth-add">
+                                                <i class="mdi mdi-plus"></i>
+                                            </div>
+                                        </div>
+                                        <div class="lk__div-content">
+                                            <form action="" method="POST" class="lk__form lk__form-setting">
+                                                <div class="ub__exp">
+                                                    <div class="ub__left">
+                                                        Научная работа
+                                                    </div>
+                                                    <div class="ub__right">
+                                                        <div class="ub__bth">
+                                                            <button type="button"><i class="mdi mdi-pencil"></i></button>
+                                                            <button type="button"><i class="mdi mdi-delete"></i></button>
+                                                        </div>
+
+                                                        <span class="ub__title">
+                                                LVII Международная научно-практическая конференция
+                                            </span>
+                                                        <span class="ub__text">University of Cambridge ESOL, the British Council и IDP: IELTS Australia., академический результат - 6,5</span>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="lk__div">
+                                        <div class="lk__div-title">
+                                            <div>
+                                                Ключевые навыки
+
+                                            </div>
+                                            <div class="lk__bth-add">
+                                                <i class="mdi mdi-plus"></i>
+                                            </div>
+                                        </div>
+                                        <div class="lk__div-content">
+                                            <form action="" method="POST" class="lk__form lk__form-setting">
+                                                <div class="unique__block-ctx unique__block-temp">
+                                                    <span>— SQL <button type="button"><i
+                                                            class="mdi mdi-delete"></i></button></span>
+                                                    <span>— PHP <button type="button"><i
+                                                            class="mdi mdi-delete"></i></button></span>
+                                                    <span>— Python <button type="button"><i class="mdi mdi-delete"></i></button></span>
+                                                    <span>— C++ <button type="button"><i
+                                                            class="mdi mdi-delete"></i></button></span>
+                                                    <span>— JavaScript <button type="button"><i
+                                                            class="mdi mdi-delete"></i></button></span>
+                                                    <span>— NodeJS <button type="button"><i class="mdi mdi-delete"></i></button></span>
+                                                    <span>— Django Framework <button type="button"><i
+                                                            class="mdi mdi-delete"></i></button></span>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="lk__div">
+                                        <div class="lk__div-title">
+                                            <div>
+                                                Знание языков
+
+                                            </div>
+                                            <div class="lk__bth-add">
+                                                <i class="mdi mdi-plus"></i>
+                                            </div>
+                                        </div>
+                                        <div class="lk__div-content">
+                                            <form action="" method="POST" class="lk__form lk__form-setting">
+                                                <div class="unique__block-ctx unique__block-temp">
+                                                    <span>Русский — Родной <button type="button"><i
+                                                            class="mdi mdi-delete"></i></button></span>
+                                                    <span>Английский — C1 — Продвинутый <button type="button"><i
+                                                            class="mdi mdi-delete"></i></button></span>
+                                                    <span>Немецкий — B1 — Средний <button type="button"><i
+                                                            class="mdi mdi-delete"></i></button></span>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab__content lk__tab" id="lk__setting">
+                                    <div class="lk__div">
+                                        <div class="lk__div-content">
+                                            <form action="" method="POST" class="lk__form lk__form-setting">
+
+                                                <a class="lk__delete-link" href="">
+                                                    <i class="mdi mdi-delete-variant"></i>
+                                                    <span>Удалить аккаунт</span>
+                                                </a>
+
+                                                <div class="flex__align">
+                                                    <span>Почтовые уведомления</span>
+                                                    <div class="flex__align-content">
+                                                        <div class="custom__checkbox">
+                                                            <input type="checkbox" class="custom-checkbox" name="more[]"
+                                                                   id="m1" value="1" checked/>
+                                                            <label for="m1">Просмотры вашего резюме</label>
+                                                        </div>
+                                                        <div class="custom__checkbox">
+                                                            <input type="checkbox" class="custom-checkbox" name="more[]"
+                                                                   id="m2" value="1" checked/>
+                                                            <label for="m1">Смена статуса вакансии</label>
+                                                        </div>
+                                                        <div class="custom__checkbox">
+                                                            <input type="checkbox" class="custom-checkbox" name="more[]"
+                                                                   id="m3" value="1" checked/>
+                                                            <label for="m1">Приглашения от работодателей</label>
+                                                        </div>
+                                                        <div class="custom__checkbox">
+                                                            <input type="checkbox" class="custom-checkbox" name="more[]"
+                                                                   id="m4" value="1" checked/>
+                                                            <label for="m1">Вакансии по подписке на компанию</label>
+                                                        </div>
+                                                        <div class="custom__checkbox">
+                                                            <input type="checkbox" class="custom-checkbox" name="more[]"
+                                                                   id="m1" value="1" checked/>
+                                                            <label for="m1"> Новости сайта и рекламная
+                                                                информация</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="flex__align">
+                                                    <span>PUSH-уведомления</span>
+                                                    <div class="flex__align-content">
+                                                        <div class="custom__checkbox">
+                                                            <input type="checkbox" class="custom-checkbox" name="more[]"
+                                                                   id="m1" value="1" checked/>
+                                                            <label for="m1">Просмотры вашего резюме</label>
+                                                        </div>
+                                                        <div class="custom__checkbox">
+                                                            <input type="checkbox" class="custom-checkbox" name="more[]"
+                                                                   id="m1" value="1" checked/>
+                                                            <label for="m1">Смена статуса вакансии</label>
+                                                        </div>
+                                                        <div class="custom__checkbox">
+                                                            <input type="checkbox" class="custom-checkbox" name="more[]"
+                                                                   id="m1" value="1" checked/>
+                                                            <label for="m1">Переписка с работодателем</label>
+                                                        </div>
+                                                        <div class="custom__checkbox">
+                                                            <input type="checkbox" class="custom-checkbox" name="more[]"
+                                                                   id="m1" value="1" checked/>
+                                                            <label for="m1">Приглашения от работодателей</label>
+                                                        </div>
+                                                        <div class="custom__checkbox">
+                                                            <input type="checkbox" class="custom-checkbox" name="more[]"
+                                                                   id="m1" value="1" checked/>
+                                                            <label for="m1">Вакансии по подписке на компанию</label>
+                                                        </div>
+                                                        <div class="custom__checkbox">
+                                                            <input type="checkbox" class="custom-checkbox" name="more[]"
+                                                                   id="m1" value="1"/>
+                                                            <label for="m1"> Новости сайта и рекламная
+                                                                информация</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <button class="lk__button">Сохранить</button>
+
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab__content lk__tab" id="lk__hidden">
 
                                 </div>
-                                <div class="lk__tab" id="lk__setting">
-
-                                </div>
-                                <div class="lk__tab" id="lk__hidden">
-
-                                </div>
-                                <div class="lk__tab" id="lk__save">
+                                <div class="tab__content lk__tab" id="lk__save">
 
                                 </div>
                             </div>

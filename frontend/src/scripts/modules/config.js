@@ -55,6 +55,30 @@ const isOGRN = ogrn => {
 }
 
 /**
+ * Переключение табов
+ * @param {Event} event
+ * @param {string} id
+ */
+const swipeTabs = (event, id) => {
+
+    let tabcontent = document.querySelectorAll('.tab__content'),
+        tablinks   = document.querySelectorAll('.tab__links');
+
+    for (let i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = 'none'
+    }
+
+    for (let i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(' tab__active', '');
+    }
+
+    document.querySelector(id).style.display = 'block'
+
+    event.currentTarget.className += ' tab__active'
+
+}
+
+/**
  * Проверить, что элемент - массив
  * @param {any} vars
  * @returns {*}
@@ -264,5 +288,6 @@ export {
     HandlingInputError,
     ready,
     mask,
+    swipeTabs,
     $_GET
 }

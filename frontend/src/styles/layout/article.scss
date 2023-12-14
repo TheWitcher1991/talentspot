@@ -443,6 +443,7 @@
 body .ub__exp {
     position: relative;
     display: flex;
+    width: 100%;
 
     .ub__left {
         font-size: 14px;
@@ -468,6 +469,7 @@ body .ub__exp {
     }
 
     .ub__right {
+        width: 100%;
         padding: 0 0 16px 60px;
         position: relative;
         display: block;
@@ -827,4 +829,8 @@ body .ub__exp {
     }
 
 
+}
+
+.tab__content {
+    display: none;
 }

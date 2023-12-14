@@ -1,5 +1,4 @@
-import { isset, ready } from '../modules/config'
-import {TRUE} from "sass";
+import { isset, ready, swipeTabs } from '../modules/config'
 
 (function () {
 
@@ -11,7 +10,8 @@ import {TRUE} from "sass";
 
         // СМЕНА ПОЛОЖЕНИЯ БОКОВОГО МЕНЮ
 
-        let lkMenu = document.querySelector('.lk__menu'),
+        let lkNav = document.querySelector('.lk__nav'),
+            lkMenu = document.querySelector('.lk__menu'),
             lkPage = document.querySelector('.lk__page'),
             lkReplace = document.querySelector('.lk__menu-replace')
 
@@ -21,8 +21,10 @@ import {TRUE} from "sass";
             localStorage.removeItem('swap')
             localStorage.setItem('swap', 'min')
             lkMenu.classList.remove('lk__menu-max')
+            lkNav.classList.remove('lk__nav-max')
             lkPage.classList.remove('lk__page-max')
             lkReplace.classList.remove('lk__menu-left')
+            lkNav.classList.add('lk__nav-min')
             lkMenu.classList.add('lk__menu-min')
             lkPage.classList.add('lk__page-min')
             lkReplace.classList.add('lk__menu-right')
@@ -33,6 +35,8 @@ import {TRUE} from "sass";
         let swapMax = () => {
             localStorage.removeItem('swap')
             localStorage.setItem('swap', 'max')
+            lkNav.classList.remove('lk__nav-min')
+            lkNav.classList.add('lk__nav-max')
             lkMenu.classList.remove('lk__menu-min')
             lkMenu.classList.add('lk__menu-max')
             lkPage.classList.remove('lk__page-min')
@@ -54,6 +58,23 @@ import {TRUE} from "sass";
             if (lkReplace.classList[1] === 'lk__menu-right') {
                 return swapMax()
             }
+        })
+
+        // ТАБЫ В ЛИЧНОМ КАБИНЕТЕ
+
+        document.querySelectorAll('.lk__tabs-link').forEach(el => {
+            el.addEventListener('click', event => swipeTabs(event, el.dataset.tab))
+        })
+
+        document.querySelector('#default__tab')?.click()
+
+        // ВСПЛЫВАЮЩЕЕ МЕНЮ В ЛЕВОМ БОКОМ МЕНЮ ЛИЧНОГО КАБИНЕТА
+
+        document.querySelectorAll('.lk__menu-max .lk__link').forEach(el => {
+            el.addEventListener('click', function () {
+                let ul = el.parentElement.querySelector('ul')
+                ul.classList.toggle('lk__menu-show')
+            })
         })
 
     })

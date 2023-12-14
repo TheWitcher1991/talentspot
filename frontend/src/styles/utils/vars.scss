@@ -11,7 +11,26 @@ $WorkSans             : 'Work Sans', sans-serif;
 $font                 : normal 16px 'Inter', sans-serif;
 
 :root[theme="light"] {
-    // BG
+    --font            : normal 16px 'Inter', sans-serif;
+    --font-inter      : 'Inter', sans-serif;
+    --font-poppins    : 'Poppins', sans-serif;
+    --font-worksans   : 'Work Sans', sans-serif;
+    --vendor          : "-webkit-", "-apple-", "-khtml-", "-moz-", "-rim-", "-xv-","-ms-", "-o-", "";
+}
+
+// COLOR
+:root[theme="light"] {
+    --color-fg-main   : #171717;
+    --color-fg-white  : #FFFFFF;
+    --color-fg-300    : #BABABA;
+    --color-fg-400    : #C3C3C3;
+    --color-fg-500    : #A19FA4;
+    --color-fg-800    : #727272;
+    --color-error     : #DC3545;
+}
+
+// BACKGROUND
+:root[theme="light"] {
     --color-bg-body   : #EDEAEB;
     --color-bg-inp    : #FAFDFF;
     --color-br-inp    : #E8E8E8;
@@ -27,27 +46,23 @@ $font                 : normal 16px 'Inter', sans-serif;
     --color-gl-500    : rgba(255, 255, 255, 0.5);
     --color-gl-600    : rgba(237, 234, 235, 0.5);
     --color-gl-550    : rgba(255,22,46,.06);
+}
 
-    // FG
-    --color-fg-main   : #171717;
-    --color-fg-white  : #FFFFFF;
-    --color-fg-300    : #BABABA;
-    --color-fg-400    : #C3C3C3;
-    --color-fg-500    : #A19FA4;
-    --color-fg-800    : #727272;
-    --color-error     : #ff4c4c;
-
-    // WIDTH
+// WIDTH
+:root[theme="light"] {
     --width-container : 1450px;
+}
 
-    // BOX-SHADOW
+// BOX-SHADOW
+:root[theme="light"] {
     --shadow-search   : 0px 2.76726px 2.21381px 0px rgba(0, 0, 0, 0.02),
-                        0px 6.6501px 5.32008px 0px rgba(0, 0, 0, 0.03),
-                        0px 12.52155px 10.01724px 0px rgba(0, 0, 0, 0.04),
-                        0px 22.33631px 17.86905px 0px rgba(0, 0, 0, 0.04),
-                        0px 41.77761px 33.42209px 0px rgba(0, 0, 0, 0.05),
-                        0px 100px 80px 0px rgba(0, 0, 0, 0.07);
+    0px 6.6501px 5.32008px 0px rgba(0, 0, 0, 0.03),
+    0px 12.52155px 10.01724px 0px rgba(0, 0, 0, 0.04),
+    0px 22.33631px 17.86905px 0px rgba(0, 0, 0, 0.04),
+    0px 41.77761px 33.42209px 0px rgba(0, 0, 0, 0.05),
+    0px 100px 80px 0px rgba(0, 0, 0, 0.07);
     --shadow-grey-bth : 0px 10px 30px 0px var(--color-bg-main);
+    --shadow-lk-div   : 0 15px 50px 0 rgb(160 163 189 / 10%);
 }
 
 :root[theme="dark"] {
