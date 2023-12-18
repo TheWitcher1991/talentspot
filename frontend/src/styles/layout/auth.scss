@@ -1,8 +1,7 @@
 .body__auth {
     width: 100%;
-    min-height: 100vh;
     min-width: 320px;
-    font: $font;
+    font: normal 16px "Inter",sans-serif;
     background: var(--color-bg-body);
     color: var(--color-fg-main);
     margin: 0;
@@ -18,62 +17,128 @@
 
 #auth__wrapper {
     width: 100%;
-    height: 100%;
-    display: block;
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .auth__center {
-    margin: 40px 0 60px 0;
+    margin: 40px 0 0 0;
 }
 
 .auth__section {
     width: 100%;
-    height: 100%;
     position: relative;
+    border-radius: 20px;
     display: flex;
+    flex-direction: row-reverse;
+    max-width: 65%;
+    border: 1px solid var(--Stroke, #E2E8F0);
+    padding: 30px;
+    box-shadow: var(--shadow-lk-div);
+    margin: 0 auto;
+    background: var(--color-fg-white);
 }
 
 .auth__image {
     height: auto;
-
-    img {
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-    }
+    margin: 0 0 0 30px;
 }
 
 .auth__image-large {
-    width: 50%
+    width: 40%
+}
+
+.auth__list {
+    margin: 0 0 30px 0;
+
+    h3 {
+        font-size: 20px;
+    }
+
+    .auth__item {
+        margin: 30px 0 0;
+        display: flex;
+
+        > span {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--color-fg-ecn);
+            margin: 0 12px 0 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        i {
+            font-size: 24px;
+            margin: 0;
+            color: var(--color-fg-white);
+        }
+
+        > div{
+            span {
+                color: var(--color-fg-black);
+                font-size: 16px;
+                font-weight: 600;
+                margin: 0;
+                display: block;
+            }
+
+            p {
+                display: flex;
+                align-items: center;
+                font-size: 14px;
+                color: var(--color-fg-800);
+            }
+        }
+
+
+
+    }
 }
 
 
 .auth__content {
     flex: 1;
     height: 100%;
-    padding: 35px 50px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    color: var(--color-fg-black);
+}
+
+.auth__context {
+    color: var(--color-fg-black);
 }
 
 .auth__logo {
     width: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    margin: 0 0 30px 0;
 
     a {
-        color: var(--color-fg-main);
+        margin: 0 0 0 6px;
+        font-weight: 600;
+        font-size: 24px;
+        color: var(--color-fg-black);
 
         &:hover {
             text-decoration: underline;
         }
     }
+
+    img {
+        height: 40px;
+    }
 }
 
 .auth__link {
     width: 100%;
+    margin: 50px 0 0 0;
     padding: 16px 0 0 0;
     font-size: 15px;
     border-top: 1px solid var(--color-bg-main);
@@ -81,7 +146,7 @@
     a {
         font-size: 15px;
         font-weight: 700;
-        color: var(--color-fg-main);
+        color: var(--color-fg-black);
 
         &:hover {
             text-decoration: underline;
@@ -142,12 +207,9 @@
         height: 38px;
         position: relative;
 
-        &:hover {
-            background: var(--color-fg-white);
-        }
 
         &:focus {
-            background-color: var(--color-bg-inp);
+
             border-color: var(--color-fg-main);
         }
 
@@ -161,7 +223,7 @@
 
     input, select {
         font-size: 15px;
-        background-color: var(--color-bg-inp);
+        background-color: transparent;
         outline: none;
         border: 2px solid var(--color-br-inp);
         width: 100%;
@@ -172,15 +234,13 @@
         flex: 1;
         transition: all 0.2s ease-in 0s;
         appearance: none;
-        height: 39px;
+        height: 38px;
         position: relative;
 
-        &:hover {
-            background: var(--color-fg-white);
-        }
+
 
         &:focus {
-            background-color: var(--color-bg-inp);
+
             border-color: var(--color-fg-main);
         }
 
@@ -243,7 +303,7 @@
 
 .auth__button {
     width: 100%;
-    background: var(--color-bg-main);
+    background: var(--color-fg-ecn);
     color: var(--color-fg-white);
     outline: none;
     height: 45px;
@@ -253,6 +313,7 @@
     border-radius: 8px;
     font-size: 15px;
     cursor: pointer;
+    width: 135px;
 
     &:hover {
         background: var(--color-fg-main);
@@ -260,9 +321,9 @@
 }
 
 .auth__arrow {
-    width: 65px;
-    height: 65px;
-    background: var(--color-bg-main);
+    width: 55px;
+    height: 55px;
+    background: var(--color-fg-ecn);
     color: var(--color-fg-white);
     outline: none;
     border: 0;
@@ -271,7 +332,7 @@
     align-items: center;
     transition: all 0.2s ease-in 0s;
     border-radius: 50%;
-    font-size: 30px;
+    font-size: 28px;
     cursor: pointer;
     box-shadow: var(--shadow-grey-bth);
     margin: 40px auto 0 auto;
@@ -282,11 +343,12 @@
 }
 
 .auth__title {
-    font-size: 34px;
+    font-size: 25px;
 }
 
 .auth__span {
     display: block;
+    font-size: 15px;
     margin: 0 0 26px 0;
 }
 
@@ -363,7 +425,7 @@
 
 .white__checkbox > label {
     font-size: 14px;
-    color: var(--color-fg-main);
+    color: var(--color-fg-black);
     font-weight: 400;
 }
 
@@ -422,7 +484,7 @@
 
 .white__checkbox > label {
     font-size: 14px;
-    color: var(--color-fg-main);
+    color: var(--color-fg-black);
     font-weight: 400;
 }
 
@@ -513,14 +575,15 @@
         align-items: center;
         transition: all 0.1s linear;
         position: relative;
-        height: 60px;
+        height: 55px;
+        font-size: 15px;
 
         > div {
             width: 20px;
             height: 20px;
             border-radius: 50%;
             position: absolute;
-            top: 18px;
+            top: 15px;
             right: 18px;
             display: none;
             align-items: center;
@@ -534,8 +597,8 @@
         }
 
         span {
-            width: 40px;
-            height: 40px;
+            width: 35px;
+            height: 35px;
             border-radius: 50%;
             background: var(--color-bg-main);
             margin: 0 12px 0 0;

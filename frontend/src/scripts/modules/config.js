@@ -1,4 +1,23 @@
 /**
+ * Конвертирует объект с параметрами в строку запроса
+ * @param {Object} params
+ * @return {string}
+ */
+const convertObjectToQueryString = params => {
+    let urlParams = '';
+
+    Object.keys(params).forEach((key) => {
+        if (urlParams !== '') {
+            urlParams += '&';
+        }
+        urlParams += `${key}=${encodeURIComponent(String(params[key]))}`;
+    });
+
+    return `?${urlParams}`;
+}
+
+
+/**
  * Проверка, что это email
  * @param {string} str
  * @return {boolean}
@@ -286,6 +305,7 @@ export {
     MessageBox,
     RenderSearchError,
     HandlingInputError,
+    convertObjectToQueryString,
     ready,
     mask,
     swipeTabs,

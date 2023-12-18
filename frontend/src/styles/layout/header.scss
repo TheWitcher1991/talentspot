@@ -7,7 +7,7 @@
 
 .header__tmp {
     position: relative;
-    background: var(--color-bg-main);
+    background: var(--color-fg-main);
     border-radius: 50px;
     height: 100%;
     width: 100%;
@@ -53,7 +53,7 @@
     }
 
     a {
-        color: var(--color-fg-main);
+        color: var(--color-fg-white);
         margin: 0 20px;
         display: block;
         transition: all 0.2s linear;
@@ -64,14 +64,15 @@
         cursor: pointer;
 
         &:hover {
-            background: var(--color-bg-500);
+            color: var(--color-fg-white);
+            background: var(--color-fg-black);
         }
 
     }
 
     .header__active {
-        color: var(--color-fg-white);
-        background: var(--color-fg-main);
+        color: var(--color-fg-main);
+        background: var(--color-fg-white);
     }
 }
 
@@ -84,6 +85,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+    z-index: 10
 }
 
 .header__bth {
@@ -91,7 +94,7 @@
     align-items: center;
 
      a {
-         color: var(--color-fg-main);
+         color: var(--color-fg-white);
          font-size: 14px;
          margin: 0 0 0 20px;
          font-weight: 600;
@@ -103,16 +106,16 @@
          transition: all 0.2s linear;
 
          &:first-of-type:hover {
-             color: var(--color-fg-white);
-             background: var(--color-fg-main);
+             color: var(--color-fg-black);
+             background: var(--color-fg-white);
          }
 
          &:last-of-type {
-             background: var(--color-bg-500);
+             background: var(--color-fg-black);
 
              &:hover {
-                 color: var(--color-fg-white);
-                 background: var(--color-fg-main);
+                 color: var(--color-fg-black);
+                 background: var(--color-fg-white);
              }
 
          }
@@ -182,7 +185,7 @@
 
         m {
             position: relative;
-            color: var(--color-fg-800);
+            color: var(--color-fg-black);
         }
     }
 
@@ -282,6 +285,7 @@
     align-items: center;
     border-radius: 25px;
     background: var(--color-gl-500);
+    color: var(--color-fg-white);
     padding: 8px 16px 8px 12px;
     font-size: 15px;
     backdrop-filter: blur(10px);
@@ -386,14 +390,14 @@
     display: flex;
     align-items: center;
     margin: 50px 0 0 0;
-    color: var(--color-fg-800);
+    color: var(--color-fg-white);
 
     > div {
         display: flex;
         align-items: center;
 
          a {
-             color: var(--color-fg-800);
+             color: var(--color-fg-white);
              text-decoration: underline;
              display: block;
              margin: 0 20px;

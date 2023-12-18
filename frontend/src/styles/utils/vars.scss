@@ -20,12 +20,14 @@ $font                 : normal 16px 'Inter', sans-serif;
 
 // COLOR
 :root[theme="light"] {
-    --color-fg-main   : #171717;
+    --color-fg-black  : #171717;
+    --color-fg-main   : #166666;
     --color-fg-white  : #FFFFFF;
     --color-fg-300    : #BABABA;
     --color-fg-400    : #C3C3C3;
     --color-fg-500    : #A19FA4;
     --color-fg-800    : #727272;
+    --color-fg-ecn    : #166666;
     --color-error     : #DC3545;
 }
 
@@ -34,10 +36,10 @@ $font                 : normal 16px 'Inter', sans-serif;
     --color-bg-body   : #EDEAEB;
     --color-bg-inp    : #FAFDFF;
     --color-br-inp    : #E8E8E8;
-    --color-bg-main   : #AFC3C3;
+    --color-bg-main   : #166666;
     --color-bg-400    : #F5F5F5;
     --color-bg-500    : #DADADA;
-    --color-bg-700    : #AABDBD;
+    --color-bg-700    : #2a8e8e;
     --color-bg-active : #D6EBEB;
     --color-bg-yellow : #EBDCD6;
     --color-bg-green  : #78C57A;

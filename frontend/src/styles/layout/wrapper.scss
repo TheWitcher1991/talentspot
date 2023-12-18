@@ -18,6 +18,7 @@
     .order__top-left {
         margin: 0 40px 0 0;
         width: 450px;
+        color: var(--color-fg-black);
 
         span {
             font-size: 18px;
@@ -49,6 +50,7 @@
 
 .search__title {
     font-size: 29px;
+    color: var(--color-fg-black);
 }
 
 .order__top-select {
@@ -59,7 +61,7 @@
 .a__trans {
     display: flex;
     align-items: center;
-    border: 1px solid var(--color-fg-500);
+    border: 1px solid var(--color-fg-main);
     padding: 0px 8px;
     color: var(--color-fg-800);
     font-size: 13px;
@@ -76,13 +78,17 @@
     &:hover {
         background: var(--color-bg-main);
         color: var(--color-fg-white);
+
+        i {
+            color: var(--color-fg-white);
+        }
     }
 }
 
 .select__trans {
     display: flex;
     align-items: center;
-    border: 1px solid var(--color-fg-500);
+    border: 1px solid var(--color-fg-main);
     padding: 0px 8px;
     color: var(--color-fg-800);
     font-size: 13px;
@@ -94,6 +100,11 @@
     &:hover {
         background: var(--color-bg-main);
         color: var(--color-fg-white);
+
+        i, span {
+            color: var(--color-fg-white);
+        }
+
     }
 
     span {
@@ -392,7 +403,7 @@
 
     .page-active > a {
         background: var(--color-bg-500);
-        color: var(--color-fg-main);
+        color: var(--color-fg-black);
     }
 
     span {
@@ -444,7 +455,7 @@
         align-items: center;
 
         i {
-            color: var(--color-fg-main);
+            color: var(--color-fg-black);
             font-size: 24px;
             margin: 0 13px 0 0;
         }
@@ -454,7 +465,7 @@
             margin: 0;
             font-size: 16px;
             font-weight: 500;
-            color: var(--color-fg-main);
+            color: var(--color-fg-black);
         }
 
         p {
@@ -511,7 +522,7 @@
     }
 
     .vi-company {
-        color: var(--color-fg-main);
+        color: var(--color-fg-black);
         margin: 6px 0 16px 0;
         font-size: 17px;
         display: inline-block;
@@ -528,7 +539,7 @@
     }
 
     .vi-title {
-        color: var(--color-fg-main);
+        color: var(--color-fg-black);
         font-size: 20px;
         text-decoration: underline;
         margin: 0;
@@ -685,6 +696,7 @@
 
     span {
         display: block;
+        color: var(--color-fg-black);
     }
 
     .resume__item-left {
@@ -710,7 +722,7 @@
     }
 
     .ri-title {
-        color: var(--color-fg-main);
+        color: var(--color-fg-black);
         font-size: 20px;
         margin: 0;
         display: block;
@@ -721,7 +733,7 @@
     }
 
     .ru-user {
-        color: var(--color-fg-main);
+        color: var(--color-fg-black);
         font-size: 16px;
         margin: 0;
         display: block;
@@ -844,7 +856,7 @@
         &:hover {
             > span {
                 color: var(--color-fg-white);
-                background: var(--color-fg-main);
+                background: var(--color-fg-black);
             }
         }
 
@@ -857,12 +869,12 @@
             height: 32px;
             outline: none;
             background: transparent;
-            color: var(--color-fg-main);
+            color: var(--color-fg-black);
             font-size: 20px;
             margin: 0 0 0 10px;
             border-radius: 50%;
             cursor: pointer;
-            border: 1px solid var(--color-fg-main);
+            border: 1px solid var(--color-fg-black);
             transition: all .2s linear;
             display: flex;
             align-items: center;
@@ -893,13 +905,12 @@
     width: 350px;
     display: flex;
     align-items: center;
-    border-radius: 20px;
+    border-radius: 25px;
     margin: 36px 0 60px 0;
-    border: 1px solid var(--color-fg-white);
     padding: 6px 12px;
     background: var(--color-gl-500);
-    color: var(--color-fg-main);
-    backdrop-filter: blur(5px);
+    color: var(--color-fg-black);
+    backdrop-filter: blur(10px);
     justify-content: space-between;
     transition: all 0.2s linear;
 
@@ -997,10 +1008,11 @@
                 font-size: 16px;
                 font-weight: 400;
                 display: block;
+                color: var(--color-fg-black);
             }
 
             p {
-                color: var(--color-fg-800);
+                color: var(--color-fg-white);
             }
         }
     }
@@ -1016,9 +1028,10 @@
                 display: flex;
                 align-items: center;
                 font-size: 15px;
+                color: var(--color-fg-black);
 
                 i {
-                    color: var(--color-fg-800);
+                    color: var(--color-fg-white);
                     font-size: 18px;
                     margin: 0 5px 0 0;
                 }
@@ -1121,7 +1134,7 @@
             m {
                 font-size: 20px;
                 font-weight: 400;
-                color: var(--color-fg-main);
+                color: var(--color-fg-black);
             }
         }
 
@@ -1134,7 +1147,7 @@
 
                 m {
                     font-weight: 500;
-                    color: var(--color-fg-main);
+                    color: var(--color-fg-black);
                     width: 100px;
                 }
             }
@@ -1185,7 +1198,7 @@
 
         span {
             margin: 16px 0 0 0;
-            color: var(--color-fg-main);
+            color: var(--color-fg-black);
             font-size: 16px;
             display: block;
             font-weight: 600;

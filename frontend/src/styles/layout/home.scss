@@ -10,6 +10,7 @@
     margin: 0 0 60px 0;
 
     h2 {
+        color: var(--color-fg-black);
         font-size: 35px;
     }
 
@@ -72,12 +73,12 @@
 
         > i {
             font-size: 42px;
-            color: var(--color-fg-500);
+            color: var(--color-fg-main);
             transition: all 0.2s linear;
         }
 
         p {
-            color: var(--color-fg-main);
+            color: var(--color-fg-black);
             font-weight: 700;
             font-size: 20px;
             margin: 20px 0 0 0;
@@ -105,7 +106,7 @@
 .hero__section {
     margin: 160px 0 60px 0;
     border-radius: 30px;
-    background: var(--color-bg-main);
+    background: var(--color-fg-main);
     height: 285px;
     display: flex;
     align-items: center;
@@ -135,7 +136,7 @@
 
         a {
             display: inline-flex;
-            background: var(--color-fg-main);
+            background: var(--color-fg-black);
             color: var(--color-fg-white);
             height: 45px;
             padding: 0 30px;
@@ -194,7 +195,7 @@
         }
 
         .hji-company {
-            color: var(--color-fg-main);
+            color: var(--color-fg-black);
             margin: 6px 0 16px 0;
             font-size: 15px;
             display: inline-block;
@@ -205,7 +206,7 @@
         }
 
         .hji-title {
-            color: var(--color-fg-main);
+            color: var(--color-fg-black);
             font-size: 20px;
             text-decoration: underline;
             margin: 0 0 8px 0;
@@ -285,6 +286,7 @@
     font-weight: 700;
     line-height: 1.1;
     width: fit-content;
+    color: var(--color-fg-black);
 
     span:first-of-type {
         position: relative;
@@ -301,7 +303,7 @@
     }
 
     m {
-        color: var(--color-fg-500)
+        color: var(--color-fg-main)
     }
 }
 
@@ -332,7 +334,7 @@
     position: relative;
 
     .plus__separator {
-        background: var(--color-fg-500);
+        background: var(--color-fg-main);
         width: 3px;
         border-radius: 10px;
         height: 60%;
@@ -356,7 +358,7 @@
 
         .plus__icon {
             transform: scale(1.2);
-            background: var(--color-fg-500);
+            background: var(--color-fg-main);
             color: var(--color-fg-white);
         }
 
@@ -369,9 +371,9 @@
     .plus__icon {
         width: 90px;
         height: 90px;
-        color: var(--color-fg-800);
+        color: var(--color-fg-main);
         background: var(--color-bg-body);
-        border: 1px solid var(--color-fg-500);
+        border: 1px solid var(--color-fg-main);
         border-radius: 50%;
         margin: 0 30px 0 0;
         display: flex;
@@ -389,7 +391,7 @@
         max-width: 520px;
 
         span {
-            color: var(--color-fg-main);
+            color: var(--color-fg-black);
             font-size: 20px;
             font-weight: 500;
             display: block;
@@ -477,7 +479,7 @@
         font-weight: 600;
 
         m {
-            color: var(--color-fg-main);
+            color: var(--color-fg-black);
         }
     }
 }
@@ -503,7 +505,7 @@
         margin: 0 0 0 100px;
 
         span {
-            color: var(--color-fg-main);
+            color: var(--color-fg-black);
             font-size: 16px;
             display: block;
             margin: 0 0 20px 0;
@@ -535,6 +537,7 @@
     align-items: center;
     border-radius: 25px;
     background: var(--color-gl-500);
+    color: var(--color-fg-black);
     padding: 8px 16px 8px 12px;
     font-size: 15px;
     backdrop-filter: blur(10px);
@@ -607,6 +610,7 @@
         font-size: 18px;
         margin: 0 0 20px 0;
         font-weight: 400;
+        color: var(--color-fg-main);
 
         i {
             margin: 0 8px 0 0;
@@ -666,7 +670,7 @@
         transition: all .2s linear;
 
         &:hover {
-            background: var(--color-bg-main);
+            background: var(--color-fg-black);
         }
     }
 
@@ -825,6 +829,7 @@
         border: 2px solid var(--color-fg-white);
         background: radial-gradient(159.26% 159.26% at -2.96% -9.7%, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.50) 100%);
         backdrop-filter: blur(30px);
+        color: var(--color-fg-black);
 
 
         &:nth-child(2) {

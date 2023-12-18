@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<!--[if lt IE 6 ]>
+<html class="ie ie6" lang="ru" dir="ltr"> <![endif]-->
+<!--[if IE 7 ]>
+<html class="ie ie7" lang="ru" dir="ltr"> <![endif]-->
+<!--[if IE 8 ]>
+<html class="ie ie8" lang="ru" dir="ltr"> <![endif]-->
+<!--[if IE 9 ]>
+<html class="ie ie9" lang="ru" dir="ltr"> <![endif]-->
+<!--[if IE 10 ]>
+<html class="ie ie10" lang="ru" dir="ltr"> <![endif]-->
+<!--[if (gte IE 11)|!(IE)]><!-->
+<html lang="ru" dir="ltr" theme="light" xmlns="http://www.w3.org/1999/html">
+<!--<![endif]-->
+<head>
+
+    <meta charset="utf-8"/>
+
+    <!-- SEO -->
+    <title>Мои подписки</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=" />
+    <link rel=" canonical
+    " href="" />
+    <meta http-equiv="content-language" content="ru"/>
+    <meta name="robots" content="index, follow"/>
+    <meta http-equiv="x-dns-prefetch-control" content="on"/>
+
+    <meta name="author" content=""/>
+    <meta name="copyright" content="ООО «ТалентСпот»"/>
+
+    <link rel="shortcut icon" href="" type="image/x-icon"/>
+    <link rel="icon" href="" type="image/x-icon"/>
+    <!-- / SEO  -->
+
+    <link rel="stylesheet" href="../../build/styles.bundle.css">
+
+    <!-- SCRIPT FOR OLD BROWSERS -->
+    <script type="text/javascript">
+        !function () {
+            "use strict";
+
+            function trackOldBrowserEvent() {
+                var t = function createXmlHttpRequestObject() {
+                    var t;
+                    try {
+                        t = new XMLHttpRequest
+                    } catch (r) {
+                        for (var e = new Array("MSXML2.XMLHHTP.11.0", "MSXML2.XMLHHTP.10.0", "MSXML2.XMLHHTP.9.0", "MSXML2.XMLHHTP.8.0", "MSXML2.XMLHHTP.7.0", "MSXML2.XMLHHTP.6.0", "MSXML2.XMLHHTP.5.0", "MSXML2.XMLHHTP.4.0", "MSXML2.XMLHHTP.3.0", "MSXML2.XMLHHTP", "Microsoft.XMLHHTP"), s = 0; s < e.length && !t; s++) try {
+                            t = new ActiveXObject(e[s])
+                        } catch (t) {
+                        }
+                    }
+                    return null != t ? t : void 0
+                }(), e = new Object;
+                return e.open = "/badbrowser?status=" + (0 !== t.status && t.status), e.xhr = t.responseURL ? t.responseURL : "/badbrowser?status=" + (0 !== t.status && t.status), t.open("GET", e.open, !0), t.setRequestHeader("Content-Type", "text/html"), t.setRequestHeader("X-Requested-With", "XMLHttpRequest"), t.onreadystatechange = function () {
+                    if (4 === t.readyState && (t.status >= 200 && t.status < 300 || 304 === t.status || 0 === t.status && "file:" === protocol)) try {
+                        location.replace(t.responseURL ? t.responseURL : "/badbrowser?status=" + t.status)
+                    } catch (t) {
+                    }
+                }, t.send(e.xhr ? e.xhr : null), t
+            }
+
+            !function checkOldBrowser() {
+                if (document.body) try {
+                    "CSS" in window && CSS.supports("display", "flex") && "undefined" != typeof Symbol || trackOldBrowserEvent()
+                } catch (t) {
+                } else setTimeout(checkOldBrowser, 100)
+            }()
+        }();
+    </script>
+    <!-- / SCRIPT FOR OLD BROWSERS -->
+
+    <!-- INCLUDE LIBS -->
+    <script src="https://cdn.quilljs.com/1.3.0/quill.min.js"></script>
+    <!-- / INCLUDE LIBS -->
+
+    <!-- INCLUDE ICONS AND FRONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.3.67/css/materialdesignicons.min.css"
+          integrity="sha512-nRzny9w0V2Y1/APe+iEhKAwGAc+K8QYCw4vJek3zXhdn92HtKt226zHs9id8eUq+uYJKaH2gPyuLcaG/dE5c7A=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <!-- / INCLUDE ICONS AND FRONTS -->
+
+</head>
+<body class="lk__body">
+
+<!-- MAIN CONTENT -->
+<main id="wrapper" class="wrapper lk__wrapper">
+    <section class="lk__section">
+
+        <aside class="lk__menu">
+            <div class="lk__menu-tmp">
+                <div class="lk__menu-brand">
+                    <div>
+                        <img src="../../src/images/static/logo/166666/png/128x128.png" alt="">
+                        <span>TalentSpot</span>
+                    </div>
+                </div>
+                <ul class="lk__menu-ul">
+                    <li>
+                        <a class="lk__link" href="">
+                            <span>
+                                <i class="mdi mdi-arrow-top-right-thin-circle-outline"></i>
+                                <div class="lk__link-title">Искать вакансии</div>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="lk__link" href="">
+                            <span>
+                                <i class="mdi mdi-chart-line-variant"></i>
+                                <div class="lk__link-title">Дашборд</div>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="lk__link">
+                            <span>
+                                <i class="mdi mdi-database-lock-outline"></i>
+                                <div class="lk__link-title">Мои резюме</div>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="lk__link" href="">
+                            <span>
+                                  <i class="mdi mdi-briefcase-outline"></i>
+                                <div class="lk__link-title">Мои отклики</div>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="lk__link" href="">
+                            <span>
+                                   <i class="mdi mdi-shield-outline"></i>
+                                <div class="lk__link-title">Безопасность</div>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="lk__link" href="">
+                            <span>
+                               <i class="mdi mdi-handshake-outline"></i>
+                                <div class="lk__link-title">Центр поддержки</div>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="lk__copy">
+                <i class="mdi mdi-copyright"></i> 2023 ООО «ТалентСпот»
+
+            </div>
+        </aside>
+
+        <div class="lk__page">
+            <div class="lk__nav">
+                <div class="lk__nav-left">
+                    <div class="lk__menu-replace">
+
+                    </div>
+
+                    <div class="lk__search-wrapper">
+                        <label for="lk__search" class="lk__search-label">
+                            <i class="mdi mdi-magnify"></i>
+                            <input type="text" name="lk__search" id="lk__search" placeholder="Введите для поиска...">
+                        </label>
+                        <div class="lk__search-result">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="lk__nav-right">
+                    <a href="">Добавить резюме</a>
+                    <div class="lk__nav-item lk__nav-bell">
+                        <span><i class="mdi mdi-bell"></i></span>
+                        <div></div>
+                    </div>
+                    <div class="lk__nav-item lk__nav-name">
+                        <span><i class="mdi mdi-account"></i></span>
+                        <div>
+                            <span>Иван</span>
+                            <p>admin@talentspot.ru</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lk__content">
+                <div class="lk__content-flex">
+                    <div class="lk__content-left">
+
+                        <div class="lk__div-no">
+                            <div class="lk__div-title">
+                                <div>
+                                    Ваши подписки
+                                    <span>Уведомления о новых вакансиях, будут приходить на e-mail</span>
+                                </div>
+                            </div>
+                            <div class="lk__div-content">
+                                <div class="lk__slot__wrap">
+                                    <div class="lk__slot-item">
+                                        <div class="lk__slot-left">
+                                            <span><i class="mdi mdi-bell-ring-outline"></i></span>
+                                            <div>
+                                                <span>Тинькофф</span>
+                                                <p>25 декабря в 16:40</p>
+                                            </div>
+                                        </div>
+                                        <div class="lk__slot-bth">
+                                            <i class="mdi mdi-close"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lk__slot__wrap">
+                                    <div class="lk__slot-item">
+                                        <div class="lk__slot-left">
+                                            <span><i class="mdi mdi-bell-ring-outline"></i></span>
+                                            <div>
+                                                <span>СБЕР</span>
+                                                <p>24 декабря в 12:10</p>
+                                            </div>
+                                        </div>
+                                        <div class="lk__slot-bth">
+                                            <i class="mdi mdi-close"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lk__slot__wrap">
+                                    <div class="lk__slot-item">
+                                        <div class="lk__slot-left">
+                                            <span><i class="mdi mdi-bell-ring-outline"></i></span>
+                                            <div>
+                                                <span>Яндекс</span>
+                                                <p>19 декабря в 10:30</p>
+                                            </div>
+                                        </div>
+                                        <div class="lk__slot-bth">
+                                            <i class="mdi mdi-close"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="lk__content-right">
+                        <div class="lk__bar">
+                            <a class="lk__bar-logout" href="">Выйти <i class="mdi mdi-logout"></i></a>
+                            <span class="lk__bar-img">
+                                <img src="../../src/images/media/user/user.jpg" alt="">
+                            </span>
+                            <div class="lk__bar-name">Иван Иванов</div>
+                            <div class="lk__bar-status">Ищу работу</div>
+                            <div class="lk__bar-slink">
+                                <div class="lk__slink-item">
+                                    <div class="lk__slink-title">
+                                        <span><i class="mdi mdi-database-lock-outline"></i></span>
+                                        Резюме
+                                    </div>
+                                    <div class="lk__slink-enum">
+                                        3
+                                    </div>
+                                </div>
+                                <div class="lk__slink-item">
+                                    <div class="lk__slink-title">
+                                        <span><i class="mdi mdi-briefcase-outline"></i></span>
+                                        Откликов
+                                    </div>
+                                    <div class="lk__slink-enum">
+                                        16
+                                    </div>
+                                </div>
+                                <div class="lk__slink-item">
+                                    <div class="lk__slink-title">
+                                        <span><i class="mdi mdi-eye"></i></span>
+                                        Просмотров
+                                    </div>
+                                    <div class="lk__slink-enum">
+                                        243
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lk__bar-notice">
+                                <div class="lk__notice-header">
+                                    Оповещения
+                                    <i class="mdi mdi-bell-ring-outline"></i>
+                                </div>
+                                <div class="lk__bar-notice-list">
+                                    <div class="lk__nl-item">
+                                        <i class="mdi mdi-chat-processing-outline"></i>
+                                        <div>
+                                            <span>Новое сообщение</span>
+                                            <p>01.12.2023 17:14</p>
+                                        </div>
+                                    </div>
+                                    <div class="lk__nl-item">
+                                        <i class="mdi mdi-checkbox-marked-circle-auto-outline"></i>
+                                        <div>
+                                            <span>Автоматический отклик</span>
+                                            <p>30.11.2023 11:44</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lk__more-notice">
+                                <a href="">Ещё 7 уведомлений</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</main>
+<!-- / MAIN CONTENT -->
+
+<!-- INCLUDE SCRIPTS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+        integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>new WOW().init()</script>
+
+<script src="../../build/lk.bundle.js"></script>
+<!-- / INCLUDE SCRIPTS -->
+
+</body>
+</html>
