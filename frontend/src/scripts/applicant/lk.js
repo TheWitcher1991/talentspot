@@ -1,3 +1,4 @@
+import Security from './model'
 import { isset, ready, swipeTabs } from '../modules/config'
 
 (function () {
@@ -76,6 +77,8 @@ import { isset, ready, swipeTabs } from '../modules/config'
                 ul.classList.toggle('lk__menu-show')
             })
         })
+
+        Security()
 
     })
 

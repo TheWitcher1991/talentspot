@@ -88,6 +88,113 @@
 </head>
 <body class="lk__body">
 
+<!-- MODEL BLOCK -->
+<div class="model model__responses" data-respons="1">
+    <div class="model__wrapper">
+        <div class="model__container">
+            <div class="model__title">
+                <span class="model__title-span">Мои отклики / Отклик №1</span>
+                <i class="mdi mdi-close model__title-close"></i>
+            </div>
+            <div class="model__content">
+                <div class="slick__wrapper">
+                    <div class="slick__block">
+                        <div class="slick__title">Информация об отклике <a target="_blank" href=""><i class="mdi mdi-arrow-top-right-thin-circle-outline"></i></a></div>
+                    </div>
+                    <div class="slick__block">
+                        <div class="slick__list">
+                            <div class="slick__item">
+                                <div class="slick__left">
+                                    <i class="mdi mdi-briefcase-outline"></i>
+                                    Вакансия
+                                </div>
+                                <div class="slick__right">Системный администратор</div>
+                            </div>
+                            <div class="slick__item">
+                                <div class="slick__left">
+                                    <i class="mdi mdi-source-fork"></i>
+                                    Статус
+                                </div>
+                                <div class="slick__right">На рассмотрении</div>
+                            </div>
+                            <div class="slick__item">
+                                <div class="slick__left">
+                                    <i class="mdi mdi-domain"></i>
+                                    Компания
+                                </div>
+                                <div class="slick__right">Тинькофф</div>
+                            </div>
+                            <div class="slick__item">
+                                <div class="slick__left">
+                                    <i class="mdi mdi-calendar-today-outline"></i>
+                                    Откликнулись
+                                </div>
+                                <div class="slick__right"> 17 декабря 17:40</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slick__block">
+                        <div class="slick__list">
+                            <div class="slick__item">
+                                <div class="slick__left">
+                                    <i class="mdi mdi-cash"></i>
+                                    Зарплата
+                                </div>
+                                <div class="slick__right">от 60 000 руб.</div>
+                            </div>
+                            <div class="slick__item">
+                                <div class="slick__left">
+                                    <i class="mdi mdi-map-marker-outline"></i>
+                                    Место работы
+                                </div>
+                                <div class="slick__right">г. Ставрополь, ул Лазо 31</div>
+                            </div>
+                            <div class="slick__item">
+                                <div class="slick__left">
+                                    <i class="mdi mdi-head-cog-outline"></i>
+                                    Опыт работы
+                                </div>
+                                <div class="slick__right">Без опыта</div>
+                            </div>
+                            <div class="slick__item">
+                                <div class="slick__left">
+                                    <i class="mdi mdi-calendar-month-outline"></i>
+                                    График работы
+                                </div>
+                                <div class="slick__right">Полный рабочий день</div>
+                            </div>
+                            <div class="slick__item">
+                                <div class="slick__left">
+                                    <i class="mdi mdi-clock-time-four-outline"></i>
+                                    Тип занятости
+                                </div>
+                                <div class="slick__right"> Полная занятость</div>
+                            </div>
+                            <div class="slick__item">
+                                <div class="slick__left">
+                                    <i class="mdi mdi-school-outline"></i>
+                                    Образование
+                                </div>
+                                <div class="slick__right"> Не важно</div>
+                            </div>
+                        </div>
+                        <div class="slick__slot">
+                            <span class="slick__slot-item"><i class="Люди с инвалидностью"></i></span>
+                        </div>
+                    </div>
+                    <div class="slick__block">
+                        <div class="slick__title">Комментарий компании</div>
+                        <span class="slick__text">Скорее всего компания сейчас рассматривает Вашу кандидатуру.
+                            (Данная система не отображает полноту картины — она является условной.
+                            Компания может не сортировать отклики и не отправлять Вам сообщения через нашу системy)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- / MODEL BLOCK -->
+
 <!-- MAIN CONTENT -->
 <main id="wrapper" class="wrapper lk__wrapper">
     <section class="lk__section">
@@ -196,7 +303,7 @@
 
                         <div class="lk__tabs">
                             <div class="lk__tabs-bth">
-                                <div data-tab="#lk__response-active" class="tab__links lk__tabs-link" id="default__tab">Активные (1)</div>
+                                <div data-tab="#lk__response-active" class="tab__links lk__tabs-link" id="default__tab">Активные</div>
                                 <div data-tab="#lk__response-archive" class="tab__links lk__tabs-link">Архив</div>
                             </div>
 
@@ -205,9 +312,18 @@
                                 <div class="tab__content lk__tab" id="lk__response-active">
 
                                     <div class="lk__div">
-                                        <div class="lk__div-title">
+
+                                        <div class="lk__div-title-no">
                                             <div>
-                                                У Вас 3 отклика
+                                                Найдено 3 отклика
+                                            </div>
+                                            <div class="lk__bth-flex">
+                                                <div class="lk__bth-add-min">
+                                                    <i class="mdi mdi-magnify"></i>
+                                                </div>
+                                                <div class="lk__bth-add-min">
+                                                    <i class="mdi mdi-tune-variant"></i>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="lk__div-content">
@@ -302,9 +418,17 @@
                                 <div class="tab__content lk__tab" id="lk__response-archive">
 
                                     <div class="lk__div">
-                                        <div class="lk__div-title">
+                                        <div class="lk__div-title-no">
                                             <div>
-                                                У Вас 2 отклика в архиве
+                                                Найдено 3 отклика в архиве
+                                            </div>
+                                            <div class="lk__bth-flex">
+                                                <div class="lk__bth-add-min">
+                                                    <i class="mdi mdi-magnify"></i>
+                                                </div>
+                                                <div class="lk__bth-add-min">
+                                                    <i class="mdi mdi-tune-variant"></i>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="lk__div-content">

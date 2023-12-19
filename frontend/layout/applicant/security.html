@@ -88,6 +88,137 @@
 </head>
 <body class="lk__body">
 
+<!-- MODEL BLOCK -->
+<div class="model model__email">
+    <div class="model__wrapper">
+        <div class="model__container-mini">
+            <div class="model__title">
+                <span class="model__title-big">Основная электронная почта</span>
+                <i class="mdi mdi-close model__title-close"></i>
+            </div>
+            <div class="model__content">
+
+                <label for="exp__start-date-1" class="lk__label-big" style="margin: 0;">
+                    <span class="lk__label-bigtext">Введите адрес электронной почты, чтобы иметь возможность восстановить доступ к аккаунту и получать уведомления безопасности</span>
+                    <input type="text" name="name" id="name" required
+                           placeholder="Введите email">
+                    <div class="label__error error__name"></div>
+                </label>
+
+
+                <button type="button" class="model__button">
+                    Сохранить
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="model model__password">
+    <div class="model__wrapper">
+        <div class="model__container-mini">
+            <div class="model__title">
+                <span class="model__title-big">Обновить пароль</span>
+                <i class="mdi mdi-close model__title-close"></i>
+            </div>
+            <div class="model__content">
+
+                <span class="model__text">После смены пароля произойдёт выход из аккаунта на всех устройствах</span>
+
+
+
+                <label for="exp__start-date-1" class="lk__label-big">
+                    <input type="password" name="name" id="name" required
+                           placeholder="Текущий пароль">
+                    <div class="label__error error__name"></div>
+                </label>
+
+                <label for="exp__start-date-1" class="lk__label-big">
+                    <input type="password" name="name" id="name" required
+                           placeholder="Новый пароль">
+                    <div class="label__error error__name"></div>
+                </label>
+
+
+                <label for="exp__start-date-1" class="lk__label-big">
+                    <input type="password" name="name" id="name" required
+                           placeholder="Повторите пароль">
+                    <div class="label__error error__name"></div>
+                </label>
+
+
+
+                <button type="button" class="model__button">
+                    Изменить
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="model model__spare">
+    <div class="model__wrapper">
+        <div class="model__container-mini">
+            <div class="model__title">
+                <span class="model__title-big">Запасная электронная почта</span>
+                <i class="mdi mdi-close model__title-close"></i>
+            </div>
+            <div class="model__content">
+
+                <label for="exp__start-date-1" class="lk__label-big" style="margin: 0;">
+                    <span class="lk__label-bigtext">Введите email, который поможет восстановить доступ к аккаунту</span>
+                    <input type="text" name="name" id="name" required
+                           placeholder="Введите email">
+                    <div class="label__error error__name"></div>
+                </label>
+
+
+                <button type="button" class="model__button">
+                    Добавить
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="model model__question">
+    <div class="model__wrapper">
+        <div class="model__container-mini">
+            <div class="model__title">
+                <span class="model__title-big">Добавить контрольный вопрос</span>
+                <i class="mdi mdi-close model__title-close"></i>
+            </div>
+            <div class="model__content">
+
+                <span class="model__text">Выберите вопрос или придумайте свой, затем напишите ответ на него</span>
+
+                <label for="exp__start-date-1" class="lk__label-big">
+                    <div class="label__select-block">
+                        <select name="exp__start-date-1" id="exp__start-date-1">
+                            <option value="01">Не выбран</option>
+                        </select>
+                        <div class="label-arrow">
+                            <i class="mdi mdi-chevron-down"></i>
+                        </div>
+                    </div>
+                </label>
+
+                <label for="exp__start-date-1" class="lk__label-big">
+                    <input type="text" name="name" id="name" required
+                           placeholder="Ответ на вопрос">
+                    <div class="label__error error__name"></div>
+                </label>
+
+
+                <button type="button" class="model__button">
+                    Добавить
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- / MODEL BLOCK -->
+
 <!-- MAIN CONTENT -->
 <main id="wrapper" class="wrapper lk__wrapper">
     <section class="lk__section">
@@ -207,7 +338,7 @@
                                 </div>
                                 <div class="lk__pop-line"></div>
                                 <div class="lk__pop-bth">
-                                    <a href=""><i class="mdi mdi-logout"></i> Выход</a>
+                                    <a href=""><i class="mdi mdi-location-exit"></i> Выход</a>
                                 </div>
                             </div>
                         </div>
@@ -227,19 +358,19 @@
                             </div>
                             <div class="lk__div-content">
                                 <div class="lk__slot__wrap">
-                                    <div class="lk__slot-item">
+                                    <div class="lk__slot-item security__login">
                                         <div class="lk__slot-left">
                                             <span><i class="mdi mdi-server-security"></i></span>
                                             <div>
                                                 <span>Двухфакторная аутентификация</span>
-                                                <p>Текущий способ</p>
+                                                <p class="security__text-act">Подключена</p>
                                             </div>
                                         </div>
                                         <div class="lk__slot-bth">
                                             <i class="mdi mdi-chevron-right"></i>
                                         </div>
                                     </div>
-                                    <div class="lk__slot-item">
+                                    <div class="lk__slot-item security__password">
                                         <div class="lk__slot-left">
                                             <span><i class="mdi mdi-cached"></i></span>
                                             <div>
@@ -265,7 +396,7 @@
                             </div>
                             <div class="lk__div-content">
                                 <div class="lk__slot__wrap">
-                                    <div class="lk__slot-item">
+                                    <div class="lk__slot-item security__email">
                                         <div class="lk__slot-left">
                                             <span><i class="mdi mdi-email-outline"></i></span>
                                             <div>
@@ -277,7 +408,7 @@
                                             <i class="mdi mdi-chevron-right"></i>
                                         </div>
                                     </div>
-                                    <div class="lk__slot-item">
+                                    <div class="lk__slot-item security__question">
                                         <div class="lk__slot-left">
                                             <span> <i class="mdi mdi-help"></i></span>
                                             <div>
@@ -289,7 +420,7 @@
                                             <i class="mdi mdi-plus"></i>
                                         </div>
                                     </div>
-                                    <div class="lk__slot-item">
+                                    <div class="lk__slot-item security__spare">
                                         <div class="lk__slot-left">
                                             <span>  <i class="mdi mdi-email-plus-outline"></i></span>
                                             <div>
@@ -307,17 +438,29 @@
                         <div class="lk__div-no">
                             <div class="lk__div-title">
                                 <div>
-                                    Активность
-                                    <span>Когда вы заходили на портал</span>
+                                    Аккаунт
                                 </div>
                             </div>
                             <div class="lk__div-content">
                                 <div class="lk__slot__wrap">
-                                    <div class="lk__slot-item">
+                                    <div class="lk__slot-item security__login">
                                         <div class="lk__slot-left">
                                             <span><i class="mdi mdi-history"></i></span>
                                             <div>
-                                                <span>Журнал посещений</span>
+                                                <span>История активности</span>
+                                                <p>Когда вы заходили на портал</p>
+                                            </div>
+                                        </div>
+                                        <div class="lk__slot-bth">
+                                            <i class="mdi mdi-chevron-right"></i>
+                                        </div>
+                                    </div>
+                                    <div class="lk__slot-item security__password">
+                                        <div class="lk__slot-left">
+                                            <span class="lk__slot-img-error"><i class="mdi mdi-trash-can-outline"></i></span>
+                                            <div>
+                                                <span>Удаление аккаунта</span>
+                                                <p>Полное удаление аккаунта из данного сервиса</p>
                                             </div>
                                         </div>
                                         <div class="lk__slot-bth">
@@ -325,7 +468,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>

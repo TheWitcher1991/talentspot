@@ -485,15 +485,25 @@
 }
 
 .footer__rev {
-    display: block;
-    color: var(--color-fg-white);
-    margin: 0 0 0 0;
-    font-size: 16px;
-}
 
-.footer__phone {
-    font-size: 22px;
-    font-weight: 700;
+    color: var(--color-fg-white);
+    margin: 0 0 16px 0;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+
+    span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        border: 1px solid var(--color-fg-white);
+        color: var(--color-fg-white);
+        border-radius: 50%;
+        margin: 0 8px 0 0;
+        font-size: 16px;
+    }
 }
 
 .footer__info {
@@ -610,7 +620,7 @@
         font-size: 18px;
         margin: 0 0 20px 0;
         font-weight: 400;
-        color: var(--color-fg-main);
+        color: var(--color-fg-black);
 
         i {
             margin: 0 8px 0 0;
