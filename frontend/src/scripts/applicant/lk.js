@@ -9,6 +9,14 @@ import { isset, ready, swipeTabs } from '../modules/config'
 
     ready(function () {
 
+        document.querySelectorAll('textarea').forEach(el => {
+            el.classList.add('auto');
+            el.addEventListener('input', e => {
+                el.style.height = 'auto'
+                el.style.height = (el.scrollHeight) + 'px'
+            })
+        })
+
         // СМЕНА ПОЛОЖЕНИЯ БОКОВОГО МЕНЮ
 
         let lkNav = document.querySelector('.lk__nav'),

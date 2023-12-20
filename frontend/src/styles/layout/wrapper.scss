@@ -840,15 +840,14 @@
 }
 
 .support__list {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     margin: 60px 0 0 0;
 
     a {
-        width: 31.9%;
+        position: relative;
         margin: 0 20px 20px 0;
-        border-radius: 10px;
+        border-radius: 20px;
         background: var(--color-bg-main);
         padding: 40px;
         color: var(--color-fg-white);
@@ -879,6 +878,9 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            position: absolute;
+            top: 40px;
+            right: 36px;
         }
 
         > div {
@@ -1094,6 +1096,11 @@ body {
     .flex__align-content > div {
         margin: 0 0 6px 0;
     }
+}
+
+
+.flex__align-content {
+    font-size: 15px;
 }
 
 

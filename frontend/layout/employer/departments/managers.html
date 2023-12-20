@@ -17,7 +17,7 @@
     <meta charset="utf-8"/>
 
     <!-- SEO -->
-    <title>Безопасность</title>
+    <title>Менеджеры</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
     <meta name="description" content=""/>
     <meta name="keywords" content=" />
@@ -232,142 +232,102 @@
                     <div class="lk__content-left">
 
                         <div class="lk__tabs-bth">
-                            <div data-tab="#lk__manager-profile" class="tab__links lk__tabs-link">Персональные данные</div>
-                            <div data-tab="#lk__manager-security" class="tab__links lk__tabs-link" id="default__tab">Безопасность</div>
-                            <div data-tab="#lk__manager-role" class="tab__links lk__tabs-link">Права</div>
-                            <div data-tab="#lk__manager-mailings" class="tab__links lk__tabs-link">Рассылки</div>
-                            <div data-tab="#lk__manager-email" class="tab__links lk__tabs-link">Письма</div>
+                            <div data-tab="#lk__company-managers" class="tab__links lk__tabs-link tab__active" id="default__tab">Менеджеры</div>
+                            <div data-tab="#lk__company-teams" class="tab__links lk__tabs-link">Команды</div>
+                            <div data-tab="#lk__company-documents" class="tab__links lk__tabs-link">Документы</div>
+                            <div data-tab="#lk__company-reviews" class="tab__links lk__tabs-link">Отзывы о компании</div>
                         </div>
                         <div class="lk__tabs-div">
-                            <div id="lk__manager-profile" class="tab__content lk__tab">
-
-                            </div>
-                            <div id="lk__manager-security" class="tab__content lk__tab">
-
-                                <div class="univ__slot">
-                                    <div>
-                                        <span>Иван Иванов Иванович</span>
-                                        <p>Главный менеджер</p>
-                                    </div>
-                                </div>
-
+                            <div id="lk__company-managers" class="tab__content lk__tab">
                                 <div class="lk__div-no">
                                     <div class="lk__div-title">
                                         <div>
-                                            Способ входа
-                                            <span>Как вы заходите на портал</span>
+                                            <label for="" class="lk__div-title-search">
+                                                <i class="mdi mdi-magnify"></i>
+                                                <input type="text" name="lk__search" id="" placeholder="Найти менеджера">
+                                            </label>
+                                        </div>
+                                        <div class="lk__bth-flex">
+                                            <div class="lk__bth-add-min">
+                                                <i class="mdi mdi-cloud-download-outline"></i>
+                                            </div>
+                                            <a href="" class="lk__bth-add-min">
+                                                <i class="mdi mdi-tune-variant"></i>
+                                            </a>
+                                            <a href="" class="lk__bth-add-min">
+                                                <i class="mdi mdi-plus-circle-outline"></i>
+                                            </a>
                                         </div>
                                     </div>
-                                    <div class="lk__div-content">
-                                        <div class="lk__slot__wrap">
-                                            <div class="lk__slot-item security__login">
-                                                <div class="lk__slot-left">
-                                                    <span><i class="mdi mdi-server-security"></i></span>
-                                                    <div>
-                                                        <span>Двухфакторная аутентификация</span>
-                                                        <p class="security__text-act">Подключена</p>
-                                                    </div>
-                                                </div>
-                                                <div class="lk__slot-bth">
-                                                    <i class="mdi mdi-chevron-right"></i>
-                                                </div>
-                                            </div>
-                                            <div class="lk__slot-item security__password">
-                                                <div class="lk__slot-left">
-                                                    <span><i class="mdi mdi-cached"></i></span>
-                                                    <div>
-                                                        <span>Обновить пароль</span>
-                                                        <p>Не менялся 20 дней</p>
-                                                    </div>
-                                                </div>
-                                                <div class="lk__slot-bth">
-                                                    <i class="mdi mdi-chevron-right"></i>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <div class="lk__div-box">
+                                        <div class="table__master">
+                                            <div class="table__filter">
 
-                                    </div>
-                                </div>
-                                <div class="lk__div-no">
-                                    <div class="lk__div-title">
-                                        <div>
-                                            Способ восстановления
-                                            <span>Помогут вернуть доступ к аккаунту, если что-то случится
-                                    </span>
-                                        </div>
-                                    </div>
-                                    <div class="lk__div-content">
-                                        <div class="lk__slot__wrap">
-                                            <div class="lk__slot-item security__email">
-                                                <div class="lk__slot-left">
-                                                    <span><i class="mdi mdi-email-outline"></i></span>
-                                                    <div>
-                                                        <span>admin@talentspot.ru</span>
-                                                        <p>Основная электронная почта</p>
-                                                    </div>
-                                                </div>
-                                                <div class="lk__slot-bth">
-                                                    <i class="mdi mdi-chevron-right"></i>
-                                                </div>
                                             </div>
-                                            <div class="lk__slot-item security__question">
-                                                <div class="lk__slot-left">
-                                                    <span> <i class="mdi mdi-help"></i></span>
-                                                    <div>
-                                                        <span>Добавить контрольный вопрос</span>
-                                                        <p>Для воостановления доступа</p>
-                                                    </div>
-                                                </div>
-                                                <div class="lk__slot-bth">
-                                                    <i class="mdi mdi-plus"></i>
-                                                </div>
-                                            </div>
-                                            <div class="lk__slot-item security__spare">
-                                                <div class="lk__slot-left">
-                                                    <span>  <i class="mdi mdi-email-plus-outline"></i></span>
-                                                    <div>
-                                                        <span>Запасная электронная почта</span>
-                                                        <p>Для воостановления доступа</p>
-                                                    </div>
-                                                </div>
-                                                <div class="lk__slot-bth">
-                                                    <i class="mdi mdi-plus"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="lk__div-no">
-                                    <div class="lk__div-title">
-                                        <div>
-                                            Аккаунт
-                                        </div>
-                                    </div>
-                                    <div class="lk__div-content">
-                                        <div class="lk__slot__wrap">
-                                            <div class="lk__slot-item security__login">
-                                                <div class="lk__slot-left">
-                                                    <span><i class="mdi mdi-history"></i></span>
-                                                    <div>
-                                                        <span>История активности</span>
-                                                        <p>Когда вы заходили на портал</p>
-                                                    </div>
-                                                </div>
-                                                <div class="lk__slot-bth">
-                                                    <i class="mdi mdi-chevron-right"></i>
-                                                </div>
+                                            <div class="table__base">
+                                                <table>
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="td__left"><span><i class="mdi mdi-account"></i> Имя</span></th>
+                                                            <th class="td__left"><span><i class="mdi mdi-hand-back-right-outline"></i> Роль</span></th>
+                                                            <th class="td__left"><span><i class="mdi mdi-source-fork"></i> Статус</span></th>
+                                                            <th class="td__left"><span><i class="mdi mdi-account-group-outline"></i> Команда</span></th>
+                                                            <th class="td__right"><span><i class="mdi mdi-eye-outline"></i> Резюме за сутки</span></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="td__center">
+                                                            <td class="td__text td__left">
+                                                                <div class="marker__user">
+                                                                    <span>ИИ</span>
+                                                                    <div>
+                                                                        <span>Иван Иванов (это я)</span>
+                                                                        <p>admin@talentspot.ru</p>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="td__text td__left"><span>Главный менеджер</span></td>
+                                                            <td class="td__text td__left">
+                                                                <div class="market__status">• Онлайн</div>
+                                                            </td>
+                                                            <td class="td__text td__left"><span>
+                                                                 <div class="market__status-wait">Маркетинг</div>
+                                                            </span></td>
+                                                            <td class="td__text td__right"><span>0</span></td>
+                                                        </tr>
+                                                        <tr class="td__center">
+                                                            <td class="td__text td__left">
+                                                                <div class="marker__user">
+                                                                    <span>СС</span>
+                                                                    <div>
+                                                                        <span>Сергей Сидоров</span>
+                                                                        <p>admin@talentspot.ru</p>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="td__text td__left"><span>Менеджер</span></td>
+                                                            <td class="td__text td__left">
+                                                                <div class="market__status">• Онлайн</div>
+                                                            </td>
+                                                            <td class="td__text td__left"><span>
+                                                                 <div class="market__status-wait">Маркетинг</div>
+                                                            </span></td>
+                                                            <td class="td__text td__right"><span>0</span></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div id="lk__manager-role" class="tab__content lk__tab">
+                            <div id="lk__company-teams" class="tab__content lk__tab">
 
                             </div>
-                            <div id="lk__manager-mailings" class="tab__content lk__tab">
+                            <div id="lk__company-documents" class="tab__content lk__tab">
 
                             </div>
-                            <div id="lk__manager-email" class="tab__content lk__tab">
+                            <div id="lk__company-reviews" class="tab__content lk__tab">
 
                             </div>
                         </div>
