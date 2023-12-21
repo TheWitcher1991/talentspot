@@ -16,7 +16,6 @@ const convertObjectToQueryString = params => {
     return `?${urlParams}`;
 }
 
-
 /**
  * Проверка, что это email
  * @param {string} str

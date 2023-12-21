@@ -1418,3 +1418,18 @@ body {
         }
     }
 }
+
+.standalone-base {
+    border: 2px solid transparent;
+    border-radius: 20px;
+
+    .ql-toolbar.ql-snow {
+        background: var(--color-bg-400);
+        border-radius: 10px 10px 0 0;
+    }
+
+    .ql-container.ql-snow {
+
+        border-radius: 0 0 10px 10px;
+    }
+}

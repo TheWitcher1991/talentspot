@@ -39,7 +39,7 @@
 
 .header__logo {
     img {
-        height: 55px;
+        height: 45px;
     }
 }
 
@@ -93,7 +93,7 @@
     display: flex;
     align-items: center;
 
-     a {
+     > a, > div > a {
          color: var(--color-fg-white);
          font-size: 14px;
          margin: 0 0 0 20px;
@@ -458,11 +458,10 @@
     width: 100%;
     position: relative;
     background: var(--color-bg-main);
-    overflow: hidden;
 }
 
 .header__unique-menu {
-    margin: 20px 0;
+    padding: 20px 0;
     display: flex;
     align-items: center;
     width: 100%;
@@ -507,3 +506,14 @@
     }
 }
 
+.header__lk-bth {
+    cursor: pointer;
+    font-size: 24px;
+    color: var(--color-fg-white);
+    margin: 0 30px 0 0;
+    transition: all 0.2s linear;
+
+    &:hover {
+        color: var(--color-fg-black);
+    }
+}

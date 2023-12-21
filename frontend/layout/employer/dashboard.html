@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<!--[if lt IE 6 ]>
+<html class="ie ie6" lang="ru" dir="ltr"> <![endif]-->
+<!--[if IE 7 ]>
+<html class="ie ie7" lang="ru" dir="ltr"> <![endif]-->
+<!--[if IE 8 ]>
+<html class="ie ie8" lang="ru" dir="ltr"> <![endif]-->
+<!--[if IE 9 ]>
+<html class="ie ie9" lang="ru" dir="ltr"> <![endif]-->
+<!--[if IE 10 ]>
+<html class="ie ie10" lang="ru" dir="ltr"> <![endif]-->
+<!--[if (gte IE 11)|!(IE)]><!-->
+<html lang="ru" dir="ltr" theme="light" xmlns="http://www.w3.org/1999/html">
+<!--<![endif]-->
+<head>
+
+    <meta charset="utf-8"/>
+
+    <!-- SEO -->
+    <title>Дашборд</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=" />
+    <link rel="canonical" href="" />
+    <meta http-equiv="content-language" content="ru"/>
+    <meta name="robots" content="index, follow"/>
+    <meta http-equiv="x-dns-prefetch-control" content="on"/>
+
+    <meta name="author" content=""/>
+    <meta name="copyright" content="ООО «ТалентСпот»"/>
+
+    <link rel="shortcut icon" href="../../src/images/static/logo.png" type="image/x-icon"/>
+    <link rel="icon" href="../../src/images/static/logo.png" type="image/x-icon"/>
+    <!-- / SEO  -->
+
+    <link rel="stylesheet" href="../../build/styles.bundle.css">
+
+    <!-- SCRIPT FOR OLD BROWSERS -->
+    <script type="text/javascript">
+        !function () {
+            "use strict";
+
+            function trackOldBrowserEvent() {
+                var t = function createXmlHttpRequestObject() {
+                    var t;
+                    try {
+                        t = new XMLHttpRequest
+                    } catch (r) {
+                        for (var e = new Array("MSXML2.XMLHHTP.11.0", "MSXML2.XMLHHTP.10.0", "MSXML2.XMLHHTP.9.0", "MSXML2.XMLHHTP.8.0", "MSXML2.XMLHHTP.7.0", "MSXML2.XMLHHTP.6.0", "MSXML2.XMLHHTP.5.0", "MSXML2.XMLHHTP.4.0", "MSXML2.XMLHHTP.3.0", "MSXML2.XMLHHTP", "Microsoft.XMLHHTP"), s = 0; s < e.length && !t; s++) try {
+                            t = new ActiveXObject(e[s])
+                        } catch (t) {
+                        }
+                    }
+                    return null != t ? t : void 0
+                }(), e = new Object;
+                return e.open = "/badbrowser?status=" + (0 !== t.status && t.status), e.xhr = t.responseURL ? t.responseURL : "/badbrowser?status=" + (0 !== t.status && t.status), t.open("GET", e.open, !0), t.setRequestHeader("Content-Type", "text/html"), t.setRequestHeader("X-Requested-With", "XMLHttpRequest"), t.onreadystatechange = function () {
+                    if (4 === t.readyState && (t.status >= 200 && t.status < 300 || 304 === t.status || 0 === t.status && "file:" === protocol)) try {
+                        location.replace(t.responseURL ? t.responseURL : "/badbrowser?status=" + t.status)
+                    } catch (t) {
+                    }
+                }, t.send(e.xhr ? e.xhr : null), t
+            }
+
+            !function checkOldBrowser() {
+                if (document.body) try {
+                    "CSS" in window && CSS.supports("display", "flex") && "undefined" != typeof Symbol || trackOldBrowserEvent()
+                } catch (t) {
+                } else setTimeout(checkOldBrowser, 100)
+            }()
+        }();
+    </script>
+    <!-- / SCRIPT FOR OLD BROWSERS -->
+
+    <!-- INCLUDE LIBS -->
+    <script src="https://cdn.quilljs.com/1.3.0/quill.min.js"></script>
+    <!-- / INCLUDE LIBS -->
+
+    <!-- INCLUDE ICONS AND FRONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.3.67/css/materialdesignicons.min.css"
+          integrity="sha512-nRzny9w0V2Y1/APe+iEhKAwGAc+K8QYCw4vJek3zXhdn92HtKt226zHs9id8eUq+uYJKaH2gPyuLcaG/dE5c7A=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <!-- / INCLUDE ICONS AND FRONTS -->
+
+</head>
+<body class="lk__body">
+
+<!-- MAIN CONTENT -->
+<main id="wrapper" class="wrapper lk__wrapper">
+    <section class="lk__section">
+
+        <aside class="lk__menu">
+            <div class="lk__menu-tmp">
+                <div class="lk__menu-brand">
+                    <div>
+                        <img src="../../src/images/static/logo/166666/png/128x128.png" alt="">
+                        <span>TalentSpot</span>
+                    </div>
+                </div>
+                <ul class="lk__menu-ul">
+                    <li>
+                        <a class="lk__link" href="">
+                            <span>
+                                <i class="mdi mdi-arrow-top-right-thin-circle-outline"></i>
+                                <div class="lk__link-title">Искать резюме</div>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="lk__link lk__link-active" href="">
+                            <span>
+                                <i class="mdi mdi-chart-line-variant"></i>
+                                <div class="lk__link-title">Дашборд</div>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="lk__link">
+                            <span>
+                                <i class="mdi mdi-school-outline"></i>
+                                <div class="lk__link-title">Соискатели</div>
+                            </span>
+                        </a>
+                        <ul class="lk__menu-pop">
+                            <li><a href="">Избранные</a></li>
+                            <li><a href="">Мои просмотры</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="lk__link">
+                            <span>
+                                <i class="mdi mdi-database-lock-outline"></i>
+                                <div class="lk__link-title">Вакансии</div>
+                            </span>
+                        </a>
+                        <ul class="lk__menu-pop">
+                            <li><a href="">Активные</a></li>
+                            <li><a href="">Архив</a></li>
+                            <li><a href="">Шаблоны</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="lk__link">
+                        <span>
+                                   <i class="mdi mdi-account-credit-card-outline"></i>
+                                <div class="lk__link-title">Тариф</div>
+                            </span>
+                        </a>
+                        <ul class="lk__menu-pop">
+                            <li><a href="">Оплата</a></li>
+                            <li><a href="">Плательщики</a></li>
+                            <li><a href="">Договор</a></li>
+                            <li><a href="">История</a></li>
+                            <li><a href="">Прайс-лист</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="lk__link" href="">
+                            <span>
+                               <i class="mdi mdi-lightbulb-on-outline"></i>
+                                <div class="lk__link-title">Есть идея</div>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="lk__link" href="">
+                            <span>
+                               <i class="mdi mdi-handshake-outline"></i>
+                                <div class="lk__link-title">Центр поддержки</div>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="lk__copy">
+                <i class="mdi mdi-copyright"></i> 2023 ООО «ТалентСпот»
+
+            </div>
+        </aside>
+
+        <div class="lk__page">
+            <div class="lk__nav">
+                <div class="lk__nav-left">
+                    <div class="lk__menu-replace">
+
+                    </div>
+
+                    <div class="lk__search-wrapper">
+                        <label for="lk__search" class="lk__search-label">
+                            <i class="mdi mdi-magnify"></i>
+                            <input type="text" name="lk__search" id="lk__search" placeholder="Введите для поиска...">
+                        </label>
+                        <div class="lk__search-result">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="lk__nav-right">
+                    <a href="">Добавить вакансию</a>
+                    <div class="lk__nav-item lk__nav-bell">
+                        <span><i class="mdi mdi-chat"></i></span>
+                        <div></div>
+                    </div>
+                    <div class="lk__nav-item lk__nav-bell">
+                        <span><i class="mdi mdi-bell"></i></span>
+                        <div></div>
+                    </div>
+                    <div class="lk__nav-item lk__nav-name">
+                        <span><i class="mdi mdi-account"></i></span>
+                        <div>
+                            <span>Иван</span>
+                            <p>admin@talentspot.ru</p>
+                        </div>
+                        <div class="lk__name-pop">
+                            <div>
+                                <div class="lk__pop-bth">
+                                    <a href=""><i class="mdi mdi-domain"></i> О компании</a>
+                                    <a href=""><i class="mdi mdi-account-circle-outline"></i> Менеджеры</a>
+                                    <a href=""><i class="mdi mdi-account-group-outline"></i> Команды</a>
+                                    <a href=""><i class="mdi mdi-check-circle-outline"></i> Документы</a>
+                                </div>
+                                <div class="lk__pop-line"></div>
+                                <div class="lk__pop-bth">
+                                    <a href=""><i class="mdi mdi-account-edit-outline"></i> Персональные данные</a>
+                                    <a href=""><i class="mdi mdi-shield-outline"></i> Безопасность</a>
+                                    <a href=""><i class="mdi mdi-hand-back-right-outline"></i> Права</a>
+                                    <a href=""><i class="mdi mdi-email-outline"></i> Рассылки</a>
+                                    <a href=""><i class="mdi mdi-chat-outline"></i> Письма</a>
+                                </div>
+                                <div class="lk__pop-line"></div>
+                                <div class="lk__pop-bth">
+                                    <a href=""><i class="mdi mdi-location-exit"></i> Выход</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lk__content">
+
+                <div class="lk__div-dashpay">
+                    <h1>Добрый день, Иван Иванов</h1>
+                    <span>Небольшая сводка недавних событий</span>
+                    <div class="lk__payment">
+                        <div class="lk__payment-left">
+                                         <span class="lk__div-money-cart-type">
+
+                                                    МИР
+                                                </span>
+                            <div class="lk__div-money-cart-number">
+                                4000 0012 3456 7899
+                            </div>
+                            <div class="lk__div-money-cart-flex">
+                                <div class="lk__div-money-cart-tiny">
+                                    <span>Плательщик</span>
+                                    <p>ООО ТАЛЕНТСПОТ</p>
+                                </div>
+                                <div class="lk__div-money-cart-tiny">
+                                    <span>Срок действия</span>
+                                    <p>09/28</p>
+                                </div>
+                            </div>
+                            <div class="boxs">
+                                <span class="box one"></span>
+                                <span class="box two"></span>
+                                <span class="box three"></span>
+                                <span class="box four"></span>
+                            </div>
+                        </div>
+                        <div class="lk__payment-right">
+                            <span class="lk__pr-title"><i class="mdi mdi-auto-fix"></i> Базовый плюс</span>
+                            <div class="lk__pr-flex">
+                                <div class="lk__pr-item">
+                                    <span>Вакансии</span>
+                                    <p>Осталось 28</p>
+                                </div>
+                                <div class="lk__pr-item">
+                                    <span>Срок вакансий</span>
+                                    <p>До 60 дней</p>
+                                </div>
+                                <div class="lk__pr-item">
+                                    <span>База резюме</span>
+                                    <p>1 000 000</p>
+                                </div>
+                                <div class="lk__pr-item">
+                                    <span>Менеджеры</span>
+                                    <p>Осталось 8</p>
+                                </div>
+                                <div class="lk__pr-item">
+                                    <span>Действует</span>
+                                    <p>До 28 декабря 2023 г.</p>
+                                </div>
+                            </div>
+                            <a href="">Продлить<i class="mdi mdi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lk__div-flex">
+
+
+                    <div class="lk__div">
+                        <div class="lk__div-title-flex">
+                            <div class="lk__div-title-min">
+                                Просмотры вакансий
+                            </div>
+                            <div class="lk__div-title-more">Подробнее</div>
+                        </div>
+                        <div class="lk__div-content">
+                            <div class="lk__strike-list">
+                                <div class="lk__div-strike-line">
+                                    <div class="lk__div-strike-item">
+                                    </div>
+                                    <span class="lk__div-once">Всего за месяц <br>30</span>
+                                </div>
+                                <div class="lk__div-strike-line">
+                                    <div class="lk__div-strike-item">
+                                    </div>
+                                    <span class="lk__div-once">За неделю <br><m>+20</m></span>
+                                </div>
+                            </div>
+                            <div id="chart__once"></div>
+                        </div>
+                    </div>
+                    <div class="lk__div">
+                        <div class="lk__div-title-min">
+                            <div>
+                                Мои события
+                            </div>
+                        </div>
+                        <div class="lk__div-content">
+                            <div class="lk__strike-block">
+                                <div class="lk__strike-block-item">
+                                    <div>
+                                        <span>126</span>
+                                        <p>Всего просмотров</p>
+                                    </div>
+                                    <i class="mdi mdi-eye-outline"></i>
+                                </div>
+                                <div class="lk__strike-block-item">
+                                    <div>
+                                        <span>16</span>
+                                        <p>Всего Соискателей</p>
+                                    </div>
+                                    <i class="mdi mdi-school-outline"></i>
+                                </div>
+                            </div>
+                            <div class="lk__strike-list">
+                                <div class="lk__div-strike-line">
+                                    <div class="lk__div-strike-item">
+                                    </div>
+                                    <span class="lk__div-once"><time>25 декабря 16:54</time> <br> Иван Иванов откликнулся на ваканси... </span>
+                                </div>
+                                <div class="lk__div-strike-line">
+                                    <div class="lk__div-strike-item">
+                                    </div>
+                                    <span class="lk__div-once"><time>20 декабря 16:54</time> <br> У вас новое сообщение от Андрей... </span>
+                                </div>
+                                <div class="lk__div-strike-line">
+                                    <div class="lk__div-strike-item">
+                                    </div>
+                                    <span class="lk__div-once"><time>15 декабря 16:54</time> <br> Вы добавили Ивана в избранное </span>
+                                </div>
+                                <div class="lk__div-strike-line">
+                                    <div class="lk__div-strike-item">
+                                    </div>
+                                    <span class="lk__div-once"><time>16 декабря 16:54</time> <br> У вас новое сообщение от СБЕР</span>
+                                </div>
+                            </div>
+                            <div class="dash__exp">
+                                <span>События за две недели</span>
+                                <div class="lk__div-title-more">Все события</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                <div class="lk__div-flex">
+                    <div class="lk__div">
+                        <div class="lk__div-title-flex">
+                            <div class="lk__div-title-min">
+                                Последняя активность
+                            </div>
+                        </div>
+                        <div class="lk__div-content">
+                            <div class="lk__session-wrap">
+                                <div class="lk__session-item">
+                                    <span><i class="mdi mdi-monitor"></i></span>
+                                    <div class="lk__session-text">
+                                        <div>Браузер Chrome</div>
+                                        <span>194.8.129.16 · Краснодар · сегодня в 9:29</span>
+                                    </div>
+                                </div>
+                                <div class="lk__session-item">
+                                    <span><i class="mdi mdi-monitor"></i></span>
+                                    <div class="lk__session-text">
+                                        <div>Браузер Yandex</div>
+                                        <span>95.153.161.251 · Краснодар · сегодня в 9:29</span>
+                                    </div>
+                                </div>
+                                <div class="lk__session-item">
+                                    <span><i class="mdi mdi-cellphone"></i></span>
+                                    <div class="lk__session-text">
+                                        <div>Мобильный Браузер Chrome</div>
+                                        <span>95.153.161.251 · Краснодар · 28 октября в 00:17</span>
+                                    </div>
+                                </div>
+                                <div class="lk__session-item">
+                                    <span><i class="mdi mdi-monitor"></i></span>
+                                    <div class="lk__session-text">
+                                        <div>Браузер Edge</div>
+                                        <span>194.8.129.16 · Краснодар · сегодня в 9:29</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lk__div">
+                        <div class="lk__div-title-min">
+                            <div>
+                                Последние операции
+                            </div>
+                        </div>
+                        <div class="lk__div-content">
+
+                            <div class="table__master">
+                                <div class="table__filter">
+
+                                </div>
+                                <div class="table__base">
+                                    <table class="table__mini">
+                                        <thead>
+                                        <tr>
+                                            <th class="td__left"><span><i class="mdi mdi-clock-outline"></i> Дата</span></th>
+                                            <th class="td__left"><span><i class="mdi mdi-account"></i> Плательщик</span></th>
+                                            <th class="td__right"><span><i class="mdi mdi-currency-rub"></i> Сумма</span></th>
+                                            <th class="td__left"><span><i class="mdi mdi-credit-card-outline"></i> Метод</span></th>
+                                            <th class="td__left"><span><i class="mdi mdi-source-fork"></i> Статус</span></th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td class="td__text td__left"><span>20.12.2023</span></td>
+                                            <td class="td__text td__left">
+                                                Оплата тарифа «Базовый плюс»
+                                                <br>
+                                                Иван Иванов Иванович
+                                            </td>
+                                            <td class="td__text td__right td__credit"><span>6 000,00 руб.</span></td>
+                                            <td class="td__text td__left"><span><img src="../../../src/images/static/dashboard/fit_master.png" alt=""> •••• 6666</span></td>
+                                            <td class="td__text td__left">
+                                                <div class="market__status-wait"><i class="mdi mdi-clock"></i> В ожидании</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td__text td__left"><span>14.12.2023</span></td>
+                                            <td class="td__text td__left">
+                                                Оплата тарифа «Базовый плюс»
+                                                <br>
+                                                Иван Иванов Иванович
+                                            </td>
+                                            <td class="td__text td__right td__credit"><span>6 000,00 руб.</span></td>
+                                            <td class="td__text td__left"><span><img src="../../../src/images/static/dashboard/fit_master.png" alt=""> •••• 6666</span></td>
+                                            <td class="td__text td__left">
+                                                <div class="market__status"><i class="mdi mdi-check-circle"></i> Исполнен</div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="td__text td__left"><span>14.10.2023</span></td>
+                                            <td class="td__text td__left">
+                                                Оплата тарифа «Базовый плюс»
+                                                <br>
+                                                ООО «ТалентСпот»
+                                            </td>
+                                            <td class="td__text td__right td__credit"><span>6 000,00 руб.</span></td>
+                                            <td class="td__text td__left"><span><img src="../../../src/images/static/dashboard/fit_visa.png" alt=""> •••• 6666</span></td>
+                                            <td class="td__text td__left">
+                                                <div class="market__status"><i class="mdi mdi-check-circle"></i> Исполнен</div>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+</main>
+<!-- / MAIN CONTENT -->
+
+<!-- INCLUDE SCRIPTS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.41.0/apexcharts.min.js" integrity="sha512-bp/xZXR0Wn5q5TgPtz7EbgZlRrIU3tsqoROPe9sLwdY6Z+0p6XRzr7/JzqQUfTSD3rWanL6WUVW7peD4zSY/vQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+        integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>new WOW().init()</script>
+
+<script src="../../build/lk.bundle.js"></script>
+
+<script>
+
+    const TemplateC = (selector, type, series, xaxis, chartAdd = {}) => {
+        const options = {
+            chart: {
+                id: selector,
+                type: type,
+                height: 250,
+                foreColor: "#fff",
+                toolbar: {
+                    show: false
+                },
+                // Дополнительные свойства
+                ...chartAdd
+            },
+            colors: ["#166666"],
+            stroke: {
+                width: 3,
+                curve: 'smooth',
+                lineCap: 'butt',
+            },
+            grid: {
+                borderColor: "#e1e1e1",
+                clipMarkers: false,
+                yaxis: {
+                    lines: {
+                        show: true
+                    }
+                }
+            },
+            dataLabels: {
+                enabled: false
+            },
+            fill: {
+                gradient: {
+                    enabled: true,
+                    opacityFrom: 0.60,
+                    opacityTo: 0
+                }
+            },
+            // ЗНАЧЕНИЯ ПО ОСИ Y
+            series: series,
+            tooltip: {
+                theme: "dark",
+            },
+            // ЗНАЧЕНИЯ ПО ОСИ X
+            xaxis: {
+                ...xaxis,
+                axisBorder: {
+                    show: false
+                },
+                axisTicks: {
+                    show: false
+                },
+                labels: {
+                    style: {
+                        colors: '#989898'
+                    }
+                }
+            },
+            yaxis: {
+                min: 0,
+                opposite: true,
+                tickAmount: 3,
+                labels: {
+                    offsetX: -5,
+                    style: {
+                        colors: '#989898'
+                    }
+                }
+            },
+        }
+
+        return new ApexCharts(document.querySelector(`#${selector}`), options)
+    }
+
+    const ChartOneYear = TemplateC(
+        'chart__once',
+        'area',
+        [
+            {
+                name: "Просмотров",
+                data: [2, 23, 19, 45, 18, 52, 35, 55]
+            }
+        ],
+        {
+            categories: [
+                "1 Янв",
+                "2 Янв",
+                "3 Янв",
+                "4 Янв",
+                "5 Янв",
+                "6 Янв",
+                "7 Янв",
+                "8 Янв",
+            ],
+        },
+    )
+
+    ChartOneYear.render()
+
+    const ChartTwoYear = TemplateC(
+        'chart__two',
+        'area',
+        [
+            {
+                name: "Просмотров",
+                data: [34, 8, 2, 45, 18, 42, 35, 85]
+            }
+        ],
+        {
+            categories: [
+                "1 Янв",
+                "2 Янв",
+                "3 Янв",
+                "4 Янв",
+                "5 Янв",
+                "6 Янв",
+                "7 Янв",
+                "8 Янв",
+            ],
+        },
+    )
+
+    ChartTwoYear.render()
+
+</script>
+<!-- / INCLUDE SCRIPTS -->
+
+</body>
+</html>

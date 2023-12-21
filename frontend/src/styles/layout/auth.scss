@@ -333,7 +333,6 @@
     border-radius: 50%;
     font-size: 28px;
     cursor: pointer;
-    box-shadow: var(--shadow-grey-bth);
     margin: 40px auto 0 auto;
 
     &:hover {
@@ -631,15 +630,15 @@
         display: flex;
         align-items: center;
         color: var(--color-fg-800);
-        font-size: 15px;
+        font-size: 14px;
         font-weight: 400;
 
         > span {
-            width: 24px;
-            height: 24px;
+            width: 22px;
+            height: 22px;
             border-radius: 50%;
             border: 1px solid var(--color-fg-800);
-            margin: 0 10px 0 0;
+            margin: 0 8px 0 0;
             display: flex;
             align-items: center;
             justify-content: center;
