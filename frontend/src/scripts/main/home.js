@@ -9,7 +9,7 @@
             bg3 = document.querySelectorAll('.parallax-bg-3'),
             bg4 = document.querySelectorAll('.parallax-bg-4')
 
-        // Параллах эффект для фигни в шапке
+        // Параллах эффект для элементов в шапке
 
         const parallax = (el, Ox, Oy) => {
             for (let i = 0; i < el.length; i++){

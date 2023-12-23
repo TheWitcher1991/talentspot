@@ -305,7 +305,7 @@
                     <div class="lk__div">
                         <div class="lk__div-title-flex">
                             <div class="lk__div-title-min">
-                                Просмотры вакансий
+                                Просмотры и отклики
                             </div>
                             <div class="lk__div-title-more">Подробнее</div>
                         </div>
@@ -314,12 +314,12 @@
                                 <div class="lk__div-strike-line">
                                     <div class="lk__div-strike-item">
                                     </div>
-                                    <span class="lk__div-once">Всего за месяц <br>30</span>
+                                    <span class="lk__div-once">Откликов за неделю <br><m>+40</m></span>
                                 </div>
                                 <div class="lk__div-strike-line">
                                     <div class="lk__div-strike-item">
                                     </div>
-                                    <span class="lk__div-once">За неделю <br><m>+20</m></span>
+                                    <span class="lk__div-once">Откликов за неделю <br><m>+20</m></span>
                                 </div>
                             </div>
                             <div id="chart__once"></div>
@@ -343,7 +343,7 @@
                                 <div class="lk__strike-block-item">
                                     <div>
                                         <span>16</span>
-                                        <p>Всего Соискателей</p>
+                                        <p>Всего откликов</p>
                                     </div>
                                     <i class="mdi mdi-school-outline"></i>
                                 </div>
@@ -382,45 +382,6 @@
 
 
                 <div class="lk__div-flex">
-                    <div class="lk__div">
-                        <div class="lk__div-title-flex">
-                            <div class="lk__div-title-min">
-                                Последняя активность
-                            </div>
-                        </div>
-                        <div class="lk__div-content">
-                            <div class="lk__session-wrap">
-                                <div class="lk__session-item">
-                                    <span><i class="mdi mdi-monitor"></i></span>
-                                    <div class="lk__session-text">
-                                        <div>Браузер Chrome</div>
-                                        <span>194.8.129.16 · Краснодар · сегодня в 9:29</span>
-                                    </div>
-                                </div>
-                                <div class="lk__session-item">
-                                    <span><i class="mdi mdi-monitor"></i></span>
-                                    <div class="lk__session-text">
-                                        <div>Браузер Yandex</div>
-                                        <span>95.153.161.251 · Краснодар · сегодня в 9:29</span>
-                                    </div>
-                                </div>
-                                <div class="lk__session-item">
-                                    <span><i class="mdi mdi-cellphone"></i></span>
-                                    <div class="lk__session-text">
-                                        <div>Мобильный Браузер Chrome</div>
-                                        <span>95.153.161.251 · Краснодар · 28 октября в 00:17</span>
-                                    </div>
-                                </div>
-                                <div class="lk__session-item">
-                                    <span><i class="mdi mdi-monitor"></i></span>
-                                    <div class="lk__session-text">
-                                        <div>Браузер Edge</div>
-                                        <span>194.8.129.16 · Краснодар · сегодня в 9:29</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
                     <div class="lk__div">
                         <div class="lk__div-title-min">
@@ -493,6 +454,48 @@
 
                         </div>
                     </div>
+
+                    <div class="lk__div">
+                        <div class="lk__div-title-flex">
+                            <div class="lk__div-title-min">
+                                Последняя активность
+                            </div>
+                        </div>
+                        <div class="lk__div-content">
+                            <div class="lk__session-wrap">
+                                <div class="lk__session-item">
+                                    <span><i class="mdi mdi-monitor"></i></span>
+                                    <div class="lk__session-text">
+                                        <div>Браузер Chrome</div>
+                                        <span>194.8.129.16 · Краснодар · сегодня в 9:29</span>
+                                    </div>
+                                </div>
+                                <div class="lk__session-item">
+                                    <span><i class="mdi mdi-monitor"></i></span>
+                                    <div class="lk__session-text">
+                                        <div>Браузер Yandex</div>
+                                        <span>95.153.161.251 · Краснодар · сегодня в 9:29</span>
+                                    </div>
+                                </div>
+                                <div class="lk__session-item">
+                                    <span><i class="mdi mdi-cellphone"></i></span>
+                                    <div class="lk__session-text">
+                                        <div>Мобильный Браузер Chrome</div>
+                                        <span>95.153.161.251 · Краснодар · 28 октября в 00:17</span>
+                                    </div>
+                                </div>
+                                <div class="lk__session-item">
+                                    <span><i class="mdi mdi-monitor"></i></span>
+                                    <div class="lk__session-text">
+                                        <div>Браузер Edge</div>
+                                        <span>194.8.129.16 · Краснодар · сегодня в 9:29</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
 
             </div>
@@ -530,7 +533,7 @@
                 // Дополнительные свойства
                 ...chartAdd
             },
-            colors: ["#166666"],
+            colors: ["#166666", "#4bb34b"],
             stroke: {
                 width: 3,
                 curve: 'smooth',
@@ -597,8 +600,12 @@
         [
             {
                 name: "Просмотров",
-                data: [2, 23, 19, 45, 18, 52, 35, 55]
-            }
+                data: [10, 33, 19, 45, 18, 52, 35, 55]
+            },
+            {
+                name: "Откликов",
+                data: [8, 25, 16, 25, 6, 32, 25, 45]
+            },
         ],
         {
             categories: [
@@ -616,30 +623,6 @@
 
     ChartOneYear.render()
 
-    const ChartTwoYear = TemplateC(
-        'chart__two',
-        'area',
-        [
-            {
-                name: "Просмотров",
-                data: [34, 8, 2, 45, 18, 42, 35, 85]
-            }
-        ],
-        {
-            categories: [
-                "1 Янв",
-                "2 Янв",
-                "3 Янв",
-                "4 Янв",
-                "5 Янв",
-                "6 Янв",
-                "7 Янв",
-                "8 Янв",
-            ],
-        },
-    )
-
-    ChartTwoYear.render()
 
 </script>
 <!-- / INCLUDE SCRIPTS -->

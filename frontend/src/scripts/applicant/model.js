@@ -1,5 +1,7 @@
 export default function () {
 
+    // ВСПЛЫВАЮЩИЕ ОКНА В МОДУЛЕ "БЕЗОПАСНОСТЬ"
+
     document.querySelectorAll('.model__title-close')?.forEach(el => {
         el.addEventListener('click', () => {
             document.querySelectorAll('.model').forEach(model => {

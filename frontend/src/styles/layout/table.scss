@@ -95,7 +95,7 @@
                 color: var(--color-fg-black);
 
                 > span {
-                    display: inline-flex;
+
 
                     i, img {
                         margin: 0 6px 0 0;
@@ -210,6 +210,10 @@
         justify-content: center;
         font-size: 17px;
         color: var(--color-fg-white);
+    }
+
+    i {
+        font-size: 20px;
     }
 
     > div {

@@ -5,6 +5,12 @@ import { mask, HandlingInputError, ready } from '../modules/config'
 
     'use strict'
 
+    // МОДУЛЬ ПОЭТАПНОЙ РЕГИСТРАЦИИ ПОЛЬЗОВАТЕЛЯ
+    // ГЛАВНЫЕ ПЕРЕМЕННЫЕ:
+    // - VERIFY_RESUME_BUTTON CREATE_RESUME_BUTTON
+    // - VERIFY_COMPANY_BUTTON CREATE_COMPANY_BUTTON
+    // - PIN_CODE_INPUT
+
     ready(function () {
 
         const START_CREATE_BUTTON  = document.querySelector('.signup__start'),

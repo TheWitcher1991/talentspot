@@ -4,6 +4,6 @@ apache + uwsgi
 
 - Python version 3.12.0
 - Django version 4.2.7
-- Pip version 23.3.1
+- Django rest framework version 3.14.0
 
 ### © ООО «ТалентСпот»
