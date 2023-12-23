@@ -75,6 +75,7 @@ import { isset, ready, swipeTabs } from '../modules/config'
             el.addEventListener('click', event => swipeTabs(event, el.dataset.tab))
         })
 
+
         document.querySelector('#default__tab')?.click()
 
         // ВСПЛЫВАЮЩЕЕ МЕНЮ В ЛЕВОМ БОКОМ МЕНЮ ЛИЧНОГО КАБИНЕТА

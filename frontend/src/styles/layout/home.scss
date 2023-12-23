@@ -410,7 +410,12 @@
 
 #footer {
     margin: 120px 0 0 0;
+    padding: 30px;
+}
+
+.footer__tmp {
     background: var(--color-bg-main);
+    border-radius: 20px;
 }
 
 .footer__container {
@@ -432,8 +437,8 @@
     }
 
     .footer__copy {
-        border-top: 3px solid #cdd9d9;
-        padding: 26px 0 26px 0;
+
+        padding: 36px 0 0 0;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -461,13 +466,13 @@
 .footer__block-wrap {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
 }
 
 .footer__logo-img {
     img {
-        width: 50px;
+        width: 65px;
         object-fit: cover;
+        margin: 0 0 50px 0;
     }
 
     span {
@@ -515,7 +520,8 @@
         margin: 0 0 0 100px;
 
         span {
-            color: var(--color-fg-black);
+            color: var(--color-fg-white);
+            opacity: 0.7;
             font-size: 16px;
             display: block;
             margin: 0 0 20px 0;
