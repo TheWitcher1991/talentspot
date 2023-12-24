@@ -39,7 +39,7 @@
                 background-color: #f2f4f7;
                 padding: 16px 12px;
                 box-sizing: border-box;
-                font-weight: 400;
+                font-weight: 600;
                 font-style: normal;
                 font-size: 13px;
                 line-height: 16px;
@@ -51,7 +51,7 @@
 
                     i {
                         margin: 0 6px 0 0;
-                        font-size: 19px;
+                        font-size: 20px;
                     }
                 }
 
@@ -93,6 +93,52 @@
                 line-height: 20px;
                 text-transform: none;
                 color: var(--color-fg-black);
+                text-wrap: balance;
+
+                span {
+                    text-wrap: balance;
+                }
+
+                button {
+                    background: #e6e4ec;
+                    color: var(--color-fg-black);
+                    height: 26px;
+                    padding: 0 8px;
+                    border-radius: 8px;
+                    font-size: 13px;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 0 0 0 auto;
+                    transition: all .2s linear;
+                    border: 0;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+
+                    i {
+                        font-size: 18px;
+                    }
+
+                    &:hover {
+                        background: var(--color-fg-main);
+                        color: var(--color-fg-white);
+                    }
+                }
+
+                m {
+                    color: var(--color-bg-green);
+                    font-weight: 600;
+                }
+
+                a {
+                    cursor: pointer;
+                    color: var(--color-fg-main);
+                    font-weight: 600;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
 
                 > span {
 

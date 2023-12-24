@@ -3,7 +3,7 @@ export default function () {
     // ВСПЛЫВАЮЩИЕ ОКНА В МОДУЛЕ "БЕЗОПАСНОСТЬ"
 
     document.querySelectorAll('.model__title-close')?.forEach(el => {
-        el.addEventListener('click', () => {
+        el?.addEventListener('click', () => {
             document.querySelectorAll('.model').forEach(model => {
                 model.style.display = 'none'
             })
@@ -16,7 +16,7 @@ export default function () {
      * @param {string} model
      */
     let openModel = (div, model) => {
-        document.querySelector(div).addEventListener('click', function () {
+        document.querySelector(div)?.addEventListener('click', function () {
             document.querySelector(model).style.display = 'flex'
         })
     }

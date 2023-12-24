@@ -17,7 +17,7 @@
     <meta charset="utf-8"/>
 
     <!-- SEO -->
-    <title>История платежей</title>
+    <title>Календарь событий</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
     <meta name="description" content=""/>
     <meta name="keywords" content=" />
@@ -29,11 +29,11 @@
     <meta name="author" content=""/>
     <meta name="copyright" content="ООО «ТалентСпот»"/>
 
-    <link rel="shortcut icon" href="../../../src/images/static/logo.png" type="image/x-icon"/>
-    <link rel="icon" href="../../../src/images/static/logo.png" type="image/x-icon"/>
+    <link rel="shortcut icon" href="../../src/images/static/logo.png" type="image/x-icon"/>
+    <link rel="icon" href="../../src/images/static/logo.png" type="image/x-icon"/>
     <!-- / SEO  -->
 
-    <link rel="stylesheet" href="../../../build/styles.bundle.css">
+    <link rel="stylesheet" href="../../build/styles.bundle.css">
 
     <!-- SCRIPT FOR OLD BROWSERS -->
     <script type="text/javascript">
@@ -95,7 +95,7 @@
             <div class="lk__menu-tmp">
                 <div class="lk__menu-brand">
                     <div>
-                        <img src="../../../src/images/static/logo/166666/png/128x128.png" alt="">
+                        <img src="../../src/images/static/logo/166666/png/128x128.png" alt="">
                         <span>TalentSpot</span>
                     </div>
                 </div>
@@ -142,7 +142,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a class="lk__link lk__link-active"">
+                        <a class="lk__link">
                         <span>
                                    <i class="mdi mdi-account-credit-card-outline"></i>
                                 <div class="lk__link-title">Тариф</div>
@@ -157,7 +157,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a class="lk__link" href="">
+                        <a class="lk__link lk__link-active" href="">
                             <span>
                                <i class="mdi mdi-calendar-badge-outline"></i>
                                 <div class="lk__link-title">Календарь</div>
@@ -199,13 +199,14 @@
                 </div>
                 <div class="lk__nav-right">
                     <a href="">Добавить вакансию</a>
-                    <div class="lk__nav-item lk__nav-bell">
+                    <div class="lk__nav-item lk__nav-bell lkv__nav-chat">
                         <span><i class="mdi mdi-chat"></i></span>
-                        <div></div>
+                        <div class="pip"></div>
+
                     </div>
                     <div class="lk__nav-item lk__nav-bell">
                         <span><i class="mdi mdi-bell"></i></span>
-                        <div></div>
+                        <div class="pip"></div>
                     </div>
                     <div class="lk__nav-item lk__nav-name">
                         <span><i class="mdi mdi-account"></i></span>
@@ -220,6 +221,7 @@
                                     <a href=""><i class="mdi mdi-account-circle-outline"></i> Менеджеры</a>
                                     <a href=""><i class="mdi mdi-account-group-outline"></i> Команды</a>
                                     <a href=""><i class="mdi mdi-check-circle-outline"></i> Документы</a>
+                                    <a href=""><i class="mdi mdi-star-outline"></i> Отзывы о компании</a>
                                 </div>
                                 <div class="lk__pop-line"></div>
                                 <div class="lk__pop-bth">
@@ -228,6 +230,7 @@
                                     <a href=""><i class="mdi mdi-hand-back-right-outline"></i> Права</a>
                                     <a href=""><i class="mdi mdi-email-outline"></i> Рассылки</a>
                                     <a href=""><i class="mdi mdi-chat-outline"></i> Письма</a>
+                                    <a href=""><i class="mdi mdi-lightbulb-on-outline"></i> Есть идея</a>
                                 </div>
                                 <div class="lk__pop-line"></div>
                                 <div class="lk__pop-bth">
@@ -240,157 +243,100 @@
             </div>
 
             <div class="lk__content">
-                <div class="lk__content-flex">
-                    <div class="lk__content-left">
-                        <div class="lk__div-no">
-                            <div class="lk__div-title">
-                                <div>
-                                    История оплаченных услуг
-                                </div>
-                                <div class="lk__bth-flex">
-                                    <div class="lk__bth-add-min">
-                                        <i class="mdi mdi-magnify"></i>
-                                    </div>
-                                    <div class="lk__bth-add-min">
-                                        <i class="mdi mdi-cloud-download-outline"></i>
-                                    </div>
-                                    <a href="" class="lk__bth-add-min">
-                                        <i class="mdi mdi-tune-variant"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="lk__div-box">
-                                <div class="table__master">
-                                    <div class="table__filter">
 
-                                    </div>
-                                    <div class="table__base">
-                                        <table>
-                                            <thead>
-                                                <tr>
-                                                    <th class="td__left"><span><i class="mdi mdi-clock-outline"></i> Дата</span></th>
-                                                    <th class="td__left"><span><i class="mdi mdi-account"></i> Плательщик</span></th>
-                                                    <th class="td__right"><span><i class="mdi mdi-currency-rub"></i> Сумма</span></th>
-                                                    <th class="td__left"><span><i class="mdi mdi-credit-card-outline"></i> Метод</span></th>
-                                                    <th class="td__left"><span><i class="mdi mdi-source-fork"></i> Статус</span></th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td class="td__text td__left"><span>20.12.2023</span></td>
-                                                    <td class="td__text td__left">
-                                                        Оплата тарифа «Базовый плюс»
-                                                        <br>
-                                                        Иван Иванов Иванович
-                                                    </td>
-                                                    <td class="td__text td__right td__credit"><span>6 000,00 руб.</span></td>
-                                                    <td class="td__text td__left"><span><img src="../../../src/images/static/dashboard/fit_master.png" alt=""> •••• 6666</span></td>
-                                                    <td class="td__text td__left">
-                                                        <div class="market__status-wait"><i class="mdi mdi-clock"></i> В ожидании</div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="td__text td__left"><span>14.12.2023</span></td>
-                                                    <td class="td__text td__left">
-                                                        Оплата тарифа «Базовый плюс»
-                                                        <br>
-                                                        Иван Иванов Иванович
-                                                    </td>
-                                                    <td class="td__text td__right td__credit"><span>6 000,00 руб.</span></td>
-                                                    <td class="td__text td__left"><span><img src="../../../src/images/static/dashboard/fit_master.png" alt=""> •••• 6666</span></td>
-                                                    <td class="td__text td__left">
-                                                        <div class="market__status"><i class="mdi mdi-check-circle"></i> Исполнен</div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="td__text td__left"><span>14.10.2023</span></td>
-                                                    <td class="td__text td__left">
-                                                        Оплата тарифа «Базовый плюс»
-                                                        <br>
-                                                        ООО «ТалентСпот»
-                                                    </td>
-                                                    <td class="td__text td__right td__credit"><span>6 000,00 руб.</span></td>
-                                                    <td class="td__text td__left"><span><img src="../../../src/images/static/dashboard/fit_visa.png" alt=""> •••• 6666</span></td>
-                                                    <td class="td__text td__left">
-                                                        <div class="market__status"><i class="mdi mdi-check-circle"></i> Исполнен</div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="td__text td__left"><span>14.10.2023</span></td>
-                                                    <td class="td__text td__left">
-                                                        Оплата тарифа «Базовый плюс»
-                                                        <br>
-                                                        ООО «ТалентСпот»
-                                                    </td>
-                                                    <td class="td__text td__right td__credit"><span>6 000,00 руб.</span></td>
-                                                    <td class="td__text td__left"><span><img src="../../../src/images/static/dashboard/fit_visa.png" alt=""> •••• 6666</span></td>
-                                                    <td class="td__text td__left">
-                                                        <div class="market__status-error"><i class="mdi mdi-minus-circle"></i> Отказано</div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="td__text td__left"><span>14.09.2023</span></td>
-                                                    <td class="td__text td__left">
-                                                        Оплата тарифа «Базовый плюс»
-                                                        <br>
-                                                        Иван Иванов Иванович
-                                                    </td>
-                                                    <td class="td__text td__right td__credit"><span>6 000,00 руб.</span></td>
-                                                    <td class="td__text td__left"><span><img src="../../../src/images/static/dashboard/fit_master.png" alt=""> •••• 6666</span></td>
-                                                    <td class="td__text td__left">
-                                                        <div class="market__status"><i class="mdi mdi-check-circle"></i> Исполнен</div>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                <div class="calendar__master">
+
+                    <div class="calendar__head">
+                    </div>
+
+                    <div class="calendar__layout">
+                        <div class="calendar__left">
+                            <div class="calendar__month-wrap">
+                                <div class="calendar__month-button">
+                                    <button class="calendar__month-prev"><i class="mdi mdi-arrow-left"></i></button>
+                                    <span class="calendar__month-title"></span>
+                                    <button class="calendar__month-next"><i class="mdi mdi-arrow-right"></i></button>
+                                </div>
+                                <div class="calendar__month-content">
+
+                                </div>
+
+                                <div class="lk__calendar-person-wrap">
+                                    <div class="lk__calendar-person">
+                                        <div class="marker__user">
+                                            <div>
+                                                <span>Иван Иванов (это я)</span>
+                                                <p>admin@talentspot.ru</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
+
+                                <div class="lk__calendar-person-wrap">
+                                    <div class="lk__calendar-person">
+                                        <div class="marker__user">
+                                            <div>
+                                                <span>Андрей сербин</span>
+                                                <p>admin@talentspot.ru</p>
+                                            </div>
+                                        </div>
+                                        <div class="lk__person-bth">
+                                            <button>
+                                                <i class="mdi mdi-delete"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="lk__resume-add" style="margin: 20px 0 0 0;">
+                                    <i class="mdi mdi-plus-circle-outline"></i> Добавить менеджера
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="calendar__right">
+                            <div class="calendar__swap-wrap">
+                                <div>
+                                    <div class="slick__button">
+                                        <button class="slick__button-item">
+                                            <i class="mdi mdi-chevron-left"></i>
+                                        </button>
+                                        <button class="slick__button-item">
+                                            <i class="mdi mdi-chevron-right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span class="calendar__swap-title">24 декабря 2023 - 30 декабря 2023</span>
+                                </div>
+                                <div>
+                                    <div class="slick__button">
+                                        <button class="slick__button-item slick__button-active">
+                                            Неделя
+                                        </button>
+                                        <button class="slick__button-item">
+                                            День
+                                        </button>
+                                        <button class="slick__button-item">
+                                            Список
+                                        </button>
+                                    </div>
+                                    <button class="slick__button-one">
+                                        <i class="mdi mdi-magnify"></i>
+                                    </button>
+                                    <button class="slick__button-one">
+                                        <i class="mdi mdi-tune-variant"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="calendar__swap-content">
+
                             </div>
                         </div>
                     </div>
-                    <div class="lk__content-right">
-                        <div class="lk__bar">
-                            <a class="lk__bar-logout" href="">Выйти <i class="mdi mdi-location-exit"></i></a>
-                            <span class="lk__bar-img-company">
-                                 <img src="../../../src/images/static/logo/166666/png/128x128.png" alt="">
-                            </span>
-                            <div class="lk__bar-name">ООО «ТалентСпот»</div>
-                            <div class="lk__bar-status">Иван Иванов</div>
-                            <div class="lk__bar-slink">
-                                <div class="lk__slink-item">
-                                    <div class="lk__slink-title">
-                                        <span><i class="mdi mdi-star-outline"></i></span>
-                                        Рейтинг
-                                    </div>
-                                    <div class="lk__slink-enum">
-                                        5
-                                    </div>
-                                </div>
-                                <div class="lk__slink-item">
-                                    <div class="lk__slink-title">
-                                        <span><i class="mdi mdi-database-lock-outline"></i></span>
-                                        Вакансий
-                                    </div>
-                                    <div class="lk__slink-enum">
-                                        3
-                                    </div>
-                                </div>
-                                <div class="lk__slink-item">
-                                    <div class="lk__slink-title">
-                                        <span><i class="mdi mdi-school-outline"></i></span>
-                                        Откликов
-                                    </div>
-                                    <div class="lk__slink-enum">
-                                        16
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="lk__more-notice">
-                                <a href="">16 уведомлений</a>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
+
             </div>
         </div>
 
@@ -399,12 +345,18 @@
 <!-- / MAIN CONTENT -->
 
 <!-- INCLUDE SCRIPTS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.41.0/apexcharts.min.js" integrity="sha512-bp/xZXR0Wn5q5TgPtz7EbgZlRrIU3tsqoROPe9sLwdY6Z+0p6XRzr7/JzqQUfTSD3rWanL6WUVW7peD4zSY/vQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
         integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>new WOW().init()</script>
 
-<script src="../../../build/lk.bundle.js"></script>
+<script src="../../build/lk.bundle.js"></script>
+
 <!-- / INCLUDE SCRIPTS -->
 
 </body>

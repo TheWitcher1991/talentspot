@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<!--[if lt IE 6 ]>
+<html class="ie ie6" lang="ru" dir="ltr"> <![endif]-->
+<!--[if IE 7 ]>
+<html class="ie ie7" lang="ru" dir="ltr"> <![endif]-->
+<!--[if IE 8 ]>
+<html class="ie ie8" lang="ru" dir="ltr"> <![endif]-->
+<!--[if IE 9 ]>
+<html class="ie ie9" lang="ru" dir="ltr"> <![endif]-->
+<!--[if IE 10 ]>
+<html class="ie ie10" lang="ru" dir="ltr"> <![endif]-->
+<!--[if (gte IE 11)|!(IE)]><!-->
+<html lang="ru" dir="ltr" theme="light" xmlns="http://www.w3.org/1999/html">
+<!--<![endif]-->
+<head>
+
+    <meta charset="utf-8"/>
+
+    <!-- SEO -->
+    <title>Системный администатор</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=" />
+    <link rel="canonical" href="" />
+    <meta http-equiv="content-language" content="ru"/>
+    <meta name="robots" content="index, follow"/>
+    <meta http-equiv="x-dns-prefetch-control" content="on"/>
+
+    <meta name="author" content=""/>
+    <meta name="copyright" content="ООО «ТалентСпот»"/>
+
+    <link rel="shortcut icon" href="../../src/images/static/logo.png" type="image/x-icon"/>
+    <link rel="icon" href="../../src/images/static/logo.png" type="image/x-icon"/>
+    <!-- / SEO  -->
+
+    <link rel="stylesheet" href="../../build/styles.bundle.css">
+
+    <!-- SCRIPT FOR OLD BROWSERS -->
+    <script type="text/javascript">
+        !function () {
+            "use strict";
+
+            function trackOldBrowserEvent() {
+                var t = function createXmlHttpRequestObject() {
+                    var t;
+                    try {
+                        t = new XMLHttpRequest
+                    } catch (r) {
+                        for (var e = new Array("MSXML2.XMLHHTP.11.0", "MSXML2.XMLHHTP.10.0", "MSXML2.XMLHHTP.9.0", "MSXML2.XMLHHTP.8.0", "MSXML2.XMLHHTP.7.0", "MSXML2.XMLHHTP.6.0", "MSXML2.XMLHHTP.5.0", "MSXML2.XMLHHTP.4.0", "MSXML2.XMLHHTP.3.0", "MSXML2.XMLHHTP", "Microsoft.XMLHHTP"), s = 0; s < e.length && !t; s++) try {
+                            t = new ActiveXObject(e[s])
+                        } catch (t) {
+                        }
+                    }
+                    return null != t ? t : void 0
+                }(), e = new Object;
+                return e.open = "/badbrowser?status=" + (0 !== t.status && t.status), e.xhr = t.responseURL ? t.responseURL : "/badbrowser?status=" + (0 !== t.status && t.status), t.open("GET", e.open, !0), t.setRequestHeader("Content-Type", "text/html"), t.setRequestHeader("X-Requested-With", "XMLHttpRequest"), t.onreadystatechange = function () {
+                    if (4 === t.readyState && (t.status >= 200 && t.status < 300 || 304 === t.status || 0 === t.status && "file:" === protocol)) try {
+                        location.replace(t.responseURL ? t.responseURL : "/badbrowser?status=" + t.status)
+                    } catch (t) {
+                    }
+                }, t.send(e.xhr ? e.xhr : null), t
+            }
+
+            !function checkOldBrowser() {
+                if (document.body) try {
+                    "CSS" in window && CSS.supports("display", "flex") && "undefined" != typeof Symbol || trackOldBrowserEvent()
+                } catch (t) {
+                } else setTimeout(checkOldBrowser, 100)
+            }()
+        }();
+    </script>
+    <!-- / SCRIPT FOR OLD BROWSERS -->
+
+    <!-- INCLUDE LIBS -->
+    <script src="https://cdn.quilljs.com/1.3.0/quill.min.js"></script>
+    <!-- / INCLUDE LIBS -->
+
+    <!-- INCLUDE ICONS AND FRONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.3.67/css/materialdesignicons.min.css"
+          integrity="sha512-nRzny9w0V2Y1/APe+iEhKAwGAc+K8QYCw4vJek3zXhdn92HtKt226zHs9id8eUq+uYJKaH2gPyuLcaG/dE5c7A=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <!-- / INCLUDE ICONS AND FRONTS -->
+
+</head>
+<body class="lk__body">
+
+<!-- MAIN CONTENT -->
+<main id="wrapper" class="wrapper lk__wrapper">
+    <section class="lk__section">
+
+        <aside class="lk__menu">
+            <div class="lk__menu-tmp">
+                <div class="lk__menu-brand">
+                    <div>
+                        <img src="../../src/images/static/logo/166666/png/128x128.png" alt="">
+                        <span>TalentSpot</span>
+                    </div>
+                </div>
+                <ul class="lk__menu-ul">
+                    <li>
+                        <a class="lk__link" href="">
+                            <span>
+                                <i class="mdi mdi-arrow-top-right-thin-circle-outline"></i>
+                                <div class="lk__link-title">Искать резюме</div>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="lk__link" href="">
+                            <span>
+                                <i class="mdi mdi-chart-line-variant"></i>
+                                <div class="lk__link-title">Дашборд</div>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="lk__link">
+                            <span>
+                                <i class="mdi mdi-school-outline"></i>
+                                <div class="lk__link-title">Кадровый резерв</div>
+                            </span>
+                        </a>
+                        <ul class="lk__menu-pop">
+                            <li><a href="">Папки</a></li>
+                            <li><a href="">Кадры</a></li>
+                            <li><a href="">История просмотров</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="lk__link lk__link-active">
+                            <span>
+                                <i class="mdi mdi-database-lock-outline"></i>
+                                <div class="lk__link-title">Вакансии</div>
+                            </span>
+                        </a>
+                        <ul class="lk__menu-pop">
+                            <li><a href="">Активные</a></li>
+                            <li><a href="">Архив</a></li>
+                            <li><a href="">Шаблоны</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="lk__link">
+                        <span>
+                                   <i class="mdi mdi-account-credit-card-outline"></i>
+                                <div class="lk__link-title">Тариф</div>
+                            </span>
+                        </a>
+                        <ul class="lk__menu-pop">
+                            <li><a href="">Оплата</a></li>
+                            <li><a href="">Плательщики</a></li>
+                            <li><a href="">Договор</a></li>
+                            <li><a href="">История</a></li>
+                            <li><a href="">Прайс-лист</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="lk__link" href="">
+                            <span>
+                               <i class="mdi mdi-calendar-badge-outline"></i>
+                                <div class="lk__link-title">Календарь</div>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="lk__link" href="">
+                            <span>
+                               <i class="mdi mdi-handshake-outline"></i>
+                                <div class="lk__link-title">Центр поддержки</div>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="lk__copy">
+                <i class="mdi mdi-copyright"></i> 2023 ООО «ТалентСпот»
+
+            </div>
+        </aside>
+
+        <div class="lk__page">
+            <div class="lk__nav">
+                <div class="lk__nav-left">
+                    <div class="lk__menu-replace">
+
+                    </div>
+
+                    <div class="lk__search-wrapper">
+                        <label for="lk__search" class="lk__search-label">
+                            <i class="mdi mdi-magnify"></i>
+                            <input type="text" name="lk__search" id="lk__search" placeholder="Введите для поиска...">
+                        </label>
+                        <div class="lk__search-result">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="lk__nav-right">
+                    <a href="">Добавить вакансию</a>
+                    <div class="lk__nav-item lk__nav-bell">
+                        <span><i class="mdi mdi-chat"></i></span>
+                        <div></div>
+                    </div>
+                    <div class="lk__nav-item lk__nav-bell">
+                        <span><i class="mdi mdi-bell"></i></span>
+                        <div></div>
+                    </div>
+                    <div class="lk__nav-item lk__nav-name">
+                        <span><i class="mdi mdi-account"></i></span>
+                        <div>
+                            <span>Иван</span>
+                            <p>admin@talentspot.ru</p>
+                        </div>
+                        <div class="lk__name-pop">
+                            <div>
+                                <div class="lk__pop-bth">
+                                    <a href=""><i class="mdi mdi-domain"></i> О компании</a>
+                                    <a href=""><i class="mdi mdi-account-circle-outline"></i> Менеджеры</a>
+                                    <a href=""><i class="mdi mdi-account-group-outline"></i> Команды</a>
+                                    <a href=""><i class="mdi mdi-check-circle-outline"></i> Документы</a>
+                                </div>
+                                <div class="lk__pop-line"></div>
+                                <div class="lk__pop-bth">
+                                    <a href=""><i class="mdi mdi-account-edit-outline"></i> Персональные данные</a>
+                                    <a href=""><i class="mdi mdi-shield-outline"></i> Безопасность</a>
+                                    <a href=""><i class="mdi mdi-hand-back-right-outline"></i> Права</a>
+                                    <a href=""><i class="mdi mdi-email-outline"></i> Рассылки</a>
+                                    <a href=""><i class="mdi mdi-chat-outline"></i> Письма</a>
+                                </div>
+                                <div class="lk__pop-line"></div>
+                                <div class="lk__pop-bth">
+                                    <a href=""><i class="mdi mdi-location-exit"></i> Выход</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lk__content">
+                <div class="lk__list-link">
+                    <a href=""><i class="mdi mdi-arrow-left"></i> Fullstack разработчик</a>
+                    <div class="lk__list-link-bth">
+                        <div class="lk__tabs-bth" style="margin: 0;">
+                            <div data-tab="#lk__company-managers" class="tab__links lk__tabs-link tab__active">Неразобранные (2)</div>
+                            <div data-tab="#lk__company-teams" class="tab__links lk__tabs-link">Телефонное интервью (2)</div>
+                            <div data-tab="#lk__company-documents" class="tab__links lk__tabs-link">Очное собедование (2)</div>
+                            <div data-tab="#lk__company-reviews" class="tab__links lk__tabs-link">Принят на работу (2)</div>
+                            <div data-tab="#lk__company-reviews" class="tab__links lk__tabs-link">Отказано (2)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lk__list-wrap">
+                    <div class="lk__list-head">
+                        <div class="lk__list-left">
+                            <label for="" class="lk__list-search">
+                                <i class="mdi mdi-magnify"></i>
+                                <input type="text" name="lk__search" id="" placeholder="Найти резюме">
+                            </label>
+                        </div>
+                        <div class="lk__list-right"></div>
+                    </div>
+                    <div class="lk__list-layout">
+                        <div class="lk__list-left">
+                            <div class="lk__list-title">
+                                <div class="white__checkbox">
+                                    <input type="checkbox" class="white-checkbox" name="" id="" value="1">
+                                    <label for=""></label>
+                                </div>
+                                <div>
+                                    <span>Найдено 30 резюме</span>
+                                    <button><i class="mdi mdi-gesture-tap"></i></button>
+                                </div>
+                            </div>
+                            <div class="lk__list-resume">
+                                <div class="lk__list-resume-item lk__list-resume-item-active">
+                                    <div class="white__checkbox">
+                                        <input type="checkbox" class="white-checkbox" name="" id="" value="1">
+                                        <label for=""></label>
+                                    </div>
+                                    <div class="lk__list-resume-content">
+                                        <div class="lk__list-resume-img">
+                                            <span>
+                                                <img src="../../../src/images/media/user/user.jpg" alt="">
+                                            </span>
+                                            <div>
+                                                <div class="lk__list-resume-title">
+                                                    Java-программист
+                                                </div>
+                                                <div class="lk__list-resume-exp">Иван Иванов, 21 год</div>
+                                                <div class="lk__list-resume-exp">+7 (909) 767-72-17</div>
+                                            </div>
+                                        </div>
+                                        <div class="lk__list-resume-tiny">Опыт работы: 1 год 3 месяца</div>
+                                        <div class="lk__list-resume-tiny">Образование: Бакалавр</div>
+                                    </div>
+                                </div>
+                                <div class="lk__list-resume-item">
+                                    <div class="white__checkbox">
+                                        <input type="checkbox" class="white-checkbox" name="" id="" value="1">
+                                        <label for=""></label>
+                                    </div>
+                                    <div class="lk__list-resume-content">
+                                        <div class="lk__list-resume-img">
+                                            <span>
+                                                <img src="../../../src/images/media/user/user.jpg" alt="">
+                                            </span>
+                                            <div>
+                                                <div class="lk__list-resume-title">
+                                                    Java-программист
+                                                </div>
+                                                <div class="lk__list-resume-exp">Иван Иванов, 21 год</div>
+                                                <div class="lk__list-resume-exp">+7 (909) 767-72-17</div>
+                                            </div>
+                                        </div>
+                                        <div class="lk__list-resume-tiny">Опыт работы: 1 год 3 месяца</div>
+                                        <div class="lk__list-resume-tiny">Образование: Бакалавр</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lk__list-right lk__resume-content">
+                            <div class="lk__resume-button">
+                                <button class="lk__resume-bth lk__resume-bth-slick">
+                                    <i class="mdi mdi-phone-in-talk-outline"></i>
+                                    Назначить телефонное интервью
+                                </button>
+                                <button class="lk__resume-bth">
+                                    <i class="mdi mdi-close"></i>
+                                    Отказать
+                                </button>
+                                <button class="lk__resume-bth">
+                                    <i class="mdi mdi-email-outline"></i>
+                                    Написать письмо
+                                </button>
+                                <button class="lk__resume-bth">
+                                    <i class="mdi mdi-archive-outline"></i>
+                                    В кадровый резерв
+                                </button>
+                                <button class="lk__resume-bth">
+                                    <i class="mdi mdi-dots-vertical"></i>
+                                    Ещё
+                                </button>
+                            </div>
+                            <div class="lk__resume-info">
+                                <span class="lk__resume-info">
+                                    <img src="../../../src/images/media/user/user.jpg" alt="">
+                                </span>
+                                <div class="lk__resume-info-title">
+                                    Иван Иванов
+                                </div>
+                                <div class="lk__resume-info-exp">21 год / Java-программист / 70 000 руб.</div>
+                                <div class="lk__resume-info-flex">
+                                    <div class="lk__resume-info-flex-item">
+                                        <span>Дата рождения</span>
+                                        <div>01.12.2002</div>
+                                    </div>
+                                    <div class="lk__resume-info-flex-item">
+                                        <span>Город</span>
+                                        <div>Ставрополь</div>
+                                    </div>
+                                    <div class="lk__resume-info-flex-item">
+                                        <span>Телефон</span>
+                                        <div>+7 (909) 767-72-17</div>
+                                    </div>
+                                    <div class="lk__resume-info-flex-item">
+                                        <span>Email</span>
+                                        <div>admin@talentspot.ru</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lk__resume-tabs">
+                                <div class="lk__resume-tabs-bth">
+                                    <div data-id="lk__vacancy-resume" class="lk__resume-tabs-link lk__resume-tabs-link-active" id="default-tab">Резюме</div>
+                                    <div data-id="lk__vacancy-comments" class="lk__resume-tabs-link">Комментарии</div>
+                                    <div data-id="lk__vacancy-actions" class="lk__resume-tabs-link">Действия</div>
+                                </div>
+
+                                <div class="lk__resume-tabs-content">
+                                    <div id="lk__vacancy-resume" class="lk__resume-tabs-div tab__content lk__tab" style="display: block">
+                                        <div class="unique__about">
+
+                                            <div class="unique__block">
+                                                <div class="unique__block-title">
+                                                    <span><i class="mdi mdi-information-slab-circle-outline"></i></span>
+                                                    Основная информация
+                                                </div>
+                                                <div class="unique__span">
+                                                    <span><m><i class="mdi mdi-map-marker"></i> Переезд:</m>Ставрополь, готов к переезду (Беларусь, Кыргызстан, Узбекистан, Россия), готов к командировкам</span>
+                                                    <span><m><i class="mdi mdi-calendar-multiselect"></i> График работы:</m> Полный рабочий день, Сменный график, Гибкий график, Ненормированный рабочий день</span>
+                                                    <span><m><i class="mdi mdi-sitemap"></i> Занятость:</m> Полная занятость, Частичная занятость, Проектная работа, Стажировка, Удаленная работа</span>
+                                                    <span><m><i class="mdi mdi-car"></i> Категории водительских прав:</m> A, B, C и есть личный автомобиль</span>
+                                                </div>
+                                                <div class="unique__block-ctx resume__text">
+
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                                                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                                                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                                                    fugiat nulla pariatur
+                                                </div>
+                                            </div>
+                                            <div class="unique__block">
+                                                <div class="unique__block-title">
+                                                    <span><i class="mdi mdi-brain"></i></span>
+                                                    Ключевые навыки
+                                                </div>
+                                                <div class="unique__block-ctx unique__block-temp">
+                                                    <span>— SQL</span>
+                                                    <span>— PHP</span>
+                                                    <span>— Python</span>
+                                                    <span>— C++</span>
+                                                    <span>— JavaScript</span>
+                                                    <span>— NodeJS</span>
+                                                    <span>— Django Framework</span>
+                                                </div>
+                                            </div>
+                                            <div class="unique__block">
+                                                <div class="unique__block-title">
+                                                    <span><i class="mdi mdi-briefcase-variant"></i></span>
+                                                    Опыт работы
+                                                </div>
+                                                <div class="unique__block-ctx">
+                                                    <div class="ub__exp">
+                                                        <div class="ub__left">
+                                                            апрель 2022 —
+                                                            <br>
+                                                            по настоящее время
+                                                            <p>1 год 7 месяцев</p>
+                                                        </div>
+                                                        <div class="ub__right">
+                                            <span class="ub__title">
+                                                ПАО «СберБанк»
+                                            </span>
+                                                            <span class="ub__perm">Менеджер</span>
+                                                            <span class="ub__text">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ub__exp">
+                                                        <div class="ub__left">
+                                                            апрель 2022 —
+                                                            <br>
+                                                            по настоящее время
+                                                            <p>1 год 7 месяцев</p>
+                                                        </div>
+                                                        <div class="ub__right">
+                                            <span class="ub__title">
+                                                 ООО «TalentSpot»
+                                            </span>
+                                                            <span class="ub__perm">Менеджер</span>
+                                                            <span class="ub__text">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ub__exp">
+                                                        <div class="ub__left">
+                                                            апрель 2022 —
+                                                            <br>
+                                                            по настоящее время
+                                                            <p>1 год 7 месяцев</p>
+                                                        </div>
+                                                        <div class="ub__right">
+                                            <span class="ub__title">
+                                                 ПАО «СберБанк»
+                                            </span>
+                                                            <span class="ub__perm">Менеджер</span>
+                                                            <span class="ub__text">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="unique__block">
+                                                <div class="unique__block-title">
+                                                    <span><i class="mdi mdi-school"></i></span>
+                                                    Образование
+                                                </div>
+                                                <div class="unique__block-ctx">
+                                                    <div class="ub__exp">
+                                                        <div class="ub__left">
+                                                            2025
+                                                        </div>
+                                                        <div class="ub__right">
+                                            <span class="ub__title">
+                                                Ставропольский ГАУ
+                                            </span>
+                                                            <span class="ub__perm">Информационные системы и технологии</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ub__exp">
+                                                        <div class="ub__left">
+                                                            2025
+                                                        </div>
+                                                        <div class="ub__right">
+                                            <span class="ub__title">
+                                                Ставропольский ГАУ
+                                            </span>
+                                                            <span class="ub__perm">Информационные системы и технологии</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="unique__block">
+                                                <div class="unique__block-title">
+                                                    <span><i class="mdi mdi-translate"></i></span>
+                                                    Знание языков
+                                                </div>
+                                                <div class="unique__block-ctx unique__block-temp">
+                                                    <span>Русский — Родной</span>
+                                                    <span>Английский — C1 — Продвинутый</span>
+                                                    <span>Немецкий — B1 — Средний</span>
+                                                </div>
+                                            </div>
+                                            <div class="unique__block">
+                                                <div class="unique__block-title">
+                                                    <span><i class="mdi mdi-seal-variant"></i></span>
+                                                    Тесты
+                                                </div>
+                                                <div class="unique__block-ctx">
+                                                    <div class="ub__exp">
+                                                        <div class="ub__left">
+                                                            2020
+                                                        </div>
+                                                        <div class="ub__right">
+                                            <span class="ub__title">
+                                                IELTS
+                                            </span>
+                                                            <span class="ub__text">University of Cambridge ESOL, the British Council и IDP: IELTS Australia., академический результат - 6,5</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="unique__block">
+                                                <div class="unique__block-title">
+                                                    <span><i class="mdi mdi-trophy-variant"></i></span>
+                                                    Достижения
+                                                </div>
+                                                <div class="unique__block-ctx"></div>
+                                            </div>
+                                            <div class="unique__block">
+                                                <div class="unique__block-title">
+                                                    <span><i class="mdi mdi-head-lightbulb-outline"></i></span>
+                                                    Портфолио
+                                                </div>
+                                                <div class="unique__block-ctx">
+                                                    <div class="unique__files">
+                                                        <span class="uf__img"><img src="../../src/images/static/fasie__site.png" alt=""></span>
+                                                        <span class="uf__img"><img src="../../src/images/static/person/company_3.png" alt=""></span>
+                                                        <span class="uf__img"><img src="../../src/images/static/person/company_2.png" alt=""></span>
+                                                        <span class="uf__img"><img src="../../src/images/static/person/company_1.png" alt=""></span>
+                                                        <span class="uf__img"><img src="../../src/images/static/person/resume_3.png" alt=""></span>
+                                                        <span class="uf__img"><img src="../../src/images/static/person/resume_2.png" alt=""></span>
+                                                        <span class="uf__img"><img src="../../src/images/static/person/resume_4.png" alt=""></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="lk__vacancy-comments" class="lk__resume-tabs-div tab__content lk__tab">
+
+                                    </div>
+                                    <div id="lk__vacancy-actions" class="lk__resume-tabs-div tab__content lk__tab">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</main>
+<!-- / MAIN CONTENT -->
+
+<!-- INCLUDE SCRIPTS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+        integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>new WOW().init()</script>
+
+<script src="../../build/lk.bundle.js"></script>
+<!-- / INCLUDE SCRIPTS -->
+
+</body>
+</html>

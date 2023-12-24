@@ -17,7 +17,7 @@
     <meta charset="utf-8"/>
 
     <!-- SEO -->
-    <title>Права</title>
+    <title>Тип работодателя</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
     <meta name="description" content=""/>
     <meta name="keywords" content=" />
@@ -29,11 +29,11 @@
     <meta name="author" content=""/>
     <meta name="copyright" content="ООО «ТалентСпот»"/>
 
-    <link rel="shortcut icon" href="../../../src/images/static/logo.png" type="image/x-icon"/>
-    <link rel="icon" href="../../../src/images/static/logo.png" type="image/x-icon"/>
+    <link rel="shortcut icon" href="../../src/images/static/logo.png" type="image/x-icon"/>
+    <link rel="icon" href="../../src/images/static/logo.png" type="image/x-icon"/>
     <!-- / SEO  -->
 
-    <link rel="stylesheet" href="../../../build/styles.bundle.css">
+    <link rel="stylesheet" href="../../build/styles.bundle.css">
 
     <!-- SCRIPT FOR OLD BROWSERS -->
     <script type="text/javascript">
@@ -95,7 +95,7 @@
             <div class="lk__menu-tmp">
                 <div class="lk__menu-brand">
                     <div>
-                        <img src="../../../src/images/static/logo/166666/png/128x128.png" alt="">
+                        <img src="../../src/images/static/logo/166666/png/128x128.png" alt="">
                         <span>TalentSpot</span>
                     </div>
                 </div>
@@ -109,7 +109,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="lk__link" href="">
+                        <a class="lk__link lk__link-active" href="">
                             <span>
                                 <i class="mdi mdi-chart-line-variant"></i>
                                 <div class="lk__link-title">Дашборд</div>
@@ -119,13 +119,14 @@
                     <li>
                         <a class="lk__link">
                             <span>
-                                <i class="mdi mdi-school-outline"></i>
-                                <div class="lk__link-title">Соискатели</div>
+                                <i class="mdi mdi-archive-lock-outline"></i>
+                                <div class="lk__link-title">Кадровый резерв</div>
                             </span>
                         </a>
                         <ul class="lk__menu-pop">
-                            <li><a href="">Избранные</a></li>
-                            <li><a href="">Мои просмотры</a></li>
+                            <li><a href="">Папки</a></li>
+                            <li><a href="">Кадры</a></li>
+                            <li><a href="">История просмотров</a></li>
                         </ul>
                     </li>
                     <li>
@@ -139,6 +140,19 @@
                             <li><a href="">Активные</a></li>
                             <li><a href="">Архив</a></li>
                             <li><a href="">Шаблоны</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="lk__link">
+                            <span>
+                                <i class="mdi mdi-school-outline"></i>
+                                <div class="lk__link-title">Студенты</div>
+                            </span>
+                        </a>
+                        <ul class="lk__menu-pop">
+                            <li><a href="">Добавить</a></li>
+                            <li><a href="">Обучающиеся</a></li>
+                            <li><a href="">Выпускники</a></li>
                         </ul>
                     </li>
                     <li>
@@ -240,127 +254,22 @@
             </div>
 
             <div class="lk__content">
-                <div class="lk__content-flex">
-                    <div class="lk__content-left">
 
-                        <div class="lk__tabs-bth">
-                            <div data-tab="#lk__manager-profile" class="tab__links lk__tabs-link">Персональные данные</div>
-                            <div data-tab="#lk__manager-security" class="tab__links lk__tabs-link">Безопасность</div>
-                            <div data-tab="#lk__manager-role" class="tab__links lk__tabs-link" id="default__tab">Права</div>
-                            <div data-tab="#lk__manager-mailings" class="tab__links lk__tabs-link">Рассылки</div>
-                            <div data-tab="#lk__manager-email" class="tab__links lk__tabs-link">Письма</div>
-                        </div>
-                        <div class="lk__tabs-div">
-                            <div id="lk__manager-profile" class="tab__content lk__tab">
+                <h2>Перед использованием личного кабинета - выберите тип вашей организации, <br>
+                    чтобы мы могли правильно настроить личный кабинет</h2>
 
-                            </div>
-                            <div id="lk__manager-security" class="tab__content lk__tab">
+                <br>
 
-                            </div>
-                            <div id="lk__manager-role" class="tab__content lk__tab">
-                                <div class="lk__div">
-                                    <div class="lk__div-content">
-                                        <form action="" method="POST" class="lk__form lk__form-setting">
+                <h3>Частная организация</h3>
+                <p>Выберите данный, если вы является прямым работодателем, </p>
+                <h3>Государственная организация</h3>
+                <p>Выберите данный, если вы являетесь государственной компанией или органом </p>
+                <h3>Учебное заведение</h3>
+                <p>Выберите данный, если вы являетесь учебным заведением. Только ВУЗЫ и СУЗЫ </p>
 
-                                            <div class="univ__slot">
-                                                <div>
-                                                    <span>Иван Иванов Иванович</span>
-                                                    <p>Главный менеджер</p>
-                                                </div>
-                                            </div>
+                <br>
 
-                                            <div class="flex__align">
-                                                <span>Права</span>
-                                                <div class="flex__align-content">
-                                                    <div class="custom__checkbox">
-                                                        <input type="checkbox" class="custom-checkbox" name="more[]" id="m3" value="1" checked="">
-                                                        <label for="m1">Изменение почты-логина</label>
-                                                    </div>
-                                                    <div class="custom__checkbox">
-                                                        <input type="checkbox" class="custom-checkbox" name="more[]" id="m1" value="1" checked="">
-                                                        <label for="m1"> Выписка счета, подключение услуг, доступ к работе с актами и договорами</label>
-                                                    </div>
-                                                    <div class="custom__checkbox">
-                                                        <input type="checkbox" class="custom-checkbox" name="more[]" id="m1" value="1" checked="">
-                                                        <label for="m1"> Редактирование описания компании</label>
-                                                    </div>
-                                                    <div class="custom__checkbox">
-                                                        <input type="checkbox" class="custom-checkbox" name="more[]" id="m1" value="1" checked="">
-                                                        <label for="m1"> Просмотр статистики</label>
-                                                    </div>
-                                                    <div class="custom__checkbox">
-                                                        <input type="checkbox" class="custom-checkbox" name="more[]" id="m1" value="1" checked="">
-                                                        <label for="m1"> Просмотр контактов соискателей</label>
-                                                    </div>
-                                                    <div class="custom__checkbox">
-                                                        <input type="checkbox" class="custom-checkbox" name="more[]" id="m1" value="1" checked="">
-                                                        <label for="m1"> Создание и продление вакансий</label>
-                                                    </div>
-                                                    <div class="custom__checkbox">
-                                                        <input type="checkbox" class="custom-checkbox" name="more[]" id="m1" value="1" checked="">
-                                                        <label for="m1"> Редактирование квот на услуги</label>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="lk__manager-mailings" class="tab__content lk__tab">
-
-                            </div>
-                            <div id="lk__manager-email" class="tab__content lk__tab">
-
-                            </div>
-                        </div>
-
-
-                    </div>
-                    <div class="lk__content-right">
-                        <div class="lk__bar">
-                            <a class="lk__bar-logout" href="">Выйти <i class="mdi mdi-location-exit"></i></a>
-                            <span class="lk__bar-img-company">
-                                 <img src="../../../src/images/static/logo/166666/png/128x128.png" alt="">
-                            </span>
-                            <div class="lk__bar-name">ООО «ТалентСпот»</div>
-                            <div class="lk__bar-status">Иван Иванов</div>
-                            <div class="lk__bar-slink">
-                                <div class="lk__slink-item">
-                                    <div class="lk__slink-title">
-                                        <span><i class="mdi mdi-star-outline"></i></span>
-                                        Рейтинг
-                                    </div>
-                                    <div class="lk__slink-enum">
-                                        5
-                                    </div>
-                                </div>
-                                <div class="lk__slink-item">
-                                    <div class="lk__slink-title">
-                                        <span><i class="mdi mdi-database-lock-outline"></i></span>
-                                        Вакансий
-                                    </div>
-                                    <div class="lk__slink-enum">
-                                        3
-                                    </div>
-                                </div>
-                                <div class="lk__slink-item">
-                                    <div class="lk__slink-title">
-                                        <span><i class="mdi mdi-school-outline"></i></span>
-                                        Откликов
-                                    </div>
-                                    <div class="lk__slink-enum">
-                                        16
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="lk__more-notice">
-                                <a href="">16 уведомлений</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <p>На данный момент регистрация инностранных организаций недоступна</p>
             </div>
         </div>
 
@@ -374,7 +283,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>new WOW().init()</script>
 
-<script src="../../../build/lk.bundle.js"></script>
+<script src="../../build/lk.bundle.js"></script>
 <!-- / INCLUDE SCRIPTS -->
 
 </body>
