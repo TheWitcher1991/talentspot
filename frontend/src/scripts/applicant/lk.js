@@ -1,5 +1,6 @@
 import Security from './model'
-import Calendar from '../modules/Calendar';
+import Table from '../modules/Table'
+import Calendar from '../modules/Calendar'
 import { isset, ready, swipeTabs } from '../modules/config'
 
 (function () {
@@ -94,16 +95,21 @@ import { isset, ready, swipeTabs } from '../modules/config'
          * КАЛЕНДАРЬ ПО НЕДЕЛЯМ
          */
 
-        Calendar.renderMonth(
-            '.calendar__month-content', '.calendar__month-title',
-            '.calendar__month-prev', '.calendar__month-next'
-        )
+        if (document.querySelector('.calendar__month-content'))
+            Calendar.renderMonth(
+                '.calendar__month-content', '.calendar__month-title',
+                '.calendar__month-prev', '.calendar__month-next'
+            )
+
 
         /**
          * КАЛЕНДАРЬ ПО ДНЯМ
          */
 
-        Calendar.renderWeek('.calendar__swap-content', '', '', '')
+        if (document.querySelector('.calendar__swap-content'))
+            Calendar.renderWeek('.calendar__swap-content', '', '', '')
+
+        Table()
 
     })
 
