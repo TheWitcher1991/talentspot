@@ -12,6 +12,7 @@ frontend/package-lock.json
 .env
 *.key
 *.sqlite3
+./TEMPLATES.MD
 TEMPLATES.MD
 
 

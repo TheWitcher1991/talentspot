@@ -77,10 +77,35 @@
     tbody {
 
         > tr {
+            position: relative;
 
             &:hover {
                 td {
                     background-color: #f2f4f7;
+                }
+
+                .td__text-button {
+                    width: 30px;
+                    display: inline-flex;
+                }
+            }
+
+            .td__text-div {
+                text-wrap: balance;
+                line-height: 1.4;
+                font-weight: 600;
+                font-size: 15px;
+
+                span {
+                    display: inline-flex;
+                    color: var(--color-fg-800);
+                    font-weight: 400;
+                    margin: 0 6px 0 0;
+                    font-size: 14px;
+
+                    i {
+                        margin: 0 6px 0 0;
+                    }
                 }
             }
 
@@ -99,7 +124,10 @@
                     text-wrap: balance;
                 }
 
+
+
                 button {
+                    display: inline-flex;
                     background: #e6e4ec;
                     color: var(--color-fg-black);
                     height: 26px;
@@ -108,11 +136,10 @@
                     font-size: 13px;
                     align-items: center;
                     justify-content: center;
-                    margin: 0 0 0 auto;
+                    margin: 0 0 0 6px;
                     transition: all .2s linear;
                     border: 0;
                     cursor: pointer;
-                    display: flex;
                     align-items: center;
 
                     i {
@@ -125,18 +152,35 @@
                     }
                 }
 
+                .td__text-button {
+                    position: absolute;
+                    left: 0;
+                    right: 16px;
+                    display: none;
+                }
+
                 m {
                     color: var(--color-bg-green);
                     font-weight: 600;
+                    margin: 0 0 0 3px;
                 }
 
-                a {
+                a, .td__text-link {
                     cursor: pointer;
-                    color: var(--color-fg-main);
-                    font-weight: 600;
+                    color: var(--color-fg-black);
+                    font-weight: 400;
+                    height: 25px;
+                    border-radius: 10px;
+                    background: #e6e4ec;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 0 12px;
+                    transition: all 0.2s linear;
 
                     &:hover {
-                        text-decoration: underline;
+                        background: var(--color-fg-main);
+                        color: var(--color-fg-white);
                     }
                 }
 

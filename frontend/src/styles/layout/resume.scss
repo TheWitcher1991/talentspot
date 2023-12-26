@@ -225,28 +225,38 @@
         }
     }
 }
+
+.lk__resume-bth-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
 .lk__resume-button {
     display: flex;
     align-items: center;
-    height: 61px;
-    padding: 0 16px;
-    border-bottom: 1px solid var(--Stroke, #E2E8F0);
+    margin: 16px 0 0 0;
 
     .lk__resume-bth {
         background: #f5f4f9;
         color: var(--color-fg-black);
-        height: 35px;
-        padding: 0 12px;
+        height: 30px;
+        padding: 0 8px;
         border-radius: 10px;
         font-size: 13px;
         align-items: center;
         justify-content: center;
-        margin: 0 16px 0 0;
+        margin: 0 0 0 16px;
         transition: all .2s linear;
         border: 0;
         cursor: pointer;
         display: flex;
         align-items: center;
+
+        &:first-child {
+            margin: 0;
+        }
 
         &:hover {
             background: var(--color-fg-main);
@@ -271,14 +281,14 @@
 }
 
 .lk__resume-info {
-    padding: 16px;
+    width: 100%;
     position: relative;
 
 
-    .lk__resume-info {
+    .lk__resume-info-img {
         display: block;
-        width: 140px;
-        height: 140px;
+        width: 80px;
+        height: 80px;
         position: absolute;
         right: 0px;
         top: 0px;
@@ -292,36 +302,43 @@
 
     .lk__resume-info-title {
         color: var(--color-fg-black);
-        font-size: 21px;
+        font-size: 19px;
         margin: 0;
         font-weight: 500;
         display: block;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 
     .lk__resume-info-exp {
         display: block;
-        font-size: 15px;
+        font-size: 14px;
         font-weight: 500;
         color: #565656;
     }
 
     .lk__resume-info-flex {
-        margin: 20px 0 0 0;
+        margin: 6px 0 0 0;
+        display: flex;
+        align-items: center;
 
         .lk__resume-info-flex-item {
-            margin: 0 0 6px 0;
+            margin: 0 12px 0 0;
             display: flex;
+            align-items: center;
 
             > span {
                 display: block;
-                font-size: 14px;
+                font-size: 13px;
                 font-weight: 400;
                 color: #565656;
-                width: 180px;
+                margin: 0 6px 0 0;
             }
 
             > div {
-                font-size: 15px;
+                font-size: 14px;
                 font-weight: 500;
             }
         }
