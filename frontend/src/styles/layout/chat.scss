@@ -1,15 +1,24 @@
 .lk__chat-pop {
     position: absolute;
-    top: 0;
+    top: 40px;
     right: 0px;
     transition: cubic-bezier(0.4, 0, 0.2, 1) .26s transform;
     transform: translateY(40px);
-    display: block;
+    display: none;
     margin: 0;
-    padding: 25px 0 0 0;
+    padding: 15px 0 0 0;
     width: 780px;
     min-width: 320px;
     height: 640px;
+
+    &.lk__chat-block {
+        z-index: 1000;
+        opacity: 1;
+        display: flex;
+        animation-duration: .26s;
+        animation-fill-mode: both;
+        animation-name: animation-open-popup;
+    }
 
     .chat__wrap {
         background: #fff;

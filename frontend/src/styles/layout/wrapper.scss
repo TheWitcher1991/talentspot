@@ -1471,3 +1471,50 @@ body {
     }
 }
 
+.lk__ai-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 200px;
+    }
+
+    span {
+        color: var(--color-fg-black);
+        font-size: 22px;
+        text-align: center;
+        font-weight: 600;
+        margin: 12px 0 3px 0;
+    }
+
+    div {
+        display: block;
+        font-size: 14px;
+        font-weight: 500;
+        color: #565656;
+        text-align: center;
+        margin: 0 0 12px 0;
+        text-wrap: balance;
+    }
+
+    button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 30px;
+        padding: 0 16px;
+        height: 35px;
+        transition: all .2s linear;
+        cursor: pointer;
+        background: #1b78e9;
+        color: var(--color-fg-white);
+        font-size: 14px;
+        border: 0;
+
+        &:hover {
+            background: var(--color-fg-black);
+        }
+    }
+}
