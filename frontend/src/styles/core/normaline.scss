@@ -47,7 +47,7 @@ progress {
     @include prefix(box-sizing, border-box);
 }
 
-input, button, select, option, pre {
+input, button, select, option, pre, textarea, legend {
     font-family: $Inter;
 }
 

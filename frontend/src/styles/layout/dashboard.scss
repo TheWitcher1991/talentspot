@@ -1,0 +1,89 @@
+.dashboard__slot-wrap {
+    margin: 0 0 30px 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    .dashboard__slot-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 210px;
+        background: var(--color-fg-white);
+        border: 1px solid var(--Stroke, #E2E8F0);
+        box-shadow: var(--shadow-lk-div);
+        transition: all .2s linear;
+        border-radius: 20px;
+        padding: 15px 30px;
+        width: 100%;
+        margin: 0 30px 0 0;
+
+        &:last-child {
+            margin: 0;
+        }
+
+        > i {
+            color: var(--color-fg-main);
+            font-size: 38px !important;
+        }
+
+        > div {
+            span {
+                color: var(--color-fg-black);
+                display: flex;
+                align-items: center;
+                font-size: 32px !important;
+                font-weight: 500;
+                line-height: 1.1;
+            }
+
+            p {
+                color: var(--color-fg-800);
+                font-size: 14px;
+            }
+        }
+
+        > span {
+            color: var(--color-bg-green);
+            background: #e8fff3;
+            font-size: 13px;
+            font-weight: 500;
+            padding: 3px 6px;
+            border-radius: 8px;
+            display: inline-flex;
+            align-items: center;
+            width: fit-content;
+
+            i {
+                font-size: 15px;
+                margin: 0 3px 0 0;
+            }
+        }
+    }
+}
+
+.dashboard__calendar {
+    position: relative;
+
+    > span {
+        margin: 0 0 20px;
+        display: flex;
+        width: fit-content;
+        align-items: center;
+        border-radius: 30px;
+        padding: 0 16px;
+        height: 35px;
+        transition: all .2s linear;
+        cursor: pointer;
+        background: var(--color-fg-black);
+        color: var(--color-fg-white);
+        font-size: 14px;
+
+        i {
+            font-size: 20px;
+            margin: 0 5px 0 0;
+        }
+    }
+
+
+}

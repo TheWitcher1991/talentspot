@@ -19,6 +19,60 @@
     margin: 0 0 30px 0;
 }
 
+.header__search-flex {
+    width: 100%;
+    padding: 60px 60px 40px 60px;
+    margin: 0 0 30px 0;
+    display: flex;
+    align-items: center;
+    color: var(--color-fg-white);
+    justify-content: space-between;
+
+    > div {
+        h1 {
+            font-size: 42px;
+            color: var(--color-fg-white);
+            font-weight: 700;
+            text-align: left;
+            position: relative;
+            line-height: 1.2;
+        }
+
+        span {
+            margin: 26px 0 0 0;
+            display: block;
+            font-size: 20px;
+            font-weight: 400;
+            color: var(--color-fg-white);
+            opacity: .8;
+        }
+
+        a {
+            width: fit-content;
+            display: flex;
+            align-items: center;
+            border-radius: 25px;
+            margin: 36px 0 0 0;
+            padding: 8px 16px;
+            background: var(--color-fg-white);
+            color: var(--color-fg-black);
+            backdrop-filter: blur(10px);
+            justify-content: space-between;
+            transition: all .2s linear;
+
+            &:hover {
+                background: var(--color-fg-black);
+                color: var(--color-fg-white);
+            }
+        }
+
+        img {
+            transform: rotate(-360deg);
+            height: 450px;
+        }
+    }
+}
+
 .header__tmp-search {
     position: relative;
     background: var(--color-bg-main);
