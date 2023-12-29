@@ -292,6 +292,7 @@
 .lk__content-flex {
     display: flex;
     width: 100%;
+    margin: 0 0 40px 0;
 }
 
 .lk__content-left {
@@ -2047,7 +2048,7 @@
         margin: 0 0 0 20px;
 
         span {
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 600;
             margin: 0;
             display: block;
@@ -3324,4 +3325,109 @@
     }
 }
 
+.lk__review-base {
+    display: flex;
+    align-items: center;
+    margin: 20px 0 20px 0;
+
+    .lk__review-base-item {
+        margin: 0 36px 0 0;
+
+        span {
+            font-size: 30px;
+            font-weight: 600;
+            color: var(--color-fg-main);
+        }
+
+        p {
+            font-size: 14px;
+            color: var(--color-fg-black);
+        }
+    }
+}
+
+.note__block {
+    max-width: 100%;
+    margin: 0 0 20px 0;
+    border-left: 3px solid var(--color-fg-main);
+    padding: 8px 16px;
+    background: var(--color-fg-);
+    background: #F8F9FA;
+    border-radius: 0 10px 10px 0;
+    position: relative;
+
+    span {
+        color: var(--color-fg-main);
+        font-weight: 600;
+        margin: 0 0 10px 0;
+        display: flex;
+        align-items: center;
+
+        i {
+            font-size: 20px;
+
+            margin: 0 6px 0 0;
+        }
+    }
+
+    div {
+        text-wrap: balance;
+        color: var(--color-fg-black);
+        font-weight: 400;
+        line-height: 1.5;
+        display: block;
+        font-size: 15px;
+    }
+}
+
+.lk__upload-files {
+    width: 560px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed rgba(0, 0, 0, 0.25);
+    background: #F9FAFB;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s linear;
+    margin: 0 0 40px 0;
+
+    &:hover {
+        border-color: var(--color-fg-black);
+    }
+
+    input {
+        display: none;
+    }
+
+    label {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    i {
+        font-size: 46px;
+        margin: 0 0 10px 0;
+        color: var(--color-fg-black);
+    }
+
+    span {
+        display: block;
+        text-align: center;
+        margin: 0 0 8px 0;
+        font-size: 16px;
+        font-weight: 500;
+        color: var(--color-fg-black);
+    }
+
+    p {
+        color: var(--color-fg-800);
+        font-size: 14px;
+        text-align: center;
+        line-height: 1.5;
+    }
+}
 

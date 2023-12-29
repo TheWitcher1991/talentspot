@@ -119,15 +119,16 @@
                         </a>
                     </li>
                     <li>
-                        <a class="lk__link ">
+                        <a class="lk__link">
                             <span>
-                                <i class="mdi mdi-school-outline"></i>
-                                <div class="lk__link-title">Соискатели</div>
+                                <i class="mdi mdi-archive-outline"></i>
+                                <div class="lk__link-title">Кадровый резерв</div>
                             </span>
                         </a>
                         <ul class="lk__menu-pop">
-                            <li><a href="">Избранные</a></li>
-                            <li><a href="">Мои просмотры</a></li>
+                            <li><a href="">Папки</a></li>
+                            <li><a href="">Шаблоны поисков</a></li>
+                            <li><a href="">История просмотров</a></li>
                         </ul>
                     </li>
                     <li>
@@ -161,8 +162,8 @@
                     <li>
                         <a class="lk__link" href="">
                             <span>
-                               <i class="mdi mdi-lightbulb-on-outline"></i>
-                                <div class="lk__link-title">Есть идея</div>
+                               <i class="mdi mdi-calendar-badge-outline"></i>
+                                <div class="lk__link-title">Календарь</div>
                             </span>
                         </a>
                     </li>
@@ -305,7 +306,19 @@
                                         <div class="label__error error__prof__student"></div>
                                     </label>
 
-                                    <div class="lk__label" style="margin: 0 0 6px 0;">
+                                    <label for="prof__student" class="lk__label" style="margin: 0 0 6px 0;">
+                                        <span>Максимальное количество откликов <m>*</m></span>
+                                        <input type="text" name="prof__applicant" id="prof__student" required="">
+                                        <div class="label__error error__prof__student"></div>
+                                    </label>
+
+                                    <div class="white_checkbox">
+                                        <input type="checkbox" class="white-checkbox" name="salary" id="2" value="1">
+                                        <label for="2">Неограниченно</label>
+                                    </div>
+
+
+                                    <div class="lk__label" style="margin: 30px 0 6px 0;">
                                         <span>Зарплата</span>
                                         <div class="lk__label-flex">
                                             <span class="lb-start">от</span>

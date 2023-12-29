@@ -4,6 +4,7 @@
 
 /.idea/
 /node_modules/
+/venv/
 frontend/node_modules
 frontend/package-lock.json
 
@@ -12,8 +13,6 @@ frontend/package-lock.json
 .env
 *.key
 *.sqlite3
-./TEMPLATES.MD
-TEMPLATES.MD
 
 
 

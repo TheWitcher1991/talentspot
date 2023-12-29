@@ -2,20 +2,18 @@
     <img src="./frontend/src/images/static/logo.png" alt=""
         width="60" align="center"
     /> 
-    <h1 align="center">Веб-сервис «TalentSpot»</h1>
+    <h1 align="center">Web service «TalentSpot»</h1>
 </p>
 
-### © ООО «ТАЛЕНТСПОТ»
+### © ООО «TALENTSPOT»
 
-TalentSpot — информационный сервис в виде интернет-портала, который связывает квалифицированных соискателей и работодателей для удовлетворения потребностей в рабочей силе, с внедрением алгоритмов автоматизации процесса найма кадров
+TalentSpot — is an information service in the form of an online portal that connects qualified job seekers and employers to meet workforce needs, with the introduction of algorithms to automate the hiring process
 
 > [!NOTE]\
-> Проект находится на стадии разработки. 
-> Сервис создается  при поддержке гранта <a href="https://fasie.ru/">Фонда содействия инновациям</a>, предоставляемого 
-> в рамках программы «Студенческий стартап» федерального проекта <a href="https://univertechpred.ru/">«Платформа университетского технологического предпринимательства»</a>
-
-
-## Стек технологий
+> The project is still in the design phase.
+> The service is being created with the support of a grant from <a href="https://fasie.ru/">the Foundation for Assistance to Innovations</a> under the
+> Student Startup Program of the federal project <a href="https://univertechpred.ru/">«University Technological Entrepreneurship Platform»</a>
+## Technology Stack
 
 
 <div align="left">  
@@ -29,7 +27,7 @@ TalentSpot — информационный сервис в виде интер�
 <a href="https://sass-lang.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/sass-original.svg" alt="Sass" height="50" /></a>  
 </div>
 
-## Версии 
+## Versions
 
 apache + uwsgi
 
@@ -40,7 +38,7 @@ apache + uwsgi
 - Npm version 9.6.2
 - Webpack version ^5.89.0
 
-## Схема работы веб-сервиса
+## Scheme of work
 
 ```mermaid
 graph LR;
@@ -58,8 +56,9 @@ graph LR;
     Middleware-->|HTTP Response| client 
 ```
 
-### © ООО «ТАЛЕНТСПОТ»
+### © ООО «TALENTSPOT»
 
-- ИНН – 2623034058
-- КПП – 262301001
-- ОГРН – 1232600016065
+- Russian Federation
+- Taxpayer Identification Number (INN) – 2623034058
+- Tax Registration Reason Code (KPP) – 262301001
+- Primary State Registration Number (PSRN) – 1232600016065

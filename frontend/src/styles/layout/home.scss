@@ -865,7 +865,6 @@
         backdrop-filter: blur(30px);
         color: var(--color-fg-black);
 
-
         &:nth-child(2) {
             margin: 0 50px;
         }
@@ -874,8 +873,7 @@
             display: flex;
             width: 100%;
             justify-content: center;
-
-
+            height: 150px;
         }
 
         span {

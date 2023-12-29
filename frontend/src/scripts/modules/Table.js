@@ -41,24 +41,26 @@ class Table {
 
     sortTable (th) {
         let tbody = this.table.querySelector('tbody'),
-            rows = [].slice.call(tbody.rows) // tbody.querySelectorAll('tr')
+            rows = [].slice.call(tbody.rows), // tbody.querySelectorAll('tr')
+            compare = null
 
         let {cellIndex, type, sort} = th
 
+        // TODO: ДОРАБОТАТЬ ПОЯВЛЕНИЕ СТРЕЛОК
+        //       И ИЗМЕНЕНИЕ В ЗАВИСИМОСТИ ОТ ТИПА
         let cellTable = (sort) => {
-
+            if (sort === 0) {
+                return (rowA, rowB) => rowA.cells[cellIndex].innerHTML > rowB.cells[cellIndex].innerHTML ? 1 : -1
+            } else if (sort === 1) {
+                return (rowA, rowB) => rowA.cells[cellIndex].innerHTML < rowB.cells[cellIndex].innerHTML ? 1 : -1
+            } else if (sort === 2) {
+                return (rowA, rowB) => rowA.cells[cellIndex].innerHTML > rowB.cells[cellIndex].innerHTML ? 1 : -1
+            }
         }
 
-        switch (sort) {
-            case 0:
-
-                break
-            case 1:
-
-                break
-            case 2:
-                break
-        }
+        compare = cellTable(sort)
+        rows.sort(compare)
+        tbody.append(...rows)
     }
 
     renderHTML () {
@@ -84,7 +86,6 @@ export default function () {
          * @type {HTMLTableCellElement}
          */
         let th = e.target
-        console.log(th)
         sortTable(th.cellIndex, th.dataset.type)
     })
 
@@ -92,8 +93,6 @@ export default function () {
         let tbody = table.querySelector('tbody'),
             rowsArray = [].slice.call(tbody.rows),
             compare
-
-        console.log(table.querySelector('tbody'))
 
         switch (type) {
             case 'number':

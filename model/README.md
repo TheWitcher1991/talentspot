@@ -9,4 +9,4 @@
 - diagrams.net [тык](https://app.diagrams.net/)
 - lucidChart [тык](https://www.lucidchart.com/pages/ru)
 
-### © ООО «ТалентСпот»
+### © ООО «ТАЛЕНТСПОТ»
