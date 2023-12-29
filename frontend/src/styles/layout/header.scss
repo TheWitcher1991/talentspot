@@ -26,20 +26,24 @@
     display: flex;
     align-items: center;
     color: var(--color-fg-white);
-    justify-content: space-between;
+    justify-content: center;
 
     > div {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
         h1 {
-            font-size: 42px;
+            font-size: 40px;
             color: var(--color-fg-white);
             font-weight: 700;
-            text-align: left;
+            text-align: center;
             position: relative;
             line-height: 1.2;
         }
 
         span {
-            margin: 26px 0 0 0;
+            margin: 26px 0 36px 0;
             display: block;
             font-size: 20px;
             font-weight: 400;
@@ -52,13 +56,13 @@
             display: flex;
             align-items: center;
             border-radius: 25px;
-            margin: 36px 0 0 0;
             padding: 8px 16px;
             background: var(--color-fg-white);
             color: var(--color-fg-black);
             backdrop-filter: blur(10px);
             justify-content: space-between;
             transition: all .2s linear;
+            margin: 0 auto;
 
             &:hover {
                 background: var(--color-fg-black);
