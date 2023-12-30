@@ -1,0 +1,30 @@
+version: "3.9"
+
+services:
+  talentspot:
+    build:
+      dockerfile: docker/Dockerfile
+      context: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      - ts_postgres
+    volumes:
+      - ./talentspot:/talentspot
+    env_file:
+      - .env
+    command: >
+      sh -c "python manage.py runserver 0.0.0.0.8080"
+  
+
+  ts_postgres:
+    image: postgres:15
+    container_name: ts_postgres
+    volumes:
+      - ~/.pg/pg_data/ts:/var/lib/postgres/data
+    env_file:
+      - .env
+
+  apache:
+    build:
+      ''

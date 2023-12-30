@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="./frontend/src/images/static/logo.png" alt=""
+    <img src="templates/src/images/static/logo.png" alt=""
         width="60" align="center"
     /> 
     <h1 align="center">Веб-сервис «TalentSpot»</h1>
@@ -34,7 +34,7 @@ TalentSpot — информационный сервис в виде интер�
 apache + uwsgi
 
 - Python version 3.12.0
-- Django version 4.2.7
+- Django version 5.0
 - Django rest framework version 3.14.0
 - NodeJS version 18.12.1
 - Npm version 9.6.2
