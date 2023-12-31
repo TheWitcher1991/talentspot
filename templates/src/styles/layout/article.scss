@@ -453,6 +453,26 @@ body {
             font-size: 22px;
             margin: 0 16px 0 0;
         }
+
+        > button {
+            margin: 0 0 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 30px;
+            padding: 0 12px;
+            height: 30px;
+            transition: all .2s linear;
+            cursor: pointer;
+            background: var(--color-fg-black);
+            color: var(--color-fg-white);
+            font-size: 13px;
+            border: 0;
+
+            &:hover {
+                background: var(--color-fg-main);
+            }
+        }
     }
 }
 
