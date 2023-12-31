@@ -1,0 +1,94 @@
+@media all and (max-width: 1655px) {
+
+    /**
+        БАЗОВЫЕ СТРАНИЦЫ
+     */
+
+    .container {
+        max-width: var(--width-box);
+    }
+
+    .header__name {
+        font-size: 190px;
+    }
+
+    .category__list .category__name {
+        width: 23.2%;
+    }
+
+    .job__list .home__job-item {
+        width: 31.7%;
+    }
+
+    #header, #footer, #header__search  {
+        padding: 25px;
+    }
+
+    .section__services {
+        justify-content: space-between;
+    }
+
+    .cart__company {
+        left: 190px;
+    }
+
+    .cart__job {
+        left: 90px;
+    }
+
+    .cart__resume {
+        left: 10px;
+    }
+
+    .plus__map {
+        svg {
+            width: 750px;
+        }
+    }
+
+    .category__list .category__name p {
+        font-size: 19px;
+    }
+
+    .map__company {
+        left: 480px;
+
+        span {
+            flex: none
+        }
+    }
+
+    .section__services>div {
+        padding: 40px;
+    }
+
+    /**
+        ЛИЧНЫЙ КАБИНЕТ
+    */
+
+    .lk__nav-max, .lk__page-max .lk__content {
+        padding: 0 40px;
+    }
+
+    .lk__payment-right .lk__pr-flex {
+        flex-wrap: wrap;
+
+        > div {
+            margin: 0 20px 16px 0;
+        }
+    }
+
+    .lk__payment-left, .lk__payment-right {
+        height: 250px;
+    }
+
+    .dashboard__slot-wrap {
+        overflow-x: auto;
+        verflow-y: hidden;
+        overscroll-behavior-x: contain;
+        position: relative;
+        white-space: nowrap;
+        width: 100%;
+    }
+
+}

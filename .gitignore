@@ -5,8 +5,7 @@
 /venv/
 /.idea/
 /node_modules/
-frontend/node_modules
-frontend/package-lock.json
+/frontend/
 templates/node_modules
 templates/package-lock.json
 
