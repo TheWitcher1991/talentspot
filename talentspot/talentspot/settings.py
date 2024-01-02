@@ -33,7 +33,7 @@ ALLOWED_HOSTS = ['*']
 DOMAIN_NAME = 'http://localhost:8080'
 
 CORS_ORIGIN_ALLOW_ALL = False
-CORS_ORIGIN_WHITELIST = ['http://localhost:8080']
+CORS_ORIGIN_WHITELIST = ['http://localhost:8080', 'http://localhost:3000']
 
 # Application definition
 
@@ -154,7 +154,6 @@ STATICFILES_DIRS = (
     BASE_DIR / 'static',
 )
 
-STATIC_ROOT = 'static'
 
 # Media files
 
