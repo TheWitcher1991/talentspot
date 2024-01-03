@@ -1,0 +1,396 @@
+.lk__div-ec {
+    margin: 0 0 30px 0;
+    padding: 25px 30px;
+    display: block;
+    background: var(--color-fg-main);
+    color: var(--color-fg-white);
+    height: fit-content;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: var(--shadow-lk-div);
+    transition: all .2s linear;
+}
+
+.lk__div-money-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0 0 16px 0;
+
+    i {
+        font-size: 25px;
+        cursor: pointer;
+
+        &:hover {
+            color: var(--color-fg-black);
+        }
+    }
+}
+
+.lk__div-money-text {
+    margin: 0 0 26px 0;
+
+    span {
+        font-size: 18px;
+        font-weight: 400;
+    }
+}
+
+.lk__div-money-cart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.lk__div-money-cart-left {
+    position: relative;
+
+    img {
+        height: 200px;
+        width: 370px;
+        border-radius: 20px;
+    }
+
+    .lk__div-money-cart-single {
+        position: absolute;
+        width: 370px;
+        height: 200px;
+        bottom: 0;
+        left: 0;
+        border-radius: 20px;
+        fill: linear-gradient(86deg, rgba(255, 255, 255, 0.00) -20.51%, rgba(255, 255, 255, 0.05) 26.82%, rgba(255, 255, 255, 0.00) 65.65%), rgba(196, 196, 196, 0.05);
+        flex-shrink: 0;
+        box-shadow: 0px 4px 49px 0px rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(8.296844482421875px);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: all 0.2s linear;
+
+        &:hover {
+            background: var(--color-fg-black);
+        }
+
+        .lk__div-money-cart-type {
+            display: block;
+            text-align: right;
+            margin: 0 0 0 20px;
+
+
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .lk__div-money-cart-number {
+            font-weight: 300;
+            font-size: 18px;
+            font-family: var(--font-mono);
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+        }
+
+        .lk__div-money-cart-flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .lk__div-money-cart-tiny {
+            span {
+                display: block;
+                color: #DEDEDE;
+                font-size: 13px;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+.lk__div-money-cart-right {
+    span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+        width: 100px;
+        height: 200px;
+        border: 2px dashed var(--color-fg-white);
+        font-size: 24px;
+        cursor: pointer;
+        transition: all 0.2s linear;
+
+        &:hover {
+            border-color: var(--color-fg-black);
+            background: var(--color-fg-black);
+        }
+    }
+}
+
+.lk__div-next-pay {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 222px;
+
+    h1 {
+        font-size: 36px;
+        font-weight: 400;
+    }
+
+    time {
+        color: #575757;
+        margin: 8px 0 12px 0;
+        display: block;
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 15px;
+        color: var(--color-fg-800);
+    }
+
+    span {
+        font-size: 15px;
+        color: var(--color-fg-black);
+    }
+
+    div {
+        margin: 6px 0 0 0;
+        font-size: 15px;
+        color: var(--color-fg-800);
+
+        a {
+            color: var(--color-fg-main);
+            font-weight: 600;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    button {
+        display: inline-flex;
+        background: var(--color-fg-ecn);
+        color: var(--color-fg-white);
+        height: 45px;
+        padding: 0 36px;
+        border-radius: 15px;
+        font-size: 14px;
+        align-items: center;
+        justify-content: center;
+        transition: all .2s linear;
+        border: 0;
+        cursor: pointer;
+        width: 100%;
+
+        i {
+            margin: 0 0 0 6px;
+            font-size: 23px;
+        }
+
+        &:hover {
+            background: var(--color-fg-black);
+        }
+    }
+}
+
+.lk__invoice-wrap-layout {
+    margin: 0 0 30px 0;
+    padding: 25px;
+    background: var(--color-fg-white);
+    height: fit-content;
+    width: 100%;
+    border-radius: 20px;
+    min-height: 250px;
+    border: 1px solid var(--Stroke, #E2E8F0);
+    box-shadow: var(--shadow-lk-div);
+    transition: all .2s linear;
+
+    > span {
+        font-size: 17px;
+        font-weight: 600;
+        margin: 0 0 26px 0;
+        color: var(--color-fg-black);
+        display: block;
+    }
+
+    .lk__invoice-wrap {
+        display: flex;
+
+    }
+
+    .lk__invoice-right {
+        margin: 0 0 0 36px;
+        padding: 0 0 0 36px;
+        border-left: 1px dashed var(--Stroke, #E2E8F0);
+        flex: 1;
+    }
+
+    .lk__invoice-slick {
+        margin: 0 0 20px 0;
+        display: flex;
+
+        &:last-child {
+            margin: 0;
+        }
+
+        > span {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--color-fg-ecn);
+            margin: 0 12px 0 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 17px;
+            color: var(--color-fg-white);
+
+            i {
+                font-size: 20px;
+            }
+        }
+
+        > div {
+            span {
+                font-weight: 600;
+                margin: 0;
+                color: var(--color-fg-black);
+                display: block;
+            }
+
+            p {
+                display: flex;
+                align-items: center;
+                font-size: 14px;
+                color: var(--color-fg-800);
+            }
+        }
+    }
+
+    .lk__invoice-top {
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+
+        .lk__invoice-top-item {
+            width: 50%;
+
+            &:first-child {
+                margin: 0 20px 0 0;
+            }
+
+            span {
+                display: flex;
+                align-items: center;
+                font-size: 14px;
+                color: var(--color-fg-800);
+                text-transform: uppercase;
+                margin: 0 0 8px 0;
+            }
+
+            div {
+                padding: 0 10px;
+                border-radius: 10px;
+                height: 36px;
+                color: var(--color-fg-black);
+                background: rgba(0,0,0,0);
+                display: flex;
+                font-weight: 600;
+                align-items: center;
+                border: 1px solid var(--color-br-inp);
+                transition: all .2s linear;
+                width: 100%;
+            }
+        }
+    }
+
+    .lk__invoice-table-master {
+        width: 100%;
+
+        table {
+            width: 100%;
+            text-align: left;
+
+            thead {
+                th {
+                    font-size: 15px;
+                    font-weight: 400;
+                    color: var(--color-fg-800);
+                    padding: 0 0 8px 0;
+                }
+            }
+
+            tbody {
+                td {
+                    font-size: 15px;
+                    font-weight: 600;
+                    color: var(--color-fg-black);
+                }
+            }
+        }
+    }
+
+    .lk__invoice-file {
+        display: flex;
+        align-items: center;
+        margin: 0 0 26px 0;
+    }
+
+    textarea {
+        width: 100%;
+        margin: 20px 0 0 0;
+        resize: none;
+        padding: 10px;
+        border-radius: 10px;
+        color: var(--color-fg-black);
+        background: rgba(0,0,0,0);
+        display: flex;
+        font-weight: 400;
+        align-items: center;
+        font-size: 14px;
+        border: 1px solid var(--color-br-inp);
+        transition: all .2s linear;
+    }
+
+    .lk__invoice-bth {
+        display: inline-flex;
+        align-items: center;
+
+        button {
+            color: var(--color-fg-ecn);
+            background: #f5f4f9;
+            outline: none;
+            height: 40px;
+            border: 0;
+            transition: all .2s ease-in 0s;
+            border-radius: 8px;
+            font-size: 14px;
+            cursor: pointer;
+            padding: 0 26px;
+
+            &.lk__invoice-bth-send {
+                margin: 0 20px 0 0;
+                background: var(--color-fg-main);
+                color: var(--color-fg-white);
+            }
+        }
+    }
+
+    .lk__invoice-content {
+        > span {
+            font-size: 17px;
+            font-weight: 600;
+            margin: 20px 0;
+            color: var(--color-fg-black);
+            display: block;
+        }
+    }
+}

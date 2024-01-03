@@ -1,0 +1,45 @@
+@media all and (max-width: 1450px) {
+
+    /**
+        БАЗОВЫЕ СТРАНИЦЫ
+     */
+
+    .container {
+        max-width: 95%;
+    }
+
+    .header__name {
+        font-size: 14vw;
+    }
+
+    #header, #footer, #header__search  {
+        padding: 0;
+        border-radius: 0;
+    }
+
+    .header__tmp, .footer__tmp, .header__tmp-search {
+        border-radius: 0;
+    }
+
+    #header {
+        margin: 0 0 50px 0;
+    }
+
+    .section__services > div {
+        width: 100%;
+    }
+
+    .section__services > div:nth-child(2) {
+        margin: 0 20px;
+    }
+
+    .section__slot-wrap {
+        height: 550px;
+    }
+
+    .plus__wrap .plus__item .plus__icon {
+        width: 75px;
+        height: 75px;
+    }
+
+}

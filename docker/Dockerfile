@@ -6,9 +6,9 @@ ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
 COPY requirements.txt /temp/requirements.txt
-COPY talentspot /talentspot
+COPY backend /backend
 
-WORKDIR /talentspot
+WORKDIR /backend
 
 EXPOSE 8080
 

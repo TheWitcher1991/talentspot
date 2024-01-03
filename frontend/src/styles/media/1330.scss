@@ -1,0 +1,162 @@
+@media all and (max-width: 1330px) {
+
+    /**
+        БАЗОВЫЕ СТРАНИЦЫ
+     */
+
+    .category__list .category__name {
+        width: 23.1%;
+    }
+}
+
+@media all and (max-width: 1300px) {
+
+    .header__info-right {
+        display: none;
+    }
+
+    #header {
+        height: fit-content;
+        overflow: hidden;
+        margin: 0 0 30px 0;
+    }
+
+    .header__purple {
+        top: 5px;
+    }
+
+    .header__tmp {
+        padding: 0 0 40px 0;
+    }
+
+    .header__company {
+        margin: 65px 0 0 0;
+    }
+
+    .plus__map svg {
+        width: 700px;
+    }
+
+    .map__resume {
+        left: 430px;
+    }
+
+    .category__list .category__name {
+        width: 31.6%;
+    }
+
+    .category__list .category__name:nth-child(4n) {
+        margin: 0 30px 30px 0;
+    }
+
+    .category__list .category__name:nth-child(3n) {
+        margin: 0 0 30px 0;
+    }
+
+    .job__list .home__job-item {
+        width: 48.7%  ;
+    }
+
+    .job__list .home__job-item:nth-child(3n) {
+        margin: 0 30px 30px 0;
+    }
+
+    .job__list .home__job-item:nth-child(2n) {
+        margin: 0 0 30px 0;
+    }
+
+    .job__list .home__job-item:last-of-type {
+        display: none;
+    }
+
+    .category__list {
+        overflow-x: auto;
+        verflow-y: hidden;
+        overscroll-behavior-x: contain;
+        position: relative;
+        white-space: nowrap;
+        flex-wrap: nowrap;
+
+        .category__name {
+            width: 100%;
+            margin: 0 20px 0 0;
+
+            &:nth-child(3n) {
+                margin: 0 20px 0 0;
+            }
+
+            &:nth-child(4n) {
+                margin: 0 20px 0 0;
+            }
+
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+
+    .hero__section {
+        margin: 160px 0 30px 0;
+    }
+
+    .section__title {
+        margin: 0 0 30px 0;
+    }
+
+    .section__title h2 {
+        font-size: 27px;
+    }
+
+    .section__title a {
+        font-size: 19px;
+
+        i {
+            font-size: 25px;
+        }
+    }
+
+    .section__plus {
+        display: block;
+    }
+
+    .plus__map svg {
+        width: 100%;
+    }
+
+    .plus__wrap {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 0 50px 0;
+
+        .plus__item {
+            margin: 0;
+            display: block;
+
+            &:nth-child(2n) {
+                margin: 0 20px
+            }
+
+            &:hover {
+                .plus__separator {
+                    opacity: 0;
+                    display: none;
+                }
+
+                .plus__icon {
+                    background: var(--color-fg-main);
+                    color: var(--color-fg-white);
+                    transform: inherit;
+                    margin: 0;
+                }
+
+                .plus__name {
+                    background: transparent;
+                    padding: 0;
+                }
+            }
+        }
+    }
+
+}

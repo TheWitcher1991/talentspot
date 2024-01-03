@@ -1,0 +1,19 @@
+User-agent: *
+Disallow:
+
+User-agent: YandexDirect
+Allow: *?*
+
+User-agent: LCC
+Disallow: /
+
+User-agent: ltx71 - (http://ltx71.com/)
+Disallow: /
+
+User-agent: *
+Disallow: *?*
+Disallow: /admin/*
+Disallow: /static
+
+Host: https:/
+Sitemap: https:/

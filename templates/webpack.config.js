@@ -4,7 +4,7 @@ const path = require('path')
 const TerserPlugin = require('terser-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
-// TODO: ПРИ РАЗРАБОТКЕ BACKEND - ВЫХОД В talentspot/static/
+// TODO: ПРИ РАЗРАБОТКЕ BACKEND - ВЫХОД В backend/static/
 
 const SCRIPT =  path.join(__dirname, './src/scripts')
 const EXTERNAL = path.join(__dirname, './src/styles')
