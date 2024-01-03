@@ -1,3 +1,4 @@
+import React from 'react'
 import Icon from '@mdi/react'
 import {mdiAtom, mdiAutoFix, mdiCrownOutline, mdiCheckCircle} from '@mdi/js'
 import colors from '../../../utils/colors'

@@ -1,3 +1,4 @@
+import React from 'react'
 import {Link} from 'react-router-dom'
 import Icon from '@mdi/react'
 import {mdiAtom, mdiAutoFix, mdiCrownOutline, mdiCheckCircle} from '@mdi/js'

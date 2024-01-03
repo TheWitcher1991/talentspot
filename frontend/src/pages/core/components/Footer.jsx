@@ -20,31 +20,31 @@ export default function Footer () {
                             <div className='footer__block'>
                                 <span>Материалы сайта</span>
                                 <ul>
-                                    <li><Link to=''>О нас</Link></li>
-                                    <li><Link to=''>Центр поддержки</Link></li>
-                                    <li><Link to=''>Реклама на сайте</Link></li>
-                                    <li><Link to=''>Политика конфиденциальности</Link></li>
-                                    <li><Link to=''>Публичная оферта</Link></li>
-                                    <li><Link to=''>Обратная связь</Link></li>
+                                    <li><Link to='/about'>О нас</Link></li>
+                                    <li><Link to='/support'>Центр поддержки</Link></li>
+                                    <li><Link to='/support/promo'>Реклама на сайте</Link></li>
+                                    <li><Link to='/support/policy'>Политика конфиденциальности</Link></li>
+                                    <li><Link to='/support/offer'>Публичная оферта</Link></li>
+                                    <li><Link to='/support/feedback'>Обратная связь</Link></li>
                                 </ul>
                             </div>
                             <div className='footer__block'>
                                 <span>Работодателям</span>
                                 <ul>
-                                    <li><Link to=''>Разместить вакансии</Link></li>
-                                    <li><Link to=''>Найти сотрудников</Link></li>
-                                    <li><Link to=''>Прайс-лист</Link></li>
+                                    <li><Link to='/login'>Разместить вакансии</Link></li>
+                                    <li><Link to='/search/resume'>Найти сотрудников</Link></li>
+                                    <li><Link to='/about'>Прайс-лист</Link></li>
                                     <li><Link to='/automation'>Автоматизация найма</Link></li>
-                                    <li><Link to=''>Помощь работодателям</Link></li>
+                                    <li><Link to='/support'>Помощь работодателям</Link></li>
                                 </ul>
                             </div>
                             <div className='footer__block'>
                                 <span>Соискателям</span>
                                 <ul>
-                                    <li><Link to=''>Разместить резюме</Link></li>
-                                    <li><Link to=''>Каталог компаний</Link></li>
-                                    <li><Link to=''>Каталог вакансий</Link></li>
-                                    <li><Link to=''>Помощь соискателям</Link></li>
+                                    <li><Link to='/login'>Разместить резюме</Link></li>
+                                    <li><Link to='/search/company'>Каталог компаний</Link></li>
+                                    <li><Link to='/search/vacancy'>Каталог вакансий</Link></li>
+                                    <li><Link to='/support'>Помощь соискателям</Link></li>
                                 </ul>
                             </div>
                         </div>

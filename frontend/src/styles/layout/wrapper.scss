@@ -1004,7 +1004,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background: linear-gradient(150deg, var(--color-bg-main) 50%, var(--color-fg-500) 50%);
 
     .global__error-left {
@@ -1022,13 +1022,15 @@
             font-size: 24px;
             display: block;
             margin: 26px 0 4px 0;
-            color: var(--color-fg-800)
+            color: var(--color-fg-white);
+            opacity: 0.8;
         }
 
         p {
             font-size: 16px;
             font-weight: 400;
-            color: var(--color-fg-800)
+            color: var(--color-fg-white);
+            opacity: 0.8;
         }
 
         > div {
@@ -1037,7 +1039,8 @@
             margin: 16px 0 0 0;
 
             a {
-                color: var(--color-fg-800);
+                color: var(--color-fg-white);
+                opacity: 0.8;
                 display: block;
                 margin: 0 20px 0 0;
                 font-size: 15px;

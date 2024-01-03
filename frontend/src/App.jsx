@@ -1,22 +1,47 @@
-import React, {lazy, Suspense} from 'react'
+import React, {lazy, Suspense, useState, useEffect} from 'react'
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import Loader from './components/Loader'
 import './styles/index.scss'
 
-const BaseLayout = lazy(() => import('./layout/base/BaseLayout'))
-const Home = lazy(() => import('./layout/base/Home'))
-const Automation = lazy(() => import('./layout/base/Automation'))
+const BaseLayout = lazy(() => import('./pages/core/layout/BaseLayout'))
+const Home = lazy(() => import('./pages/core/Home'))
+const Vacancy = lazy(() => import('./pages/core/Vacancy'))
+const Company = lazy(() => import('./pages/core/Company'))
+const Resume = lazy(() => import('./pages/core/Resume'))
+const About = lazy(() => import('./pages/core/About'))
+const Automation = lazy(() => import('./pages/core/Automation'))
+
+const SearchLayout = lazy(() => import('./pages/core/layout/SearchLayout'))
+const SearchVacancy = lazy(() => import('./pages/core/search/SearchVacancy'))
+const SearchCompany = lazy(() => import('./pages/core/search/SearchCompany'))
+const SearchResume = lazy(() => import('./pages/core/search/SearchResume'))
+
+const SupportLayout = lazy(() => import('./pages/core/layout/SupportLayout'))
+const Support = lazy(() => import('./pages/core/support/Support'))
+const Conditions = lazy(() => import('./pages/core/support/Conditions'))
+const Legal = lazy(() => import('./pages/core/support/Legal'))
+const Offer = lazy(() => import('./pages/core/support/Offer'))
+const Policy = lazy(() => import('./pages/core/support/Policy'))
+const Promo = lazy(() => import('./pages/core/support/Promo'))
+const Terms = lazy(() => import('./pages/core/support/Terms'))
+const Feedback = lazy(() => import('./pages/core/support/Feedback'))
+
 const NotFound = lazy(() => import('./components/NotFound'))
 
 export default function App () {
-
-    let user = 1
+    const [user, setUser] = useState(1)
     // 1 - гость
     // 2 - соискатель
     // 3 - работодатель
 
+    // Установка прокрутки страницы на 0 при смене маршрута
+    useEffect(() => {
+        document.documentElement.scrollTop = 0
+        document.scrollingElement.scrollTop = 0
+    }, [])
+
     /**
-     * Все три имеют доступ к страницам, которые находятся в layout/base
+     * Все три имеют доступ к страницам, которые находятся в pages/core
      * В зависимости типа пользователя будет соответствующий header, footer и т.д.
      *
      * Стартовая страница для гостя: /
@@ -34,18 +59,18 @@ export default function App () {
                         {/** <BASE_ROUTER> **/}
                         <Route path='/' element={<BaseLayout />} >
                             <Route index element={<Home/>} />
-                            <Route path='vacancy'  />
-                            <Route path='company'  />
-                            <Route path='resume'  />
-                            <Route path='about'  />
+                            <Route path='vacancy/:id' element={<Vacancy/>}  />
+                            <Route path='company/:id' element={<Company/>}  />
+                            <Route path='resume/:id' element={<Resume/>}  />
+                            <Route path='about'  element={<About/>} />
                             <Route path='automation' element={<Automation />} />
                         </Route>
 
-                        <Route path='/search'>
+                        <Route path='/search' element={<SearchLayout />}>
                             {/** ПОИСК **/}
-                            <Route path='vacancy'  />
-                            <Route path='company'  />
-                            <Route path='resume'  />
+                            <Route path='vacancy' element={<SearchVacancy />} />
+                            <Route path='company' element={<SearchCompany />} />
+                            <Route path='resume' element={<SearchResume />} />
                             {/** РАСШИРЕННЫЕ ПОИСК **/}
                             <Route path='expanded'>
                                 <Route path='vacancy'  />
@@ -54,17 +79,16 @@ export default function App () {
                             </Route>
                         </Route>
 
-                        <Route path='/support'>
+                        <Route path='/support' element={<SupportLayout />}>
                             {/** ЦЕНТР ПОДДЕРЖКИ **/}
-                            <Route index />
-                            <Route path='conditions'  />
-                            <Route path='feedback'  />
-                            <Route path='legal'  />
-                            <Route path='main'  />
-                            <Route path='oferta'  />
-                            <Route path='policy'  />
-                            <Route path='promo'  />
-                            <Route path='terms'  />
+                            <Route index element={<Support />} />
+                            <Route path='conditions' element={<Conditions />} />
+                            <Route path='feedback' element={<Feedback />} />
+                            <Route path='legal' element={<Legal />} />
+                            <Route path='offer' element={<Offer />} />
+                            <Route path='policy' element={<Policy />} />
+                            <Route path='promo' element={<Promo />} />
+                            <Route path='terms' element={<Terms />} />
                         </Route>
                         {/** </BASE_ROUTER> **/}
 
@@ -75,7 +99,7 @@ export default function App () {
                             <>
                                 <Route path='/login'  />
                                 <Route path='/signup'  />
-                                <Route path='/recovey'  />
+                                <Route path='/recovey/:token'  />
                             </>
                         )}
 
