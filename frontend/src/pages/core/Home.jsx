@@ -3,8 +3,15 @@ import {Link} from 'react-router-dom'
 import PriceList from './components/PriceList'
 import PlusMap from './components/PlusMap'
 import HeaderHome from './components/HeaderHome'
+import CategoryItem from './components/CategoryItem'
+import VacancyHome from './components/VacancyHome'
+import specialization from '../../utils/specialization'
+import vacancies from '../../utils/vacancies'
 
 export default function Home () {
+    const [category, setCategory] = React.useState(specialization)
+    const [vacancy, setVacancy] = React.useState(vacancies)
+
     return (
         <>
             <HeaderHome>
@@ -69,6 +76,9 @@ export default function Home () {
                         <Link to=''>Посмотреть все <i className='mdi mdi-arrow-right'></i></Link>
                     </div>
                     <div className='category__list vac__list'>
+                        {category.map(({link, icon, name, count}) => {
+                            return <CategoryItem link={link} icon={icon} name={name} count={count} key={Date.now()} />
+                        })}
                     </div>
                 </section>
 
@@ -76,7 +86,7 @@ export default function Home () {
                     <img src='../../images/static/person/home_hero_2.png' alt='' />
                     <div className='hero__text'>
                         <span>Вы в поисках <br /> работы?</span>
-                        <Link to=''>Создать резюме бесплатно</Link>
+                        <Link to='/signup'>Создать резюме бесплатно</Link>
                     </div>
                 </section>
 
@@ -86,6 +96,9 @@ export default function Home () {
                         <Link to=''>Посмотреть все <i className='mdi mdi-arrow-right'></i></Link>
                     </div>
                     <div className='section__content job__list'>
+                        {vacancy.map(({time, company, title, text, link, exp}) => {
+                            return <VacancyHome time={time} company={company} title={company} text={text} link={link} exp={exp} key={Date.now()} />
+                        })}
                     </div>
                 </section>
 
@@ -93,7 +106,16 @@ export default function Home () {
                     <img src='../../images/static/person/company_2.png' alt='' />
                     <div className='hero__text'>
                         <span>Вы хотите нанять <br /> специалиста?</span>
-                        <Link to=''>Создать личный кабинет</Link>
+                        <Link to='/signup'>Создать личный кабинет</Link>
+                    </div>
+                </section>
+
+                <section className='home__section job__section'>
+                    <div className='section__title wow fadeIn'>
+                        <h2>НАШИ СПЕЦИАЛИСТЫ</h2>
+                        <Link to=''>Посмотреть все <i className='mdi mdi-arrow-right'></i></Link>
+                    </div>
+                    <div className='section__content job__list'>
                     </div>
                 </section>
 

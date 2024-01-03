@@ -15,7 +15,7 @@ export default function PlusMap () {
                     <div className='plus__item'>
                         <span className='plus__icon'><i className='mdi mdi-seal-variant'></i></span>
                         <div className='plus__name'>
-                            <span>Дипломированные специалисты</span>
+                            <span>Квалифицированные кадры</span>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                         </div>
                     </div>

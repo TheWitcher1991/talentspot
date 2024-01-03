@@ -618,15 +618,17 @@
     width: 100%;
 
     > div {
-        border-radius: 40px;
+        border-radius: 30px;
         padding: 40px 60px;
-        border: 2px solid var(--color-fg-white);
-        background: radial-gradient(159.26% 159.26% at -2.96% -9.7%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%);
-        backdrop-filter: blur(30px);
+        /*border: 2px solid var(--color-fg-white);
+        background: radial-gradient(159.26% 159.26% at -2.96% -9.7%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%);*/
+        background: var(--color-fg-white);
         min-height: 425px;
         display: flex;
+        box-shadow: var(--shadow-lk-div);
         flex-direction: column;
-        transition: all 0.2s ;
+        transition: all 0.2s;
+        border: 1px solid #f5f4f9;
 
         &:hover {
             transform: scale(1.1);
@@ -643,7 +645,7 @@
         justify-content: center;
         font-size: 18px;
         margin: 0 0 20px 0;
-        font-weight: 400;
+        font-weight: 600;
         color: var(--color-fg-black);
 
         i {
@@ -674,18 +676,34 @@
         display: block;
         margin: 0 0 26px 0;
 
+        > a {
+            display: flex;
+            align-items: center;
+            margin: 0 0 3px 0;
+            font-size: 15px;
+            color: var(--color-fg-black);
+            font-weight: 500;
+            text-decoration: underline;
+
+            i {
+                color: var(--color-fg-black);
+                margin: 0 6px 0 0;
+                font-size: 21px;
+            }
+        }
+
         > div {
             display: flex;
             align-items: center;
             margin: 0 0 3px 0;
             font-size: 15px;
-            color: var(--color-fg-800);
+            color: var(--color-fg-black);
             font-weight: 500;
 
             i {
-                color: var(--color-fg-main);
+                color: var(--color-fg-black);
                 margin: 0 6px 0 0;
-                font-size: 20px;
+                font-size: 21px;
             }
         }
     }

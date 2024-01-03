@@ -18,7 +18,7 @@ export default function Automation () {
             <div className='container context__container'>
                 <section className='home__section employer__section'>
                     <div className='plus__title wow fadeIn'>
-                        <span>Почему мы должны<m></m></span>
+                        <span>Почему вы должны<m></m></span>
                         <span>включить <m>автоматизацию</m>?</span>
                     </div>
                     <div className='section__content section__employer'>

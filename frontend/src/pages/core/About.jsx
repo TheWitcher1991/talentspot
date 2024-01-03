@@ -27,8 +27,8 @@ export default function About () {
                     </div>
 
                     <h1 className='wow fadeIn'>Сервис для поиска<br />
-                        <m>квалифицированного</m>
-                        персонала<br />
+                        <m>квалифицированного </m>
+                         персонала <br />
                         TalentSpot
                     </h1>
 

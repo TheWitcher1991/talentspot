@@ -10,43 +10,46 @@ export default function PriceList () {
             <div className='services__item'>
                 <div className='services__item-title'><Icon className='' path={mdiAtom} size={1} color={colors.MAIN} style={{marginRight: 10}} /> Базовый</div>
                 <div className='services__item-price'>
-                    <span>3000 руб. </span>
+                    <span>3600 руб. </span>
                     <m> / месяц</m>
                 </div>
                 <div className='services__item-list'>
-                    <div><Icon path={mdiCheckCircle} size={0.8} color={colors.MAIN} style={{marginRight: 5}} /> 15 вакансий</div>
-                    <div><Icon path={mdiCheckCircle} size={0.8} color={colors.MAIN} style={{marginRight: 5}} /> Вакансия на 30 дней</div>
-                    <div><Icon path={mdiCheckCircle} size={0.8} color={colors.MAIN} style={{marginRight: 5}} /> 3 менеджера вакансий</div>
-                    <div><Icon path={mdiCheckCircle} size={0.8} color={colors.MAIN} style={{marginRight: 5}} /> Доступ к базе кандидатов на 50%</div>
+                    <div><i className='mdi mdi-briefcase'></i> 15 вакансий</div>
+                    <div><i className='mdi mdi-timer'></i> Вакансия до 30 дней</div>
+                    <div><i className='mdi mdi-account-circle'></i> 7 менеджеров вакансий</div>
+                    <div><i className='mdi mdi-school'></i> Доступ к базе кандидатов на 70%</div>
+                    <a href='/automation'><i className='mdi mdi-creation'></i> Автоматизация найма</a>
                 </div>
                 <Link className='services__item-link' to='/signup'>Регистрация</Link>
             </div>
             <div className='services__item'>
                 <div className='services__item-title'><Icon path={mdiAutoFix} size={1} color={colors.MAIN} style={{marginRight: 10}} /> Базовый плюс</div>
                 <div className='services__item-price'>
-                    <span>6000 руб. </span>
+                    <span>6600 руб. </span>
                     <m>/ месяц</m>
                 </div>
                 <div className='services__item-list'>
-                    <div><Icon path={mdiCheckCircle} size={0.8} color={colors.MAIN} style={{marginRight: 5}} /> 30 вакансий</div>
-                    <div><Icon path={mdiCheckCircle} size={0.8} color={colors.MAIN} style={{marginRight: 5}} /> Срок вакансии до 60 дней</div>
-                    <div><Icon path={mdiCheckCircle} size={0.8} color={colors.MAIN} style={{marginRight: 5}} /> 10 менеджеров вакансий</div>
-                    <div><Icon path={mdiCheckCircle} size={0.8} color={colors.MAIN} style={{marginRight: 5}} /> Доступ к базе кандидатов на 75%</div>
+                    <div><i className='mdi mdi-briefcase'></i> 30 вакансий</div>
+                    <div><i className='mdi mdi-timer'></i> Вакансия до 60 дней</div>
+                    <div><i className='mdi mdi-account-circle'></i> 15 менеджеров вакансий</div>
+                    <div><i className='mdi mdi-school'></i> Полный доступ к базе кандидатов</div>
+                    <a href='/automation'><i className='mdi mdi-creation'></i> Автоматизация найма</a>
                 </div>
                 <Link className='services__item-link' to='/signup'>Регистрация</Link>
             </div>
             <div className='services__item'>
                 <div className='services__item-title'><Icon path={mdiCrownOutline} size={1} color={colors.MAIN} style={{marginRight: 10}} /> Премиум</div>
                 <div className='services__item-price'>
-                    <span>9000 руб. </span>
+                    <span>10800 руб. </span>
                     <m>/ месяц</m>
                 </div>
                 <div className='services__item-list'>
-                    <div><Icon path={mdiCheckCircle} size={0.8} color={colors.MAIN} style={{marginRight: 5}} /> Неограниченные вакансии</div>
-                    <div><Icon path={mdiCheckCircle} size={0.8} color={colors.MAIN} style={{marginRight: 5}} /> Срок вакансии до 120 дней</div>
-                    <div><Icon path={mdiCheckCircle} size={0.8} color={colors.MAIN} style={{marginRight: 5}} /> Неограниченные менеджеры</div>
-                    <div><Icon path={mdiCheckCircle} size={0.8} color={colors.MAIN} style={{marginRight: 5}} /> Полный доступ к базе кандидатов</div>
-                    <div><Icon path={mdiCheckCircle} size={0.8} color={colors.MAIN} style={{marginRight: 5}} /> Брендирование страницы компании</div>
+                    <div><i className='mdi mdi-briefcase'></i> Неограниченные вакансии</div>
+                    <div><i className='mdi mdi-timer'></i>Срок вакансии до 120 дней</div>
+                    <div><i className='mdi mdi-account-circle'></i> Неограниченные менеджеры</div>
+                    <div><i className='mdi mdi-school'></i> Полный доступ к базе кандидатов</div>
+                    <a href='/automation'><i className='mdi mdi-creation'></i> Автоматизация найма</a>
+                    <div><i className='mdi mdi-check-circle'></i> Брендирование страницы компании</div>
                 </div>
                 <Link className='services__item-link' to='/signup'>Регистрация</Link>
             </div>

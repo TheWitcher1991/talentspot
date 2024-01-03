@@ -1,9 +1,13 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import {Link, useLocation} from 'react-router-dom'
 
 export default function BaseNav () {
     const [user, setUser] = useState(1)
-    const location = useLocation()
+    const { pathname } = useLocation()
+
+    let routesGuest = {
+
+    }
 
     return (
         <nav className='header__menu'>
