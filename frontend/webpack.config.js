@@ -13,7 +13,9 @@ module.exports = {
     ],
     output: {
         path: path.resolve(__dirname, './dist'),
-        filename: production ? '[name].[contenthash].js' : '[name].js',
+        filename: production ? '[contenthash].modern.js' : '[name].js',
+        asyncChunks: true,
+        clean: true
     },
     module: {
         rules: [
@@ -57,7 +59,7 @@ module.exports = {
             favicon: './public/favicon.png'
         }),
         new MiniCssExtractPlugin({
-            filename: production ? '[name].[contenthash].css' : '[name].css',
+            filename: production ? '[contenthash].modern.css' : '[name].css',
         }),
     ],
     devServer: {

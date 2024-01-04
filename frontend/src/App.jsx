@@ -11,6 +11,12 @@ const Resume = lazy(() => import('./pages/core/Resume'))
 const About = lazy(() => import('./pages/core/About'))
 const Automation = lazy(() => import('./pages/core/Automation'))
 
+const AuthLayoutWithIcon = lazy(() => import('./pages/auth/layout/AuthLayoutWithIcon'))
+const AuthLayoutWithoutIcon = lazy(() => import('./pages/auth/layout/AuthLayoutWithoutIcon'))
+const Recovery = lazy(() => import('./pages/auth/Recovery'))
+const Signup = lazy(() => import('./pages/auth/Signup'))
+const Login = lazy(() => import('./pages/auth/Login'))
+
 const SearchLayout = lazy(() => import('./pages/core/layout/SearchLayout'))
 const SearchVacancy = lazy(() => import('./pages/core/search/SearchVacancy'))
 const SearchCompany = lazy(() => import('./pages/core/search/SearchCompany'))
@@ -97,9 +103,13 @@ export default function App () {
 
                         {user === 1 && (
                             <>
-                                <Route path='/login'  />
-                                <Route path='/signup'  />
-                                <Route path='/recovey/:token'  />
+                                <Route path='/' element={<AuthLayoutWithIcon />}>
+                                    <Route path='/login' element={<Login />} />
+                                    <Route path='/signup' element={<Signup />} />
+                                </Route>
+                                <Route path='/' element={<AuthLayoutWithoutIcon />}>
+                                    <Route path='/recovery' element={<Recovery />} />
+                                </Route>
                             </>
                         )}
 

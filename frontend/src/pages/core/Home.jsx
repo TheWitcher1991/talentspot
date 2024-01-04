@@ -97,7 +97,7 @@ export default function Home () {
                     </div>
                     <div className='section__content job__list'>
                         {vacancy.map(({time, company, title, text, link, exp}) => {
-                            return <VacancyHome time={time} company={company} title={company} text={text} link={link} exp={exp} key={Date.now()} />
+                            return <VacancyHome time={time} company={company} title={title} text={text} link={link} exp={exp} key={Date.now()} />
                         })}
                     </div>
                 </section>
@@ -107,15 +107,6 @@ export default function Home () {
                     <div className='hero__text'>
                         <span>Вы хотите нанять <br /> специалиста?</span>
                         <Link to='/signup'>Создать личный кабинет</Link>
-                    </div>
-                </section>
-
-                <section className='home__section job__section'>
-                    <div className='section__title wow fadeIn'>
-                        <h2>НАШИ СПЕЦИАЛИСТЫ</h2>
-                        <Link to=''>Посмотреть все <i className='mdi mdi-arrow-right'></i></Link>
-                    </div>
-                    <div className='section__content job__list'>
                     </div>
                 </section>
 
