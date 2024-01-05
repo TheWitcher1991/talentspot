@@ -1,0 +1,85 @@
+.skeleton {
+    margin: 0 0 30px 0;
+    padding: 20px;
+    border-radius: 20px;
+    transition: all .2s linear;
+    position: relative;
+    width: 100%;
+    background: var(--color-fg-white);
+    box-shadow: var(--shadow-lk-div);
+
+    &.skeleton__border {
+        background: rgb(255 255 255 / 30%);
+        box-shadow: none;
+    }
+
+    .skeleton__item {
+        overflow: hidden;
+        position: relative;
+        border-radius: 4px;
+        background: linear-gradient(100deg, #fff 30%, #eee 50%, #fff 70%);
+        background-size: 400%;
+        animation: load 1.2s ease-in-out infinite;
+    }
+
+}
+
+
+.skeleton__flex {
+    display: flex;
+    width: 100%;
+
+    .skeleton__flex-1 {
+        flex: 1
+    }
+}
+
+.skeleton__img {
+    display: block;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin: 0 16px 16px 0;
+}
+
+.skeleton__title {
+    width: 380px;
+    height: 18px;
+    margin: 0 0 6px 0;
+}
+
+.skeleton__exp {
+    width: 280px;
+    height: 18px;
+    margin: 0 0 12px 0;
+}
+
+.skeleton__little {
+    width: 120px;
+    height: 18px;
+    margin: 0 0 6px 0;
+}
+
+.skeleton__slot {
+    width: 70%;
+    height: 18px;
+    margin: 0 0 10px 0;
+}
+
+.skeleton__bigger {
+    width: 80%;
+    height: 18px;
+    margin: 0 0 6px 0;
+}
+
+.skeleton__large {
+    width: 65%;
+    height: 18px;
+    margin: 0 0 6px 0;
+}
+
+.skeleton__medium {
+    width: 50%;
+    height: 18px;
+    margin: 0 0 6px 0;
+}

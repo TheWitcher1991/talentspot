@@ -1,8 +1,15 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import {Link} from 'react-router-dom'
 import Header from '../components/Header'
+import SkeletonResume from '../../../ui/Skeleton/SkeletonResume'
 
 export default function SearchResume () {
+    const [search, setSearch] = useState('')
+    const [location, setLocation] = useState('')
+    const [resume, setResume] = useState([])
+    const [isLoading, setIsLoading] = useState(false)
+
+
     return (
         <>
             <Header image={3}>
@@ -73,7 +80,9 @@ export default function SearchResume () {
                                     <Link to='/signup'>Регистрация</Link>
                                 </div>
                                 <div className='resume__list'>
-
+                                    {!isLoading && (
+                                        <SkeletonResume />
+                                    )}
                                 </div>
                                 <div className='paginator'>
                                     <div data-page='1'><a><i className='mdi mdi-chevron-double-left'></i></a></div>
