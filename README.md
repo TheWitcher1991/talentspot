@@ -33,7 +33,7 @@ TalentSpot — информационный сервис в виде интер�
 apache + uwsgi
 
 - Python version 3.12.0
-- Django version 4.2.7
+- Django version 4.2.8
 - Django rest framework version 3.14.0
 - NodeJS version 18.12.1
 - ReactJS version ^18.2.0

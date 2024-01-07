@@ -5,19 +5,21 @@ export default function BaseNav () {
     const [user, setUser] = useState(1)
     const { pathname } = useLocation()
 
-    let routesGuest = {
-
-    }
-
+    let routesGuest = [
+        { name: 'Главная', link: '/' },
+        { name: 'Резюме', link: '/search/resume' },
+        { name: 'Вакансии', link: '/search/vacancy' },
+        { name: 'Компании', link: '/search/company' },
+        { name: 'О нас', link: '/about' },
+    ]
+//
     return (
         <nav className='header__menu'>
             <span className='header__logo'><img src='../../../images/static/logo.png' alt='' /></span>
             <ul className='header__ul'>
-                <li><Link className='header__active' to='/'>Главная</Link></li>
-                <li><Link to='/search/resume'>Резюме</Link></li>
-                <li><Link to='/search/vacancy'>Вакансии</Link></li>
-                <li><Link to='/search/company'>Компании</Link></li>
-                <li><Link to='/about'>О нас</Link></li>
+                {user === 1 && routesGuest.map(({name, link}) => {
+                    return <li><Link to={link} className={pathname === link ? 'header__active' : ''}>{name}</Link></li>
+                })}
             </ul>
             <div className='header__bth'>
                 <Link to='/login'><i className='mdi mdi-login'></i> Войти</Link>
